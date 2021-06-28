@@ -1,87 +1,42 @@
 .nav{
-	position: absolute;
-  display: flex;
-	flex-direction: column;
-	top: 120px;
-	opacity: 0;
-	visibility: hidden;
-	margin-right: 2px;
-	font-size: 1.5rem;
+	&--upper-nav{}
+	&--main-nav{}
 }
 @media only screen and (min-width: 991px){
   .nav{
-		position: static;
-    display: flex;
-		justify-content: space-between;
-		width: 100%;
-		margin-right: 20px;
-		opacity: 1;
-		visibility: visible;
-    &__list{
+		&--upper-nav{
 			display: flex;
-			justify-content: flex-start;
-			align-items: center;
+			justify-content: space-between;
+			width: fit-content;
+		}
+		&--main-nav{
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			margin-right: 20px;
+		}
+    &__list{
+			&--main-nav{
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+			}
 		}
 		&__item{
 			position: relative;
-			padding: 0 5px;
+			&--main-nav{
+				padding: 0 5px;
+			}
 		}
 		&__link{
 			display: block;
-			padding: 15px 10px;
-			font-size: 1.3rem;
-			color: #fff;
-			font-weight: 500;
-			transition: all .3s ease-in-out;
-			text-transform: uppercase;
-			&--subtitle{
-				position: relative;
-				padding-right: 12px;
-				&::after{
-					position: absolute;
-					display: block;
-					content: '';
-					top: 50%;
-					right: 4px;
-					width: 5px;
-					height: 1px;
-					transform: rotate(45deg);
-					background-color: $white;
-				}
-				&::before{
-					position: absolute;
-					display: block;
-					content: '';
-					top: 50%;
-					right: 1px;
-					width: 5px;
-					height: 1px;
-					transform: rotate(-45deg);
-					background-color: $white;
-				}
-			}
-			&--sub-nav{
-				display: block;
-				font-weight: 400;
-				padding: 6px 0;
-				font-size: 1.4rem;
+			&--main-nav{
+				padding: 15px 10px;
+				font-size: 1.3rem;
+				color: #fff;
+				font-weight: 500;
 				transition: all .3s ease-in-out;
-				color: $content-color;
-			}
-		}
-		&__sub1-list{
-			position: absolute;
-			top: 40px;
-			opacity: 0;
-			visibility: hidden;
-			background-color: #fff;
-			pointer-events: none;
-			width: max-content;
-			padding: 15px 20px;
-			box-shadow:0 2px 35px rgba(0,0,0,0.1);
-			z-index: 13;
-			& a{
-				color: $content-color;
+				text-transform: uppercase;
 			}
 		}
   }

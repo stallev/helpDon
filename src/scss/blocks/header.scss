@@ -1,32 +1,44 @@
 .header{
-	background-color: $header-top-bg;
-	&__search-container{
+	background-color: #fff;
+	&__upper{
 		display: none;
 	}
-	&__top{
-		background-color: $header-top-bg;
+	&__nav-wrap--main-nav{
+		display: none;
+	}
+	&__middle-inner{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__call-btn{
+		display: inline-block;
+		width: 36px;
+		height: 36px;
+		background: #646464;
+		border: 2px solid #FFFFFF;
+		box-sizing: border-box;
+		background-repeat: no-repeat;
+		background-image: url(../img/decor/icons/phone-big-mobile.png);
+		cursor: pointer;
 	}
 	&__bottom{
 		display: none;
 	}
-	&__cart-area{
-		padding-left: 20px;
-	}
 	&__menu-open-btn{
 		display: inline-block;
 		width: fit-content;
-		margin-left: auto;
 		padding: 4px 8px;
 		border-radius: 4px;
-		border: 1px solid $white;
-		color: $white;
+		border: 1px solid #646464;
+		color: #646464;
 		font-size: 1.7rem;
 		text-align: center;
 		cursor: pointer;
 		transition: all .3s ease;
 		&:hover{
-			color: $red;
-			border: 1px solid $red;
+			color: red;
+			border: 1px solid red;
 		}
 	}
 }
@@ -36,55 +48,31 @@
 		&__menu-open-btn{
 			display: none;
 		}
+		&__upper{
+			display: block;
+		}
+		&__upper-inner{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		&__contacts{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
 		&__middle{
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
 		}
-		&__search-container{
-			display: block;
-			background-color: $white;
-			border-radius: 5px;
-		}
-		&__search-box{
+		
+		&__middle-nav-wrap{
 			display: flex;
-		}
-		&__search-submit-btn{
-			display: inline-block;
-			background: $yellow;
-			padding: 10px 15px;
-			border-radius: 0 5px 5px 0;
-		}
-		&__select-block{
-			position: relative;
-			padding-right: 15px;
-			&::before{
-				content: "";
-				width: 1px;
-				height: 16px;
-				background: #a1a1a1;
-				position: absolute;
-				top: 50%;
-				margin-top: -8px;
-				right: 0;
-			}
-		}
-		&__search-field{
-			display: inline-block;
-			border: 0;
-			background: inherit;
-			height: 50px;
-			color: #222222;
-			font-size: 1.4rem;
-			font-weight: 400;
-			padding: 0 105px 0 20px;
-		}
-		&__form{
-			display: flex;
+			align-items: center;
 		}
 		&__bottom{
 			display: block;
-			background-color: $dark-blue;
 			z-index: 12;
 		}
 	}
