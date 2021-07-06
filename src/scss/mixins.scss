@@ -66,3 +66,37 @@
     }
   }
 }
+@mixin inputField() {
+  padding: 11px 13px;
+  border: 3px solid #F75135;
+  border-radius: 5px;
+  color: #F75135;
+  background: #fff;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: left;
+  color: #000000;
+}
+@mixin colorBorder{
+  border: 2px solid #F73A18;
+  border-radius: 20px;
+}
+@media only screen and (min-width: 991px){
+  @mixin inputField() {
+    padding: 11px 13px;
+    border: 3px solid #F75135;
+    border-radius: 5px;
+    color: #F75135;
+    background: #fff;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 17px;
+    text-align: left;
+    color: #000000;
+  }
+}

@@ -1,0 +1,85 @@
+.card{
+  padding: 0 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  &__title{
+    margin-bottom: 15px;
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+  }
+  &__description{
+    margin-bottom: 22px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #000000;
+  }
+  &__img-wrap{
+    margin-bottom: 18px;
+    width: 100%;
+    & img{
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+  &__list{
+    padding-left: 15px;
+    margin-bottom: 10px;
+  }
+  &__list-item{
+    position: relative;
+    padding-left: 25px;
+    &::before{
+      position: absolute;
+      display: block;
+      content: '';
+      left: 0;
+      width: 12px;
+      height: 12px;
+      background: #333E5B;
+      border-radius: 2px;
+      top: 8px;
+      transform: rotate(45deg);
+    }
+  }
+  &__list-item-content{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2;
+    color: #000;
+  }
+  &__action{
+    align-self: flex-end;
+  }
+}
+@media only screen and (min-width: 991px){
+  .card{
+    &__title{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 55px;
+    }
+    &__list-item{
+      margin-bottom: 15px;
+    }
+    &__action{
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+}

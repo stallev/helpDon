@@ -1,13 +1,9 @@
 .container{
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 15px;
   box-sizing: border-box;
   width: 100%;
-  max-width: 1430px;
-}
-.container--header-top{
-  padding-top: 25px;
-  padding-bottom: 25px;
+  max-width: 1200px;
 }
 
 @media only screen and (min-width: 575px){
@@ -16,17 +12,16 @@
   }
 }
 @media only screen and (min-width: 767px){
-  div.container{
-    max-width: 1430px;
+  .container{
+    padding: 0 30px;
   }
 }
 @media only screen and (min-width: 991px){
   .container{
-    max-width: 1430px;
+    overflow: hidden;
   }
 }
 @media only screen and (min-width: 1199px){
   .container{
-    max-width: 1430px;
   }
 }

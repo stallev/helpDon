@@ -1,21 +1,38 @@
 .logo{
   display: flex;
-  align-items: center;
-  & a{
+  align-items: flex-end;
+  max-width: 150px;
+  &__description{
     display: inline-block;
-    vertical-align: middle;
-  }
-  & img{
-    display: inline-block;
-    min-width: 108px;
+    margin-left: 5px;
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    color: #C4C4C4;
   }
 }
 .logo--footer{
   display: block;
-  width: 163px;
+  width: 30%;
+  margin: 0 auto;
 }
-@media only screen and (min-width: 360px){
+@media only screen and (min-width: 767px){
   .logo{
-    max-width: 200px;
+    max-width: 300px;
+    align-items: center;
+    & a{
+      display: inline-block;
+      width: fit-content;
+    }
+    & img{
+      width: 70px;
+      max-width: 70px;
+    }
+    &__description{
+      font-size: 20px;
+      line-height: 26px;
+    }
   }
 }

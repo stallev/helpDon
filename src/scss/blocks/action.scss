@@ -1,14 +1,25 @@
 .action{
+  display: inline-block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  min-width: none;
+  max-width: 270px;
+  background: linear-gradient(90.04deg, #F75135 44.02%, #F73A18 80.12%);
+  border-radius: 5px;
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
   
 }
-.collections__item:hover .action--collections{
-  background-color: #000;
-}
-
-.action.product-item__buy-now{
-  width: 100%;
-}
-@media only screen and (min-width: 767px){
+@media only screen and (min-width: 991px){
   .action{
+    min-width: 0;
+    width: 270px;
+    padding: 15px 0;
+    font-size: 20px;
   }
 }

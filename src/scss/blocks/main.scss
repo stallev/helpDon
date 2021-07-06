@@ -1,8 +1,14 @@
 .main{
-  background-color: $section-bg;
   &__content-wrap{
     overflow: hidden;
   }
+}
+.section{
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+.gateways, .examples, .reviews{
+  background-color: #E8E7E5;
 }
 @media only screen and (min-width: 575px){
   .main{
@@ -17,5 +23,9 @@
     &__content{
       overflow-x: hidden;
     }
+  }
+  .section{
+    padding-top: 80px;
+    padding-bottom: 130px;
   }
 }
