@@ -79,9 +79,10 @@ $('.reviews__list').each(function() {
     dots: false,
     arrows: true,
     infinite: true,
-    //centerMode: true,
+    centerMode: true,
     focusOnSelect: true,
     //variableWidth: true,
+    focusOnSelect: true,
     prevArrow:'<button class="reviews__slider-prev"><i class="far fa-angle-left"></i></button>',
     nextArrow:'<button class="reviews__slider-next"><i class="far fa-angle-right"></i></button>',
     responsive: [

@@ -27,14 +27,14 @@
   .reviews__list{
     &>.slick-list{
       max-height: 38vw;
-      margin-left:-7vw;
+      //margin-left:-7vw;
     }
     &>.slick-list>.slick-track{
       height: 38vw;
     }
-    &>.slick-list>.slick-track>.slick-slide {
-      margin-left: 7vw;
-    }
+    // &>.slick-list>.slick-track>.slick-slide {
+    //   margin-left: 7vw;
+    // }
   }
     
 }

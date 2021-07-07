@@ -52,6 +52,12 @@
   .examples{
     & .slick-track{
       display: flex;
+      height: 30vw;
+    }
+    &__item-wrap{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     &__item-img-wrap{
       height: calc(100% - 3vw);
@@ -59,8 +65,29 @@
         object-fit: cover;
       }
     }
+    & .slick-slide:not(.slick-center){
+      max-width: 10vw;
+      padding-top: 7vw;
+      margin: 0 7vw;
+      cursor: pointer;
+    }
+    & .slick-center{
+      max-width: 30vw;
+      height: 30vw;
+      margin: 0 7vw;
+      & img{
+        max-width: 26vw;
+        object-fit: cover;
+      }
+      & .examples__item-title{
+        font-size: 25px;
+      }
+    }
     &__item-title{
       height: 3vw;
+      text-align: center;
+      margin-right: 0;
+      padding-top: 15px;
     }
     &__item-wrap{
       flex-direction: column;
@@ -74,12 +101,69 @@
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(calc(-24vw - 50%), -50%);
+    transform: translate(calc(-20vw - 50%), -50%);
   }
   .examples-slider-next{
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(calc(13vw - 50%), -50%);
+    transform: translate(calc(17vw - 50%), -50%);
+  }
+}
+@media only screen and (min-width: 1260px){
+  .examples{
+    & .slick-track{
+      display: flex;
+      height: 380px;
+    }
+    &__item-wrap{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__item-img-wrap{
+      height: calc(100% - 4px);
+      & img{
+        object-fit: cover;
+      }
+    }
+    & .slick-slide:not(.slick-center){
+      max-width: 130px;
+      padding-top: 70px;
+      margin: 0 90px
+    }
+    & .slick-center{
+      max-width: 380px;
+      height: 380px;
+      margin: 0 90px;
+      & img{
+        max-width: 327px;
+        object-fit: cover;
+      }
+      & .examples__item-title{
+        font-size: 25px;
+      }
+    }
+    &__item-title{
+      height: 38px;
+      text-align: center;
+      margin-right: 0;
+      padding-top: 15px;
+    }
+    &__item-wrap{
+      flex-direction: column;
+    }
+  }
+  .examples-slider-prev{
+    top: 38%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(calc(-250px - 50%), -50%);
+  }
+  .examples-slider-next{
+    top: 38%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(calc(209px - 50%), -50%);
   }
 }
