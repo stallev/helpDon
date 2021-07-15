@@ -5,7 +5,7 @@
 @import "variables.scss";
 @import "global/fonts.scss";
 @import "global/scaffolding.scss";
-//@import "global/nouislider.scss";
+@import "global/splide-core.min.scss";
 @import "global/nice-select.scss";
 @import "global/theme-settings.scss";
 @import "blocks/body.scss";
@@ -47,6 +47,7 @@
 // @import "blocks/mini-cart.scss";
 @import "blocks/mobile-nav.scss";
 @import "blocks/nav.scss";
+@import "blocks/order-form.scss";
 @import "blocks/palisades.scss";
 // @import "blocks/pagination.scss";
 // @import "blocks/page-header.scss";

@@ -70,31 +70,27 @@ $('.examples__list').each(function() {
   });
 });
 
-
-
-$('.reviews__list').each(function() {
-  $(this).slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,              
-    dots: false,
-    arrows: true,
-    infinite: true,
-    centerMode: true,
-    focusOnSelect: true,
-    //variableWidth: true,
-    focusOnSelect: true,
-    prevArrow:'<button class="reviews__slider-prev"><i class="far fa-angle-left"></i></button>',
-    nextArrow:'<button class="reviews__slider-next"><i class="far fa-angle-right"></i></button>',
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
-      },
-    ]
-  });
+$('.reviews__list').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,              
+  dots: false,
+  arrows: true,
+  infinite: true,
+  centerMode: true,
+  focusOnSelect: true,
+  //variableWidth: true,
+  focusOnSelect: true,
+  prevArrow:'<button class="reviews__slider-prev"><i class="far fa-angle-left"></i></button>',
+  nextArrow:'<button class="reviews__slider-next"><i class="far fa-angle-right"></i></button>',
+  responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    },
+  ]
 });
 
 $('.review__slider').each(function() {

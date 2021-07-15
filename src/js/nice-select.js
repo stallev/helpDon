@@ -20,3 +20,6 @@ if($('.select-box__options--d')){
   $('.select-box__options--d').niceSelect();
 }
 
+$('.custom-select').each(function() {
+  $(this).niceSelect();
+});

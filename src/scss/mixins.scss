@@ -66,6 +66,18 @@
     }
   }
 }
+@mixin submitBtn {
+  padding: 10px 15px;
+  font-weight: 700;
+  background-color: $red;
+  color: $white;
+  text-transform: uppercase;
+  transition: background-color .3s ease-in-out;
+  &:hover{
+    cursor: pointer;
+    background-color: #999;
+  }
+}
 @mixin inputField() {
   padding: 11px 13px;
   border: 3px solid #F75135;
