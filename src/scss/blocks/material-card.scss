@@ -1,9 +1,15 @@
+.materials-list__radio:checked + .materials-list__label + .material-card{
+  max-height: fit-content;
+  padding: 40px 20px;
+  border: 3px solid #F75135;
+}
 .material-card{
   width: 100%;
-  padding: 40px 20px;
-  display: none;
+  max-height: 0;
+  overflow-y: hidden;
+  //display: none;
   border-radius: 0 0 5px 5px;
-  border: 3px solid #F75135;
+  border-top: 0;
   &__top{
     display: flex;
     flex-direction: column;
@@ -80,6 +86,9 @@
     flex-direction: column;
     margin-bottom: 20px;
   }
+  &__variety-slider{
+    overflow-x: hidden;
+  }
   &__variety-slider-item{
     & img{
       display: inline-block;
@@ -132,9 +141,12 @@
     color: #000000;
   }
 }
+
 @media only screen and (min-width: 575px){
-  .material-card{
+  .materials-list__radio:checked + .materials-list__label + .material-card{
     padding: 30px 35px 30px;
+  }
+  .material-card{
     &__description{
       font-size: 16px;
       line-height: 19px;
@@ -150,8 +162,10 @@
   }
 }
 @media only screen and (min-width: 991px){
-  .material-card{
+  .materials-list__radio:checked + .materials-list__label + .material-card{
     padding: 60px 70px 70px;
+  }
+  .material-card{
     &__description{
       text-align: left;
       font-size: 18px;

@@ -77,7 +77,6 @@ $('.reviews__list').slick({
   arrows: true,
   infinite: true,
   centerMode: true,
-  focusOnSelect: true,
   //variableWidth: true,
   focusOnSelect: true,
   prevArrow:'<button class="reviews__slider-prev"><i class="far fa-angle-left"></i></button>',

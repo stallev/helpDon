@@ -21,7 +21,9 @@
   color: #F75135;
   background: #fff;
 }
-
+.materials-list__label + .material-card{
+  max-height: 0;
+}
 .materials-list__radio:checked + .materials-list__label{
   display: block;
   margin-bottom: 0;

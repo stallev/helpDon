@@ -29,13 +29,13 @@
 
     &>.slick-list{
       //max-height: 45vw;
-      margin-left:-7vw;
+      margin-left:-3vw;
     }
     &>.slick-list>.slick-track{
       max-height: 400px;
     }
     &>.slick-list>.slick-track>.slick-slide {
-      margin-left: 7vw;
+      margin-left: 3vw;
       height: fit-content;
     }
   }
