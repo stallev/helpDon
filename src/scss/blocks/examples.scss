@@ -7,6 +7,12 @@
   &__item-wrap{
     display: flex;
     flex-direction: column-reverse;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__item-img-wrap{
+    width: fit-content;
   }
   &__item-title{
     margin-right: auto;
@@ -41,18 +47,33 @@
   transition: all .4s;
   opacity: 1;
   z-index: 10;
+  transition: all .3s ease;
+  & path{
+    fill: #F75135;
+  }
 }
 .examples-slider-prev{
-  right: 70px;
+  right: 40px;
+  & svg{
+    transform: rotate(180deg);
+  }
 }
 .examples-slider-next{
-  right: 20px;
+  right: 5px;
 }
-@media only screen and (min-width: 767px){
+@media only screen and (min-width: 575px){
+  .examples-slider-prev{
+    right: 70px;
+  }
+  .examples-slider-next{
+    right: 20px;
+  }
+}
+@media only screen and (min-width: 768px){
   .examples{
     & .slick-track{
       display: flex;
-      height: 30vw;
+      height: 32vw;
     }
     &__item-wrap{
       display: flex;
@@ -73,7 +94,7 @@
     }
     & .slick-center{
       max-width: 30vw;
-      height: 30vw;
+      height: 32vw;
       margin: 0 7vw;
       & img{
         max-width: 26vw;
@@ -98,13 +119,13 @@
     //top: -60px;
   }
   .examples-slider-prev{
-    top: 50%;
+    top: 40%;
     left: 50%;
     margin-right: -50%;
     transform: translate(calc(-20vw - 50%), -50%);
   }
   .examples-slider-next{
-    top: 50%;
+    top: 40%;
     left: 50%;
     margin-right: -50%;
     transform: translate(calc(17vw - 50%), -50%);

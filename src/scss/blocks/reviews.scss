@@ -1,4 +1,9 @@
 .reviews{
+  &__slider{
+    padding-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   &__list{
     padding-top: 50px;
   }
@@ -24,20 +29,85 @@
     right: 20px;
   }
 }
-@media only screen and (min-width: 767px){
-  .reviews__list{
+//положение стрелок главного слайдера
+.reviews__slider>.splide__arrows>.splide__arrow{
+  top: 0;
+  background: transparent;
+  font-size: 30px;
+  font-weight: 700;
+  transition: all .3s ease;
+  &:hover{
+    transform: scale(1.5) translate(0, -29%);
+  }
+  &--prev{
+    right: 35px;
+    left: auto;
+  }
+  &--next{
+    right: -1px;
+  }
+  & path{
+    fill: #F73A18;
+  }
+}
 
-    &>.slick-list{
-      //max-height: 45vw;
-      margin-left:-3vw;
+
+@media only screen and (min-width: 767px){
+  //положение стрелок главного слайдера
+  .reviews__slider{
+    position: relative;
+    padding-top: 0;
+  }
+  .reviews__slider>.splide__arrows{
+    position: absolute;
+    display: flex;
+    width: fit-content;
+    top: 58%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(calc(-50% - 0px), calc(-50% - 30px));
+    z-index: 20;
+  }
+  
+  .reviews__slider>.splide__arrows>.splide__arrow{
+    position: relative;
+    top: 70%;
+    background: transparent;
+    font-size: 30px;
+    font-weight: 700;
+    &--prev{
+      right: 16vw;
+      left: auto;
     }
-    &>.slick-list>.slick-track{
-      max-height: 400px;
-    }
-    &>.slick-list>.slick-track>.slick-slide {
-      margin-left: 3vw;
-      height: fit-content;
+    &--next{
+      right: -16vw;
     }
   }
-    
+}
+@media only screen and (min-width: 992px){
+  .reviews__slider>.splide__arrows>.splide__arrow{
+    position: relative;
+    top: 30px;
+    background: transparent;
+    font-size: 40px;
+    font-weight: 700;
+    &--prev{
+      right: 17vw;
+      left: auto;
+    }
+    &--next{
+      right: -17vw;
+    }
+  }
+}
+@media only screen and (min-width: 1200px){
+  .reviews__slider>.splide__arrows>.splide__arrow{
+    &--prev{
+      right: 210px;
+      left: auto;
+    }
+    &--next{
+      right: -220px;
+    }
+  }
 }

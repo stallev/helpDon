@@ -14,6 +14,11 @@
     text-align: center;
     color: #000000;
   }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   &__description{
     margin-bottom: 22px;
     font-family: Montserrat;

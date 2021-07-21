@@ -1,4 +1,5 @@
 .action{
+  position: relative;
   display: inline-block;
   margin: 0 auto;
   padding: 10px 20px;
@@ -13,13 +14,24 @@
   line-height: 20px;
   text-align: center;
   color: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: all .3s ease;
+  &:hover{
+    top: -2px;
+  }
   
+  &.quiz__action{
+    padding: 10px 80px;
+  }
 }
-@media only screen and (min-width: 991px){
+a.action:focus{
+  top: 2px;
+  color: #FFFFFF;
+}
+@media only screen and (min-width: 768px){
   .action{
     min-width: 0;
-    width: 270px;
-    padding: 15px 0;
-    font-size: 20px;
+  }
+  .action.card-action{
   }
 }

@@ -20,6 +20,13 @@
 		line-height: 16px;
 		text-transform: uppercase;
 		color: #FFFFFF;
+		transition: all .3s ease;
+		&:hover{
+			color: #F73A18;
+		}
+		&:focus{
+			color: #F73A18;
+		}
 	}
 	&__contacts-callback{
 		position: relative;
@@ -67,16 +74,6 @@
 		&__menu-open-btn{
 			display: none;
 		}
-		&__text{
-			display: block;
-			width: 380px;
-			font-family: Montserrat;
-			font-style: normal;
-			font-weight: 500;
-			font-size: 20px;
-			line-height: 24px;
-			color: #E8E7E5;
-		}
 		&__contacts-link{
 			font-size: 20px;
 			line-height: 26px;
@@ -87,6 +84,23 @@
 		}
 	}
 }
+@media only screen and (min-width: 992px){
+	.header{
+		&__text{
+			display: block;
+			width: 380px;
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 24px;
+			color: #E8E7E5;
+		}
+	}
+}
+
+
+
 .header__bottom.sticky-header{
 	position: fixed;
   top: 0;

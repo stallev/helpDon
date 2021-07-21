@@ -68,10 +68,9 @@
 }
 @mixin submitBtn {
   padding: 10px 15px;
-  font-weight: 700;
-  background-color: $red;
+  font-weight: 500;
+  background-color: $orange;
   color: $white;
-  text-transform: uppercase;
   transition: background-color .3s ease-in-out;
   &:hover{
     cursor: pointer;

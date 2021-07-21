@@ -16,14 +16,19 @@
   padding: 10px;
   cursor: pointer;
 }
-.materials-list__label.action{
+.materials-list__label{
+  max-width: 100%;
   border: 3px solid #F75135;
   color: #F75135;
   background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  font-family: "Roboto Slab";
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
 }
-.materials-list__label + .material-card{
-  max-height: 0;
-}
+
 .materials-list__radio:checked + .materials-list__label{
   display: block;
   margin-bottom: 0;
