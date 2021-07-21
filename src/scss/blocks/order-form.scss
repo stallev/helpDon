@@ -79,6 +79,7 @@
 .palisade-4 .order-form__content--palisade4,
 .gateway-1 .order-form__content--gateway1,
 .quiz .order-form__content--quiz,
+.call-form .order-form__content--call-form,
 .order-form-view-call .order-form__content--consult{
   top: 50%;
   margin-right: -50%;
@@ -147,38 +148,6 @@ input{
     font-size: 1.6rem;
     font-weight: 500;
   }
-  &__field--select{
-    display: block; 
-    font-size: 1.6rem;
-    font-weight: 500; 
-    color: rgba($color: #000000, $alpha: 0.5);
-    line-height: 1.3; 
-    padding: 16px 21px;
-    width: 100%; 
-    max-width: 100%; 
-    box-sizing: border-box; 
-    margin: 0; 
-    border: 3px solid $orange;
-    border-radius: 5px;
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAQCAYAAAAI0W+oAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGLSURBVHgBtZVBTsJAFIbfG6RQcaEL4+zkCLIwAdzADeQElBvoCYAT6A2EE+gNYCOYuOkR2FnjpomQthA6vokdqKRIKfAnbea9mfm/l5n0FYA0LnLDKXMD9qyw75EMUgyeZEDJS31gtWEP8sq86QO0Al9gqb/zLUo2YUeFIUooX5MS7zCEukoKgffHw49HSKBViC+gmxtaBqqEU+I9wlZUnEIwtFerC1toesPrcwEdWBb8QgXX5JippJtxawKEqWK54bvIKxBT4+vzqzAEAU094zRUvACd9W3b07wqDUcql2b4LA3iQFia9UKpkfBFDclzCV6RU+R5wstNebUJfKjqb9YoChJ3Pe6yeZuiIkFS6jjorE+VSVZzC+o4ViF0v7Y/86sn719mlN9aUGBWCcyCxWhmNEfeI3hTvUfmi/ubz+aFdZCNoABmQNA54Lf0vgC0EcVtaFmDOkrnP5+NICm3dHEnEB+i5ujjbOcGVmuTB4MYyg4/ZZdoJ4VsLeqDshcK+UxoDIeUk/CX8gMnQrQYUGMJQgAAAABJRU5ErkJggg=='); 
-    background-repeat: no-repeat, repeat;
-    background-position: right .7em top 50%, 0 0;
-    background-size: 15px 10px;
-    &:focus { 
-      border-color: $orange; 
-      box-shadow: none;
-      color: rgba($color: #000000, $alpha: 0.5);
-      outline: none;
-      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAErSURBVHgBrVNBbsIwEFzHKkrUHtJDJR/zhORQCdFLeUmTlxBeQvsSeimq1AM8gWOkXnxACgTFZjckYEJQgmAkK854Zzxr2QAdsOqLMB2IEO6BzUCM0EyXY9RWz9rMFEBco2NnloyvNszexEeu4bNpjTMIez/JV2fD1euLzx/4/FjEFgoUff2Ky7d58PT3v2g1TPvC05aeo9gtqaXdWwcSJ3Zm0yZeuYnUSgfOb7I09VbdDJmpaYbBhuxbymccNC84hAbtUm2haUqo3113bSRAgWSKnSW41AFtepJwkznTyoygtmpYNyMQR2sG5ZXaY8t4vyaYyDeKoqYDr1CsKYgO3aGWPIqW6RVwCyaHZADjx1kSQwegCdWZlz2yuPF3jRnB2deeX/L0xrdq6nfsFY2ilR44QgAAAABJRU5ErkJggg==');  
-    }
-    & option {
-      display: inline-block;
-      padding: 5px; 
-      font-weight:500;
-      color: $textColor;
-      font-size: 1.6rem;
-    } 
-  }
   &__field-group-sublist{
     display: flex;
     flex-direction: column;
@@ -221,9 +190,9 @@ input{
       margin-right: 15px;
       font-size: 20px;
       transition: all .3s ease;
-      color: linear-gradient(90.04deg, rgba(247, 81, 53, 0.7) 44.02%, rgba(247, 58, 24, 0.7) 80.12%);
+      color: $orange;
       &:hover{
-        color: linear-gradient(90.04deg, #F75135 44.02%, #F73A18 80.12%);
+        color: $orange;
       }
     }
   }
@@ -330,8 +299,8 @@ input{
     }
   }
   .order-form__form .action{
-    align-self: flex-end;
     margin: 0;
+    margin-left: auto;
     width: 270px;
     padding: 13px 0;
     font-size: 20px;

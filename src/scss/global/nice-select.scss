@@ -28,7 +28,7 @@ $arrow_color: $gray !default;
   font-family: inherit;
   font-size: $font_size;
   font-weight: normal;
-  height: $input_height;
+  //height: $input_height;
   line-height: $input_height - 2;
   outline: none;
   padding-left: $dropdown_padding;
@@ -66,7 +66,8 @@ $arrow_color: $gray !default;
   &.open {
     @extend :active;
     &:after {
-      transform: rotate(-135deg);
+      transform: rotate(180deg) translateY(15px);
+    
     }
     .list {
       opacity: 1;
@@ -171,7 +172,6 @@ $arrow_color: $gray !default;
 }
 
 //custom css
-.header__select-category,
 .select-box__options{
   display: inline-block;
   height: 100%;
@@ -184,7 +184,6 @@ $arrow_color: $gray !default;
 .nice-select.open .list{
   background-color: $white;
 }
-.header__select-category .option,
 .select-box__options .option {
   cursor: pointer;
   font-weight: 400;
@@ -200,7 +199,55 @@ $arrow_color: $gray !default;
     background-color: #f6f6f6;
   }
 }
-.header__select-category .option.focus,
 .select-box__options .option.focus{
   background-color: #fff;
+}
+.order-form{
+  &__field--select{
+    display: block; 
+    font-size: 1.6rem;
+    font-weight: 500; 
+    color: rgba($color: #000000, $alpha: 0.5);
+    line-height: 1.3; 
+    padding: 16px 21px;
+    width: 100%; 
+    max-width: 100%; 
+    box-sizing: border-box; 
+    margin: 0; 
+    border: 3px solid $orange;
+    border-radius: 5px;
+    &:focus { 
+      border-color: $orange; 
+      box-shadow: none;
+      color: rgba($color: #000000, $alpha: 0.5);
+      outline: none;
+    }
+    & option {
+      display: inline-block;
+      padding: 5px; 
+      font-weight:500;
+      color: $textColor;
+      font-size: 1.6rem;
+    } 
+  }
+}
+.custom-select .list{
+  width: 100%;
+  border: 2px solid $orange;
+  background-color: #fff;
+  //box-shadow: none;
+}
+.custom-select:hover{
+  border: 3px solid $orange;
+}
+.nice-select:after{
+  border-bottom: 0 solid #999;
+  border-right: 0 solid #999;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/decor/icons/down_arrow.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(0);
 }

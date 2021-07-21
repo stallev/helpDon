@@ -19,7 +19,7 @@ if($('.select-box__options--h')){
 if($('.select-box__options--d')){
   $('.select-box__options--d').niceSelect();
 }
-
+//кастомизируем select
 $('.custom-select').each(function() {
   $(this).niceSelect();
 });

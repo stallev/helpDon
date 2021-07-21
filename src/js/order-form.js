@@ -3,6 +3,9 @@ function convertToArray(collection){
   let newArray = Array.prototype.slice.call(collection);
   return newArray;
  }
+//кастомизируем select
+
+
 
 let closeFormBtns = convertToArray(document.querySelectorAll('.closeFormBtn'));
 if(closeFormBtns){
@@ -43,6 +46,7 @@ function openCalcForm(btnClass){
 openCalcForm('palisade-1');
 openCalcForm('gateway-1');
 openCalcForm('quiz');
+openCalcForm('call-form');
 //закрытие формы квиза
 let submitQuizBtn = document.querySelector('.quiz__action--submit');
 if(submitQuizBtn){
