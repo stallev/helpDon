@@ -37,14 +37,20 @@
   font-weight: 700;
   transition: all .3s ease;
   &:hover{
-    transform: scale(1.5) translate(0, -29%);
+    transform: scale(1.44) translate(0, -29%);
   }
   &--prev{
     right: 35px;
     left: auto;
   }
+  &--prev:target{
+    transform: scale(1.44) translate(-5px, -29%);
+  }
   &--next{
     right: -1px;
+  }
+  &--next:target{
+    transform: scale(1.44) translate(5px, -29%);
   }
   & path{
     fill: #F73A18;

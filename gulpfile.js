@@ -23,6 +23,7 @@ const browserSync = require('browser-sync').create();
 const svgstore = require('gulp-svgstore');
 const svgmin = require('gulp-svgmin');
 const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
 
 const paths =  {
   src: './src/',              // paths.src
@@ -98,6 +99,11 @@ function images() {
     ]))
     .pipe(gulp.dest('build/img'));
 };
+function toWebp() {
+  return gulp.src('src/img/**/*.{jpg,jpeg,png,svg}')
+    .pipe(webp())
+    .pipe(gulp.dest('build/img'));
+};
 function libs() {
   return gulp.src('src/libs/**/*.*')
     .pipe(gulp.dest('build/libs'));
@@ -126,6 +132,7 @@ exports.scripts = scripts;
 exports.scriptsVendors = scriptsVendors;
 exports.htmls = htmls;
 exports.images = images;
+exports.toWebp = toWebp;
 exports.libs = libs;
 exports.svgSprite = svgSprite;
 exports.clean = clean;
@@ -133,11 +140,11 @@ exports.watch = watch;
 
 gulp.task('build', gulp.series(
   clean,
-  gulp.parallel(styles, scripts, scriptsVendors, htmls, libs, copyFonts, images)
+  gulp.parallel(styles, scripts, scriptsVendors, htmls, libs, copyFonts, images, toWebp)
 ));
 
 gulp.task('default', gulp.series(
   clean,
-  gulp.parallel(styles, scripts, scriptsVendors, htmls, libs, copyFonts, images),
+  gulp.parallel(styles, scripts, scriptsVendors, htmls, libs, copyFonts, images, toWebp),
   gulp.parallel(watch, serve)
 ));

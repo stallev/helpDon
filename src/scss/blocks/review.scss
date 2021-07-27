@@ -28,8 +28,12 @@
   &__slider-item-img{
     display: block;
     width: 100%;
+    transition: all .5s ease;
+    &:hover{
+      transform: scale(1.3);
+    }
   }
-  &__slider-item-sm-image{
+  &__slider-item-sm-image-wrap{
     display: none;
   }
   &__slider-prev,
@@ -54,12 +58,21 @@
   background: transparent;
   font-size: 15px;
   font-weight: 700;
+  &:hover{
+    transform: scale(1.44) translate(0, -29%);
+  }
   &--prev{
     right: 20px;
     left: auto;
   }
+  &--prev:focus{
+    transform: scale(1.44) translate(-3px, -29%);
+  }
   &--next{
     right: -1px;
+  }
+  &--next:focus{
+    transform: scale(1.44) translate(3px, -29%);
   }
   & path{
     fill: #F75135;
@@ -89,8 +102,21 @@
 }
 @media only screen and (min-width: 768px){
   .review{
+    &__slider-item-sm-image-wrap{
+      width: 60%;
+      max-width: 150px;
+      & img{
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    &__slider-item-sm-image-wrap:hover img{
+      transition: transform .5s ease;
+      transform: scale(1.4);
+    }
     &:not(.is-active){
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       background-color: transparent;
@@ -100,8 +126,10 @@
       & .review__slider, .review__person, .review__text{
        display: none;
       }
-      & .review__slider-item-sm-image{
+      & .review__slider-item-sm-image-wrap{
         display: block;
+      }
+      & .review__slider-item-sm-image{
         box-shadow: 15px -15px 0px 0px rgba(255, 255, 255, 0.9);
       }
     }
@@ -114,17 +142,6 @@
   }
   .review__slider>.splide__arrows>.splide__arrow{
     font-size: 0px;
-  }
-}
-@media only screen and (min-width: 992px){
-  .review{
-    padding: 30px 40px;
-    &:not(.is-active){
-      padding: 0 5vw;
-    }
-  }
-  .review__slider>.splide__arrows>.splide__arrow{
-    font-size: 40px;
   }
   .review__slider>.splide__arrows>.splide__arrow{
     top: 50%;
@@ -139,6 +156,15 @@
       right: -40px;
     }
   }
+}
+@media only screen and (min-width: 992px){
+  .review{
+    padding: 30px 40px;
+    &:not(.is-active){
+      padding: 0 5vw;
+    }
+  }
+  
 }
 @media only screen and (min-width: 768px){
   .review{

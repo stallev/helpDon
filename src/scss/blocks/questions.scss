@@ -9,10 +9,11 @@
     left: 0;
     width: 100%;
     height: 40%;
-    background-image: url(../img/content/questions-1.jpg);
+    background-image: url(../img/content/questions-1-mob.jpg);
+    background-image: -webkit-image-set(url(../img/content/questions-1-mob.webp));
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 4px 0px 25px 24px rgba(246, 249, 251, 0.8) inset;
+    background-position: center;
     z-index: -2;
   }
   &__form{
@@ -41,8 +42,10 @@
       right: 0;
       width: 50%;
       height: 100%;
+      background-image: url(../img/content/questions-1.jpg);
+      background-image: -webkit-image-set(url(../img/content/questions-1.webp));
       background-size: cover;
-      box-shadow: inset 20vw 7px 7vw -19px rgba(255,255,255,0.79);
+     background-position: center;
     }
     &__form{
       width: 60%;

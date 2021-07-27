@@ -3,6 +3,22 @@ function convertToArray(collection){
   let newArray = Array.prototype.slice.call(collection);
   return newArray;
  }
+
+//маска номера телефона
+// var elements = document.getElementsByClassName('imaskjs__input_tel');
+// for (var i = 0; i < elements.length; i++) {
+//   new IMask(elements[i], {
+//     mask: '+{375}(00)000-00-00',
+//   });
+// }
+// $(function() {
+//   $('.imaskjs__input_tel').mask('+{375}(00)000-00-00');
+// });
+
+$(document).ready(function() {
+  $('.imaskjs__input_tel').mask("+375 (99) 999-99-99");
+});
+
 //кастомизируем select
 
 
@@ -45,8 +61,17 @@ function openCalcForm(btnClass){
 }
 openCalcForm('palisade-1');
 openCalcForm('gateway-1');
-openCalcForm('quiz');
+openCalcForm('quiz-form');
 openCalcForm('call-form');
+
+let closeCallForm =document.querySelector('.order-form__content--call-form .order-form__submit');
+
+if(closeCallForm){
+  closeCallForm.addEventListener('click', function(){
+    document.body.removeAttribute("class");
+  });
+}
+
 //закрытие формы квиза
 let submitQuizBtn = document.querySelector('.quiz__action--submit');
 if(submitQuizBtn){
@@ -66,6 +91,28 @@ if(fieldGroupTitles){
     }
   )
 }
+//стилизация чекбоксов
+let formLabels = convertToArray(document.querySelectorAll('.gateways .wpcf7-list-item-label'));
+if(formLabels){
+  formLabels.forEach(
+    formLabel => {
+      formLabel.addEventListener('click', function(){
+        formLabel.classList.toggle('label--checked');
+      });
+    }
+  )
+}
+//стилизация радио в квизе
+// let quizRadioLabels = convertToArray(document.querySelectorAll('.order-form__content--quiz .wpcf7-list-item-label'));
+// if(quizRadioLabels){
+//   quizRadioLabels.forEach(
+//     quizRadioLabel => {
+//       quizRadioLabel.addEventListener('click', function(){
+//         quizRadioLabel.classList.toggle('label--checked');
+//       });
+//     }
+//   )
+// }
 
 //форма заказа расчета забора1
 // let palisade1Btn = document.querySelector('.palisade-1');

@@ -102,22 +102,27 @@
   & .slick-list {
     margin-left:-20px;
   }
-
+  &__form{
+    width: 100%;
+  }
   &__form-wrap{
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  &__form{
+  &__form-inner{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
+  &__field-wrap{
+    margin-bottom: 20px;
+    width: 100%;
+  }
   &__form-field{
     display: inline-block;
     width: 100%;
-    margin-bottom: 30px;
     padding: 11px 13px;
     border: 3px solid #F75135;
     border-radius: 5px;
@@ -130,6 +135,13 @@
     line-height: 17px;
     text-align: left;
     color: #000000;
+  }
+  & .wpcf7 .ajax-loader{
+    height: 0;
+    width: 0;
+  }
+  & .material-card__form-inner p{
+    max-width: min-content;
   }
 }
 @media only screen and (min-width: 575px){
@@ -172,6 +184,7 @@
     &__form{
       flex-direction: row-reverse;
       justify-content: space-between;
+      align-items: stretch;
     }
     &__form-field{
       width: 30%;
@@ -184,8 +197,32 @@
       margin-left: 28px;
       width: 65%;
     }
-    & .action{
-      margin: 0;
+    &__form-inner{
+      flex-direction: row-reverse;
+      align-items: stretch;
+      flex-wrap: nowrap;
     }
+    &__form-field{
+      width: 100%;
+    }
+    &__field-wrap{
+      margin-bottom: 0;
+    }
+    &__field-wrap:nth-of-type(2){
+      margin-right: 20px;
+    }
+    
+    & .action{
+      height: 100%;
+    }
+    & p .action, .action{
+      min-width: 270px;
+      width: fit-content;
+      margin-right: 20px;
+      height: 100%;
+    }
+  }
+  .material-card__variety-slider .material-card__variety-slider-item{
+    margin-right: 30px;
   }
 }

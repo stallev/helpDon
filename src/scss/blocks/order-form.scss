@@ -57,8 +57,7 @@
   transform: translate(-50%, -100vh);
   overflow-y: auto;
   background: #222529;
-  width: 80vw;
-  max-width: 320px;
+  width: 320px;
   transition: transform .4s ease-in-out;
   border-radius: 20px;
 }
@@ -78,7 +77,7 @@
 .palisade-3 .order-form__content--palisade3,
 .palisade-4 .order-form__content--palisade4,
 .gateway-1 .order-form__content--gateway1,
-.quiz .order-form__content--quiz,
+.quiz-form .order-form__content--quiz,
 .call-form .order-form__content--call-form,
 .order-form-view-call .order-form__content--consult{
   top: 50%;
@@ -148,14 +147,16 @@ input{
     font-size: 1.6rem;
     font-weight: 500;
   }
-  &__field-group-sublist{
+  &__field-group-sublist, &__gateway-checkbox{
     display: flex;
     flex-direction: column;
   }
-  &__field-group-subitem{
-    margin-bottom: 15px;
+  &__field-group-subitem,
+  & .order-form__gateway-checkbox .wpcf7-list-item{
+    margin-bottom: 20px;
   }
-  &__field-group-subitem-chk, &__field--radio{
+  &__field-group-subitem-chk,
+  &__field--radio{
     display: none;
   }
   //стилизация радио в квизе
@@ -178,22 +179,30 @@ input{
     display: inline-block;
     margin-bottom: 5px;
   }
-
-
   &__field-group-subitem-label{
-    display: flex;
-    align-items: center;
-    font-size: 1.6rem;
-    line-height: 19.5px;
-    & i{
-      display: inline-block;
-      margin-right: 15px;
-      font-size: 20px;
-      transition: all .3s ease;
-      color: $orange;
-      &:hover{
-        color: $orange;
-      }
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    //opacity: .7;
+    &::before{
+      position: absolute;
+      content: '';
+      display: block;
+      width: 26px;
+      height: 26px;
+      background-image: url(../img/decor/icons/chk-empty.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      @include absoluteYCenter;
+    }
+    &:hover::before{
+      background-image: url(../img/decor/icons/chk-empty-hover.svg);
     }
   }
   &__hidden{
@@ -210,6 +219,137 @@ input{
     @include submitBtn;
   }
 }
+//стилизация checkbox
+.gateways{
+  & .order-form__gateway-checkbox .wpcf7-list-item{
+    margin-bottom: 20px;
+  }
+  & .wpcf7-list-item input[type=checkbox],
+  & .wpcf7-list-item input[type=radio]{
+    display: none;
+  }
+  & .wpcf7-list-item-label{
+    position: relative;
+    display: inline-block;
+    padding-left: 40px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    //opacity: .7;
+    &::before{
+      position: absolute;
+      content: '';
+      display: block;
+      width: 26px;
+      height: 26px;
+      left: 0;
+      background-image: url(../img/decor/icons/chk-empty.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      @include absoluteYCenter;
+    }
+    &:hover::before{
+      background-image: url(../img/decor/icons/chk-empty-hover.svg);
+    }
+  }
+  & .wpcf7-list-item-label.label--checked::before{
+    background-image: url(../img/decor/icons/chk-checked.svg);
+  }
+}
+//стилизация select
+.wpcf7-form-control-wrap.quiz2,
+.wpcf7-form-control-wrap.quiz5{
+  display: block;
+  width: 100%;
+  padding: 16px 21px;
+  color: rgba($color: #000000, $alpha: 0.5);
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  & .nice-select{
+    margin: 0 auto;
+    float: none;
+  }
+}
+.palisade-q, .gateways-q{
+  width: 100%;
+  & .wpcf7-list-item{
+    display: inline-block;
+    margin-bottom: 50px;
+    margin-left: 0;
+  }
+  & .wpcf7-radio{
+    display: flex;
+    flex-direction: column;
+  }
+  & .order-form__palisade-radio{
+    width: 100%;
+  }
+  & .wpcf7-list-item input[type=radio]{
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+    display: none;
+    background-image: url(../img/decor/icons/chk-empty.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  & .wpcf7-list-item input[type=checkbox]{
+    display: none;
+  }
+  & .wpcf7-list-item-label{
+    position: relative;
+    display: inline-block;
+    height: 133px;
+    padding-bottom: 30px;
+    width: 100%;
+    font-size: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    //opacity: .7;
+    &::before{
+      position: absolute;
+      content: '';
+      display: block;
+      width: 26px;
+      height: 26px;
+      bottom: -35px;
+      left: 0;
+      background-image: url(../img/decor/icons/radio-empty.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  & .wpcf7-list-item input:checked +.wpcf7-list-item-label::before{
+    background-image: url(../img/decor/icons/radio-checked.svg);
+  }
+}
+.palisade-q .wpcf7-list-item:nth-of-type(1) .wpcf7-list-item-label{
+  background-image: url(../img/content/zabor-1.jpg);
+}
+.palisade-q .wpcf7-list-item:nth-of-type(2) .wpcf7-list-item-label{
+  background-image: url(../img/content/zabor-2.jpg);
+}
+.palisade-q .wpcf7-list-item:nth-of-type(3) .wpcf7-list-item-label{
+  background-image: url(../img/content/zabor-3.jpg);
+}
+.palisade-q .wpcf7-list-item:nth-of-type(4) .wpcf7-list-item-label{
+  background-image: url(../img/content/zabor-4.jpg);
+}
+.gateways-q .wpcf7-list-item:nth-of-type(1) .wpcf7-list-item-label{
+  background-image: url(../img/content/gateway-1.jpg);
+}
+.gateways-q .wpcf7-list-item:nth-of-type(2) .wpcf7-list-item-label{
+  background-image: url(../img/content/gateway-2.jpg);
+}
+.gateways-q .wpcf7-list-item:nth-of-type(3) .wpcf7-list-item-label{
+  background-image: url(../img/content/gateway-3.jpg);
+}
+
 .count-product-field-wrap{
   display: inline-block;
   border: 1px solid #222;
@@ -222,12 +362,8 @@ input{
 .order-form__form .order-form__submit{
   padding: 15px 20px;
 }
-*[dir="rtl"] .order-form__field--select, :root:lang(ar) .order-form__field--select, :root:lang(iw) .order-form__field--select { 
-  background-position: left .7em top 50%, 0 0; 
-  padding: .6em .8em .5em 1.4em; 
-}
 //скрытие и открытие списка полей
-.order-form__field-group-title--hidden+.order-form__field-group-sublist{
+.order-form__field-group-title--hidden+p .order-form__field-group-sublist{
   display: none;
 }
 //стилизация checkbox в различных состояниях
@@ -238,6 +374,7 @@ input{
   display: inline-block;
   color: linear-gradient(90.04deg, #F75135 44.02%, #F73A18 80.12%);
 }
+
 .order-form__field-group-subitem-chk:checked+.order-form__field-group-subitem-label>i.fa-square{
   display: none;
 }
@@ -251,7 +388,63 @@ input{
 .order-form__field--radio:checked+label>.fa-dot-circle{
   display: inline-block;
 }
+
+//стилизация модального окна подтверждения
+.swal-modal{
+  width: 350px;
+  border-radius: 8px;
+  & .swal-title{
+    text-align: center;
+  }
+  & .swal-icon{
+    text-align: center;
+  }
+  & .swal-text{
+    text-align: center;
+  }
+  & .swal-footer{
+    order: 4;
+    display: flex;
+    justify-content: center;
+  }
+}
+.swal-text{text-align: center;}
+.swal-button,
+.swal-button:focus,
+.swal-button:hover{
+  box-shadow: none;border-radius: 0px;
+}
+.swal-button{
+  background-color: $orange ;
+  color: #fff;
+  border: 1px solid $orange;
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: $content-ff;
+  border-radius: 5px;
+}
+.swal-button:not([disabled]):hover{
+  background-color: $orange;
+  color: #fff ;
+  box-shadow: none;
+}
+/*style check success form*/
+.swal-icon--success__ring {
+  border: 2px solid $orange;
+  background-color: $orange;
+}
+.swal-icon--success__line {
+  background-color: $white;
+  height: 10px;
+  border-radius: 6px;
+  z-index: 5;
+}
+
 @media only screen and (min-width: 768px){
+  .wpcf7-form-control-wrap.quiz2{
+    max-width: 340px;
+  }
   .order-form{
     &__field-list--radio{
       flex-direction: row;
@@ -266,12 +459,8 @@ input{
       max-width: 340px;
     }
     &__content{
-      max-width: 700px;
+      width: 650px;
     }
-  }
-}
-@media only screen and (min-width: 768px){
-  .order-form{
     &__field-group{
       flex-direction: row;
       & .order-form__field-wrap{
@@ -291,12 +480,35 @@ input{
         margin-left: 20px;
       }
     }
-    &__field-group-sublist{
+    & .order-form__gateway-checkbox .wpcf7-list-item{
+      margin-bottom: 30px;
+    }
+    &__field-group-sublist, &__gateway-checkbox{
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 20px;
       align-items: center;
     }
+  }
+  .gateways{
+    & .order-form__gateway-checkbox{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 20px;
+      align-items: center;
+    }
+  }
+  .palisade-q .wpcf7-radio{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    align-items: center;
+  }
+  .gateways-q .wpcf7-radio{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    align-items: center;
   }
   .order-form__form .action{
     margin: 0;
@@ -313,7 +525,14 @@ input{
       max-width: 100%;
     }
     &__content{
-      max-width: 1140px;
+      width: 900px;
+    }
+  }
+}
+@media only screen and (min-width: 1200px){
+  .order-form{
+    &__content{
+      width: 1100px;
     }
   }
 }

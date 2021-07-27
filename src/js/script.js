@@ -1,3 +1,11 @@
+//lazy
+[].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+  img.setAttribute('src', img.getAttribute('data-src'));
+  img.onload = function() {
+    img.removeAttribute('data-src');
+  };
+});
+
 //квиз
 let quizNextBtn1 = document.querySelector('.quiz__action--1');
 let btnsQuizNextStep = convertToArray(document.querySelectorAll('.quiz__action-next'));
@@ -7,7 +15,6 @@ if(btnsQuizNextStep){
       btn.addEventListener('click', function(e){
         e.preventDefault();
         let mainParent = e.target.closest('.quiz__item');
-        console.log(mainParent.nextElementSibling);
         //валидация полей на пустое значение
         let parentsInputs = convertToArray(mainParent.querySelectorAll('input'));
         
@@ -21,18 +28,21 @@ if(btnsQuizNextStep){
           }
           parentsInputsValidity = validity;
         }
+        //валидация полей на выбор одного значения из списка
         let parentsSelect = convertToArray(mainParent.querySelectorAll('select'));
         let parentsSelectsValidity = true;
-        // if(parentsSelect){
-        //   for(let i = 0; i<parentsSelect.length; i++){
-        //     if(parentsSelect[i].value == ""){
-        //      validity = false; 
-        //     }
-        //     else validity = true;
-        //     if(!validity) return;
-        //   }
-        //   parentsSelectsValidity = validity;
-        // }
+        if(parentsSelect){
+          for(let i = 0; i<parentsSelect.length; i++){
+            if(parentsSelect[i].value == "Выберите"){
+            window.alert('Вы не выбрали значение');
+            parentsSelect[i].focus(); 
+            validity = false; 
+            }
+            else validity = true;
+            if(!validity) return;
+           }
+           parentsSelectsValidity = validity;
+        }
         if(parentsInputsValidity&&parentsSelectsValidity){
           mainParent.nextElementSibling.style.display = "flex";
           mainParent.style.display = "none";
@@ -131,41 +141,36 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
 //увеличение центральной картинки
 
-$('.examples__list').each(function() {
-  $(this).slick({
-    slidesToShow: 3,
-    speed: 500,
-    margin: 45,
-    slidesToScroll: 1, 
-    centerMode: true,
-    focusOnSelect: true,              
-    dots: false,
-    arrows: true,
-    infinite: true,
-    variableWidth: true,
-    cssEase: 'linear', 
-    prevArrow:'<button class="examples-slider-prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg></button>',
-    nextArrow:'<button class="examples-slider-next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg></button>',
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: false,
-          focusOnSelect: false,
-          variableWidth: false, 
-        }
+document.addEventListener( 'DOMContentLoaded', function () {
+  new Splide( '.examples__slider', {
+    type: 'loop',
+    focus    : 1,
+    pagination: false,
+    width: '100%',
+    start: 1,
+    perPage    : 3,
+    breakpoints: {
+      768: {
+        perPage: 1,
+        width: '60%',
       },
-    ]
-  });
-});
+      575: {
+        perPage: 1,
+        width: '90%',
+      },
+      350: {
+        perPage: 1,
+        width: '90%',
+      },
+    }
+  } ).mount();
+} );
 
 
 document.addEventListener( 'DOMContentLoaded', function () {
   new Splide( '.reviews__slider', {
     type: 'loop',
-    focus    : 'center',
+    focus    : 1,
     pagination: false,
     width: '100%',
     start: 1,
