@@ -148,6 +148,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
     pagination: false,
     width: '100%',
     start: 1,
+    easing: 'ease',
     perPage    : 3,
     breakpoints: {
       768: {

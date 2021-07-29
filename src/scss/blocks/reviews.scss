@@ -30,12 +30,14 @@
   }
 }
 //положение стрелок главного слайдера
+
 .reviews__slider>.splide__arrows>.splide__arrow{
   top: 85px;
   background: transparent;
   font-size: 40px;
   font-weight: 700;
   transition: all .3s ease;
+  height: 1px;
   &:hover{
     transform: scale(1.44) translate(0, -29%);
   }
@@ -68,7 +70,7 @@
     position: absolute;
     display: flex;
     width: fit-content;
-    top: 58%;
+    top: 51%;
     left: 50%;
     margin-right: -50%;
     transform: translate(calc(-50% - 0px), calc(-50% - 30px));
@@ -82,11 +84,11 @@
     font-size: 30px;
     font-weight: 700;
     &--prev{
-      right: 16vw;
+      right: 130px;
       left: auto;
     }
     &--next{
-      right: -16vw;
+      right: -130px;
     }
   }
 }
