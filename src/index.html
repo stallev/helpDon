@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
-    <link rel="stylesheet" href="libs/fontawesome/all.min.css">
-    <link rel="stylesheet" href="libs/slick/slick.min.css">    
+    <link rel="stylesheet" href="libs/fontawesome/all.min.css"> 
     <link rel="stylesheet" href="libs/splide/splide.min.css">
+    <link rel="stylesheet" href="libs/lightbox/lightbox.min.css">
+    <link rel="stylesheet" href="libs/fancybox/fancybox.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="shortcut icon" href="../img/decor/favicon.png" type="image/png" />
     <title>Заборы под ключ</title>
@@ -121,7 +122,7 @@
                   </ul>
                 </div>
                 <a href="#" class="action card__action palisade-1">
-                  Расчет стоимости
+                  Рассчет стоимости
                 </a>
               </article>
               <article class="card">
@@ -151,7 +152,7 @@
                   </ul>
                 </div>
                 <a href="#" class="action card__action palisade-1">
-                  Расчет стоимости
+                  Рассчет стоимости
                 </a>
               </article>
               <article class="card">
@@ -184,7 +185,7 @@
                   </ul>
                 </div>
                 <a href="#" class="action card__action palisade-1">
-                  Расчет стоимости
+                  Рассчет стоимости
                 </a>
               </article>
               <article class="card">
@@ -217,7 +218,7 @@
                   </ul>
                 </div>
                 <a href="#" class="action card__action palisade-1">
-                  Расчет стоимости
+                  Рассчет стоимости
                 </a>
               </article>
             </div>
@@ -248,7 +249,7 @@
                     Выполнение с автоматикой и без
                   </p>
                   <a href="#" class="action card__action palisade-1">
-                    Расчет стоимости
+                    Рассчет стоимости
                   </a>
                 </div>
               </article>
@@ -268,7 +269,7 @@
                   </p>
                 </div>
                 <a href="#" class="action card__action palisade-1">
-                  Расчет стоимости
+                  Рассчет стоимости
                 </a>
               </article>
               <article class="card">
@@ -287,7 +288,7 @@
                   </p>
                 </div>
                 <a href="#" class="action card__action palisade-1">
-                  Расчет стоимости
+                  Рассчет стоимости
                 </a>
               </article>
             </div>
@@ -604,16 +605,18 @@
                 <div class="splide__list examples__list">
                   <div class="splide__slide examples__item">
                     <div class="examples__item-wrap">
-                      <div class="examples__item-img-wrap">
-                        <img src="../img/content/material-1.jpg" alt="" class="examples__item-image">
+                      <div class="examples__item-img-wrap" style="background-image: url(../img/content/material-1.jpg);">
+                        <a href="../img/content/material-1.jpg" class="examples__item-img-link" data-lightbox="image-2" data-title="">
+                        </a>
                       </div>
                       <h4 class="examples__item-title">Сетка-рабица</h4>
                     </div>
                   </div>
                   <div class="splide__slide examples__item">
                     <div class="examples__item-wrap">
-                      <div class="examples__item-img-wrap">
-                        <img src="../img/content/material-2.jpg" alt="" class="examples__item-image">
+                      <div class="examples__item-img-wrap" style="background-image: url(../img/content/material-2.jpg);">
+                        <a href="../img/content/material-2.jpg" class="examples__item-img-link" data-fancybox data-title="">
+                        </a>
                       </div>
                       <h4 class="examples__item-title">Штакетник</h4>
                     </div>
@@ -621,7 +624,10 @@
                   <div class="splide__slide examples__item">
                     <div class="examples__item-wrap">
                       <div class="examples__item-img-wrap">
-                        <img src="../img/content/material-3.jpg" alt="" class="examples__item-image">
+                        <div class="examples__item-img-wrap" style="background-image: url(../img/content/material-3.jpg);">
+                          <a href="../img/content/material-3.jpg" class="examples__item-img-link" data-lightbox="image-2" data-title="">
+                          </a>
+                        </div>
                       </div>
                       <h4 class="examples__item-title">Металлопрофиль</h4>
                     </div>
@@ -629,7 +635,10 @@
                   <div class="splide__slide examples__item">
                     <div class="examples__item-wrap">
                       <div class="examples__item-img-wrap">
-                        <img src="../img/content/material-4.jpg" alt="" class="examples__item-image">
+                        <div class="examples__item-img-wrap" style="background-image: url(../img/content/material-3.jpg);">
+                          <a href="../img/content/material-3.jpg" class="examples__item-img-link" data-lightbox="image-2" data-title="">
+                          </a>
+                        </div>
                       </div>
                     <h4 class="examples__item-title">3D-панели</h4>
                     </div>
@@ -689,7 +698,8 @@
               <div class="splide__track">
                 <div class="splide__list reviews__list">
                   <div class="splide__slide review reviews__item">
-                    <h3 class="review__person">Ирина</h3>
+                    <div class="review__inner">
+                      <h3 class="review__person">Ирина</h3>
                     <p class="review__text">
                       Как уже неоднократно упомянуто, предприниматели в сети интернет в равной степени предоставлены сами себе. Как уже неоднократно упомянуто, непосредственные участники технического прогресса формируют глобальную экономическую сеть и при этом - разоблачены.
                     </p>
@@ -710,10 +720,12 @@
                           </div>
                         </div>
                       </div>
+                    </div>
                     </div>
                   </div>
                   <div class="splide__slide reviews__item review">
-                    <h3 class="review__person">Петр</h3>
+                    <div class="review__inner">
+                      <h3 class="review__person">Петр</h3>
                     <p class="review__text">
                       Как уже неоднократно упомянуто, предприниматели в сети интернет в равной степени предоставлены сами себе. Как уже неоднократно упомянуто, непосредственные участники технического прогресса формируют глобальную экономическую сеть и при этом - разоблачены.
                     </p>
@@ -734,10 +746,12 @@
                           </div>
                         </div>
                       </div>
+                    </div>
                     </div>
                   </div>
                   <div class="splide__slide reviews__item review">
-                    <h3 class="review__person">Анна</h3>
+                    <div class="review__inner">
+                      <h3 class="review__person">Анна</h3>
                     <p class="review__text">
                       Как уже неоднократно упомянуто, предприниматели в сети интернет в равной степени предоставлены сами себе. Как уже неоднократно упомянуто, непосредственные участники технического прогресса формируют глобальную экономическую сеть и при этом - разоблачены.
                     </p>
@@ -758,10 +772,12 @@
                           </div>
                         </div>
                       </div>
+                    </div>
                     </div>
                   </div>
                   <div class="splide__slide reviews__item review">
-                    <h3 class="review__person">Николай</h3>
+                    <div class="review__inner">
+                      <h3 class="review__person">Николай</h3>
                     <p class="review__text">
                       Как уже неоднократно упомянуто, предприниматели в сети интернет в равной степени предоставлены сами себе. Как уже неоднократно упомянуто, непосредственные участники технического прогресса формируют глобальную экономическую сеть и при этом - разоблачены.
                     </p>
@@ -782,6 +798,7 @@
                           </div>
                         </div>
                       </div>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -803,7 +820,7 @@
               <input type="tel" name="person-phone" class="questions__form-input" placeholder="*  Телефон">
               <textarea class="questions__form-textarea" name="person-question" id="" cols="30" rows="5" placeholder="" >* Ваш вопрос  
               </textarea>
-              <button class="questions__form-submit action" type="submit">Отправить</button>
+              <button class="questions__form-submit action" type="submit">Получить ответ</button>
             </form>
           </div>
         </section>
@@ -849,7 +866,7 @@
         <div class="footer__bottom">
           <div class="container">
             <p class="footer__bottom-text">
-              Разработка сайта - BelwebStudio
+              <a href="https://belwebstudio.by/">Разработка сайта - BelwebStudio</a>
             </p>
           </div>
         </div>
@@ -918,7 +935,7 @@
             <span class="order-form__icon-close"></span>
           </div>
           <h3 class="order-form__title">
-            Расчет стоимости забора
+            Рассчет стоимости забора
           </h3>
           <form action="" class="order-form__form">
             <div class="order-form__field-group">
@@ -1010,7 +1027,7 @@
           </div>
           <form action="" class="order-form__form">
             <h3 class="order-form__title">
-              Расчет стоимости ворот с автоматикой и без
+              Рассчет стоимости ворот с автоматикой и без
             </h3>
             <div class="order-form__field-group">
               <div class="order-form__field-wrap">
@@ -1309,7 +1326,9 @@
     </div>
     <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
     <script src="libs/slick/slick.min.js"></script>
-    <script src="libs/splide/splide.min.js"></script>    
+    <script src="libs/splide/splide.min.js"></script>
+    <script src="libs/lightbox/lightbox.min.js"></script>
+    <script src="libs/fancybox/fancybox.umd.js"></script>
     <script src="js/vendors.min.js"></script>
     <script src="js/script.min.js"></script>
   </body>

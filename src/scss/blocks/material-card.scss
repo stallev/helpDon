@@ -9,7 +9,7 @@
     flex-direction: column;
   }
   &__description{
-    margin-bottom: 22px;
+    margin-bottom: 15px;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
@@ -212,14 +212,10 @@
       margin-right: 20px;
     }
     
-    & .action{
-      height: 100%;
-    }
     & p .action, .action{
       min-width: 270px;
       width: fit-content;
       margin-right: 20px;
-      height: 100%;
     }
   }
   .material-card__variety-slider .material-card__variety-slider-item{

@@ -31,9 +31,9 @@
 }
 //положение стрелок главного слайдера
 .reviews__slider>.splide__arrows>.splide__arrow{
-  top: 0;
+  top: 85px;
   background: transparent;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 700;
   transition: all .3s ease;
   &:hover{
@@ -98,22 +98,23 @@
     font-size: 40px;
     font-weight: 700;
     &--prev{
-      right: 17vw;
+      right: 180px;
       left: auto;
     }
     &--next{
-      right: -17vw;
+      right: -180px;
     }
   }
+  
 }
 @media only screen and (min-width: 1200px){
   .reviews__slider>.splide__arrows>.splide__arrow{
     &--prev{
-      right: 220px;
+      right: 255px;
       left: auto;
     }
     &--next{
-      right: -220px;
+      right: -255px;
     }
   }
 }

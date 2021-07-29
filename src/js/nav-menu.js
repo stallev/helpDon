@@ -45,11 +45,11 @@ if (isMobile.any()) {
 }
 
 /* липкий header*/
-let header = document.querySelector(".header__bottom");
+let header = document.querySelector(".header");
 if(header){
 	(function(){
 		window.onscroll = function() {stickyHeader()};
-		let sticky = header.offsetHeight+100;
+		let sticky = header.offsetHeight+18;
 		function stickyHeader() {
 			if (window.pageYOffset > sticky) {
 				header.classList.add("sticky-header");

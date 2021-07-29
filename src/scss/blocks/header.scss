@@ -55,6 +55,14 @@
 			width: 100%;
 			height: 2px;
 			background-color: #F75135;
+			transition: all .3s ease;
+		}
+		&:focus{
+			color: $white;
+		}
+		&:hover::after, &:focus::after{
+			height: 4px;
+			bottom: -5px;
 		}
 	}
 	&__menu-open-btn{
@@ -125,11 +133,10 @@
 	}
 }
 
-
-
-.header__bottom.sticky-header{
+.header.sticky-header{
 	position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, .7);
+  //background-color: rgba(0, 0, 0, .7);
+	z-index: 100;
 }

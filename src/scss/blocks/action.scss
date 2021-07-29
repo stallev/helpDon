@@ -2,8 +2,8 @@
   position: relative;
   display: inline-block;
   margin: 0 auto;
-  padding: 10px 20px;
-  min-width: none;
+  padding: 13px 20px;
+  min-width: 270px;
   max-width: 270px;
   background: linear-gradient(90.04deg, #F75135 44.02%, #F73A18 80.12%);
   border-radius: 5px;
@@ -11,7 +11,7 @@
   font-style: normal;
   font-weight: bold;
   font-size: 15px;
-  line-height: 20px;
+  line-height: 26px;
   text-align: center;
   color: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -30,6 +30,9 @@ a.action:focus{
 }
 @media only screen and (min-width: 768px){
   .action{
+    //min-width: 0;
+  }
+  .cards-list--gateways .action{
     min-width: 0;
   }
   .action.card-action{
