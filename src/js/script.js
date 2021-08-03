@@ -6,53 +6,7 @@
   };
 });
 
-//квиз
-let quizNextBtn1 = document.querySelector('.quiz__action--1');
-let btnsQuizNextStep = convertToArray(document.querySelectorAll('.quiz__action-next'));
-if(btnsQuizNextStep){
-  btnsQuizNextStep.forEach(
-    btn => {
-      btn.addEventListener('click', function(e){
-        e.preventDefault();
-        let mainParent = e.target.closest('.quiz__item');
-        //валидация полей на пустое значение
-        let parentsInputs = convertToArray(mainParent.querySelectorAll('input'));
-        
-        let parentsInputsValidity = true;
-        
-        let validity;
-        if(parentsInputs){
-          for(let i = 0; i<parentsInputs.length; i++){
-            validity = parentsInputs[i].validity.valid;
-            if(!validity) return;
-          }
-          parentsInputsValidity = validity;
-        }
-        //валидация полей на выбор одного значения из списка
-        let parentsSelect = convertToArray(mainParent.querySelectorAll('select'));
-        let parentsSelectsValidity = true;
-        if(parentsSelect){
-          for(let i = 0; i<parentsSelect.length; i++){
-            if(parentsSelect[i].value == "Выберите"){
-            window.alert('Вы не выбрали значение');
-            parentsSelect[i].focus(); 
-            validity = false; 
-            }
-            else validity = true;
-            if(!validity) return;
-           }
-           parentsSelectsValidity = validity;
-        }
-        if(parentsInputsValidity&&parentsSelectsValidity){
-          mainParent.nextElementSibling.style.display = "flex";
-          mainParent.style.display = "none";
-        }
-        mainParent.nextElementSibling.style.display = "flex";
-        mainParent.style.display = "none";
-      });
-    }
-  )
-}
+
 //слайдеры материалов забора
 document.addEventListener( 'DOMContentLoaded', function () {
   new Splide( '.material-card__variety-slider--1', {

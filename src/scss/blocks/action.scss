@@ -23,18 +23,22 @@
   &.quiz__action{
     padding: 10px 80px;
   }
+  &--thanks{
+    min-width: 0;
+    width: 100%;
+  }
 }
 a.action:focus{
   top: 2px;
   color: #FFFFFF;
 }
 @media only screen and (min-width: 768px){
-  .action{
-    //min-width: 0;
-  }
-  .cards-list--gateways .action{
-    min-width: 0;
-  }
+  
   .action.card-action{
+  }
+}
+@media only screen and (min-width: 992px){
+  .action.card__action.palisade-1{
+    min-width: 100%;
   }
 }

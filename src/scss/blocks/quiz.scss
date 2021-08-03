@@ -86,6 +86,9 @@
       }
     }
   }
+  .quiz .order-form__field-wrap.quiz__field{
+    width: fit-content;
+  }
 }
 @media only screen and (min-width: 992px){
   .quiz{

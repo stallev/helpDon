@@ -64,21 +64,13 @@ openCalcForm('gateway-1');
 openCalcForm('quiz-form');
 openCalcForm('call-form');
 
-let closeCallForm =document.querySelector('.order-form__content--call-form .order-form__submit');
+// let closeCallForm =document.querySelector('.order-form__content--call-form .order-form__submit');
 
-if(closeCallForm){
-  closeCallForm.addEventListener('click', function(){
-    document.body.removeAttribute("class");
-  });
-}
-
-//закрытие формы квиза
-let submitQuizBtn = document.querySelector('.quiz__action--submit');
-if(submitQuizBtn){
-  submitQuizBtn.addEventListener('click', function(){
-    document.body.removeAttribute("class");
-  });
-}
+// if(closeCallForm){
+//   closeCallForm.addEventListener('click', function(){
+//     document.body.removeAttribute("class");
+//   });
+// }
 
 //скрытие списка полей
 let fieldGroupTitles = convertToArray(document.querySelectorAll('.order-form__field-group-title'));

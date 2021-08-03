@@ -41,7 +41,7 @@
         </div>
       </header>
       <main class="main">
-        <section class="head">
+        <section class="head lazy">
           <div class="container">
             <div class="page-title">
               <h1 class="page-title__text">
@@ -877,6 +877,9 @@
     <div class="order-form__wrap">
       <div class="order-form__overlay"></div>
       <div class="container container--order-form">
+        <div class="order-form__icon-close-wrap closeFormBtn">
+          <span class="order-form__icon-close"></span>
+        </div>
         <div class="order-form__content order-form__content--order">
           <div class="order-form__icon-close-wrap">
             <span class="order-form__icon-close"></span>
@@ -913,14 +916,11 @@
 
 
         <div class="order-form__content order-form__content--call-form">
-          <div class="order-form__icon-close-wrap call-form__icon-close-wrap closeFormBtn">
-            <span class="order-form__icon-close"></span>
-          </div>
           <h3 class="order-form__title">
             Заказ консультации
           </h3>
           <form action="" class="order-form__form">
-            <div class="order-form__field-group">
+            <div class="order-form__field-group order-form__field-group--call-form">
               <div class="order-form__field-wrap">
                 <label for="call1-1" class="order-form__field-name">*Ваше имя</label>
                 <input type="text" name="person" id="call1-1" required class="order-form__field order-form__field--text" placeholder="Например: Михаил Петров">
@@ -930,13 +930,10 @@
                 <input type="tel" name="phone" id="call1-2" required class="order-form__field order-form__field--text">
               </div>
             </div>
-            <input type="submit" value="Оправить заявку" class="order-form__submit action action">
+            <input type="submit" value="Оправить заявку" class="order-form__submit order-form__submit--call action action">
           </form>
         </div>
         <div class="order-form__content order-form__content--palisade1">
-          <div class="order-form__icon-close-wrap call-form__icon-close-wrap closeFormBtn">
-            <span class="order-form__icon-close"></span>
-          </div>
           <h3 class="order-form__title">
             Рассчет стоимости забора
           </h3>
@@ -1025,9 +1022,6 @@
           </form>
         </div>
         <div class="order-form__content order-form__content--gateway1">
-          <div class="order-form__icon-close-wrap call-form__icon-close-wrap closeFormBtn">
-            <span class="order-form__icon-close"></span>
-          </div>
           <form action="" class="order-form__form">
             <h3 class="order-form__title">
               Рассчет стоимости ворот с автоматикой и без
@@ -1116,9 +1110,6 @@
           </form>
         </div>
         <div class="order-form__content order-form__content--quiz">
-          <div class="order-form__icon-close-wrap call-form__icon-close-wrap closeFormBtn">
-            <span class="order-form__icon-close"></span>
-          </div>
           <form action="" class="order-form__form order-form__form--quiz quiz">
             <div class="quiz__list">
               <article class="quiz__item quiz__item--1">
@@ -1307,7 +1298,7 @@
                   Ваш контактный номер телефона
                 </h3>
                 <div class="order-form__field-wrap quiz__field">
-                  <input type="email" name="quiz7" id="quiz7" required class="order-form__field order-form__field--text" placeholder="Ваш телефон">
+                  <input type="tel" name="quiz7" id="quiz7" required class="order-form__field order-form__field--text" placeholder="Ваш телефон">
                 </div>
                 <span class="quiz__progress-title">Шаг 7/7</span>
                 <ul class="quiz__progress-bar">
@@ -1332,6 +1323,7 @@
     <script src="libs/splide/splide.min.js"></script>
     <script src="libs/lightbox/lightbox.min.js"></script>
     <script src="libs/fancybox/fancybox.umd.js"></script>
+    <script src="http://rawgit.com/notifyjs/notifyjs/master/dist/notify.js"></script>
     <script src="js/vendors.min.js"></script>
     <script src="js/script.min.js"></script>
   </body>

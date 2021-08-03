@@ -44,12 +44,20 @@ if (isMobile.any()) {
 	document.body.classList.add('_pc');
 }
 
+//еслм Safari, то навесим класс
+function determineBrowser() { 
+	if(navigator.userAgent.indexOf("Safari") != -1) 
+ {
+		 document.body.classList.add('safari');
+ }
+ }
+
 /* липкий header*/
 let header = document.querySelector(".header");
 if(header){
 	(function(){
 		window.onscroll = function() {stickyHeader()};
-		let sticky = header.offsetHeight+18;
+		let sticky = header.offsetHeight;
 		function stickyHeader() {
 			if (window.pageYOffset > sticky) {
 				header.classList.add("sticky-header");
