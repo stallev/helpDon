@@ -1,13 +1,9 @@
 .container{
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 16px;
   box-sizing: border-box;
-  width: 100%;
+  width: 360;
   max-width: 1200px;
-  &--head-thanks{
-    position: relative;
-    min-height: 600px;
-  }
 }
 
 @media only screen and (min-width: 575px){
@@ -19,17 +15,11 @@
   .container{
     padding: 0 30px;
     width: 700px;
-    &--head-thanks{
-      min-height: 800px;
-    }
   }
 }
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: $desctop-width){
   .container{
     width: 930px;
-    &--head-thanks{
-      min-height: 700px;
-    }
   }
 }
 @media only screen and (min-width: 1200px){

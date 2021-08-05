@@ -1,44 +1,53 @@
 .action{
   position: relative;
   display: inline-block;
-  margin: 0 auto;
-  padding: 13px 20px;
-  min-width: 270px;
-  max-width: 270px;
-  background: linear-gradient(90.04deg, #F75135 44.02%, #F73A18 80.12%);
-  border-radius: 5px;
-  font-family: "Roboto Slab";
+  box-sizing: border-box;
+  padding: 28px 0;
+  border-radius: 15px;
+  width: 238px;
+  text-align: center;
+  font-family: Inter;
   font-style: normal;
   font-weight: bold;
   font-size: 15px;
-  line-height: 26px;
-  text-align: center;
-  color: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transition: all .3s ease;
+  line-height: 18px;
+  color: $white;
+  background: $btnBgColor;
+  text-transform: uppercase;
+  &--nobg{
+    background: rgba($color: #fff, $alpha: .7);
+    border: 3.5px solid $pinkColor;
+    color: $pinkColor;
+  }
   &:hover{
-    top: -2px;
+  }
+  &__group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & a{
+      margin-top: 20px;
+    }
+    & a:nth-of-type(1){
+     margin-top: 0;
+    }
   }
   
-  &.quiz__action{
-    padding: 10px 80px;
-  }
-  &--thanks{
-    min-width: 0;
-    width: 100%;
-  }
 }
-a.action:focus{
-  top: 2px;
-  color: #FFFFFF;
+@media only screen and (min-width:$tablet-width){
+  .action{}
 }
-@media only screen and (min-width: 768px){
-  
-  .action.card-action{
-  }
-}
-@media only screen and (min-width: 992px){
-  .action.card__action.palisade-1{
-    min-width: 100%;
+@media only screen and (min-width: $desctop-width){
+  .action{
+    &__group{
+      flex-direction: row;
+      & a{
+        z-index: 5;
+        margin-top: 0;
+        &:nth-of-type(1){
+          margin-right: 52px;
+        }
+      }
+    }
   }
 }

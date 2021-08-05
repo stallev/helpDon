@@ -72,26 +72,15 @@ if(header){
 
 
 // Меню бургер
-const iconMenu = document.querySelector('.header__menu-open-btn');
-const mobileNavBlock = document.querySelector('.header__nav-block');
-const menuBody = document.querySelector('.nav');
-const closeIcon = document.querySelector('.mobile-nav-close');
-const navOverlay = document.querySelector('.mobile-nav-under');
-if (iconMenu) {
-	iconMenu.addEventListener("click", function (e) {
-		document.body.classList.add('_lock');
-	});
-}
-if (closeIcon) {
-	closeIcon.addEventListener("click", function (e) {
-		document.body.classList.remove('_lock');
-	});
-}
-if(navOverlay){
-	navOverlay.addEventListener("click", function (e) {
-		document.body.classList.remove('_lock');
-	});
-}
+let tooggleMenu = document.querySelector('.header__tooggle-menu');
+let headerContent = document.querySelector('.header__content');
+let menuHamburger = document.querySelector('.header__hamburger-img');
+let menuCross = document.querySelector('.header__cross-img');
+tooggleMenu.addEventListener('click', function(){
+	tooggleMenu.classList.toggle('header__tooggle-menu--cross');
+	headerContent.classList.toggle('header__content--visible');
+})
+
 //показываем и скрываем списки и подменю
 let hiddenItemsControls = document.querySelectorAll('.hidden-items-control');
 if(hiddenItemsControls){
@@ -106,6 +95,14 @@ if(hiddenItemsControls){
 		}
 	)
 }
+
+//появление кнопок соцсетей
+let headSocialBlock = document.querySelector('.head__social');
+let headSocialBlockBtn = document.querySelector('.head__social-clk');
+headSocialBlockBtn.addEventListener('click', function(){
+	headSocialBlock.classList.toggle('head__social--display');
+})
+
 
 //меню футер
 const footerMenu = document.querySelector('.footer__mobile-nav-wrap');

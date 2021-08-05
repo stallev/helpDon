@@ -1,22 +1,53 @@
 .page-title{
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: center;
+  margin-bottom: 73px;
   &__text{
-    font-family: "Roboto Slab";
+    margin-bottom: 10px;
+    font-family: Inter;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 900;
     font-size: 22px;
-    line-height: 29px;
+    line-height: 27px;
+    color: rgba(0, 0, 0, 0.9);
+  }
+  &__description{
     text-align: center;
-    color: #FFFFFF;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    color: #000000;
+    opacity: 0.9;
   }
 }
-@media only screen and (min-width: 991px){
+@media only screen and (min-width: $tablet-width){
   .page-title{
-    margin-bottom: 92px;
+    margin-bottom: 60px;
     &__text{
       font-size: 50px;
       line-height: 66px;
+      
+      text-align: left;
+    }
+    &__description{
+      text-align: left;
+    }
+  }
+}
+@media only screen and (min-width: $desctop-width){
+  .page-title{
+    margin-bottom: 84px;
+    &__text{
+      font-size: 60px;
+      line-height: 66px;
+      text-align: left;
+    }
+    &__description{
+      font-size: 24px;
+      line-height: 1.7;
     }
   }
 }

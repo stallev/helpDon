@@ -105,7 +105,7 @@
     }
   }
 }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width:$tablet-width){
   .examples{
     &__list{
       align-items: center;
@@ -210,7 +210,7 @@
     }
   }
 }
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: $desctop-width){
   .examples__slider>.splide__arrows>.splide__arrow{
     font-size: 40px;
     font-weight: 700;

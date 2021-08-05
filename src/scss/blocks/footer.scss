@@ -98,7 +98,7 @@
     }
   }
 }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width:$tablet-width){
   .footer{
     padding-top: 82px;
     &__content{
@@ -137,7 +137,7 @@
     }
   }
 }
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: $desctop-width){
   .footer{
     &__logo-text{
       width: 100%;

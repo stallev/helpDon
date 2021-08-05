@@ -1,0 +1,25 @@
+.section{
+  &__name{
+    position: relative;
+    bottom: -25px;
+    font-family: Inter;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 73px;
+    -webkit-text-stroke: 1px rgba(213, 220, 223, .5);
+    -webkit-text-fill-color: rgba(255, 255, 255, 1);
+  }
+  &__name-wrap{
+    overflow-y: hidden;
+    border-bottom: 4px solid #C4C4C4;
+  }
+}
+@media only screen and (min-width: $desctop-width){
+  .section{
+    &__name{
+      font-size: 200px;
+      line-height: 140px;
+      bottom: -45px;
+    }
+  }
+}

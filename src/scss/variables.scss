@@ -1,19 +1,28 @@
 
 
-$tablet-width: 768px;
-$desctop-width: 1360px;
+$tablet-width: 767px;
+$desctop-width: 991px;
+$xl-width: 1199px;
 
 $body-color: #fff;
 $content-color: #222;
-$content-ff: "Montserrat";
+$content-ff: "Roboto";
 
 //background colors
 $textColor: #000;
+$light-grey: #D5DCDF;
+$pinkColor: #ED2051;
+$dark-gray: #586F78;
+$messengerBgColor: #739AA8;
+$messengerBgColorHover: #FA3D54;
+
+
 $delColor: #b1b1b1;
-$btnBgColor: #222;
+$btnBgColor:  linear-gradient(137.06deg, #FA3D54 55.49%, #B5707C 142.05%);
+$btnBorderColor: rgba(255, 255, 255, 0.7);
 $white: #fff;
 $light-grey: #f6fafb;
-$bg-grey: #f8f8f8;
+
 $bluewood-bg: #354b65;
 $dark-blue: #1560b2;
 $orange: #F73A18;

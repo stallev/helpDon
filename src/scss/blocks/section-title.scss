@@ -1,61 +1,29 @@
 .section-title{
-  margin: 0 0 40px;
-  &__text{
-    position: relative;
-    width: fit-content;
-    padding-right: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    max-width: 80vw;
-    text-align: left;
-    font-family: "Roboto Slab";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 21px;
-    color: #FFFFFF;
-    z-index: 4;
-    &::after{
-			position: absolute;
-			display: block;
-			content: '';
-			bottom: -1px;
-			right: 0;
-			width: 305%;
-			height: 100%;
-      background: linear-gradient(90.04deg, #333E5B 13.11%, #798190 68.27%);
-      z-index: -2;
-      transform: skew(-30deg);
-      border-radius: 5px;
-      box-shadow: 22px -10px 0px 0px rgba(232, 231, 229, 0.6);
-		}
-    &--white-shadow{
-      &::after{
-        //box-shadow: 10px -10px 0px 0px rgba(255, 255, 255, 0.9)
-        box-shadow: 10px -10px 0px 0px rgba(255, 255, 255, 0.9);
-      }
-    }
-  }
+  position: relative;
+  top: -15px;
+  display: block;
+  padding-left: 20px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+  text-transform: uppercase;
 }
 @media only screen and (min-width: 767px){
   .section-title{
     
   }
 }
-@media only screen and (min-width: 991px){
+@media only screen and (min-width: $desctop-width){
   .section-title{
-    margin-bottom: 80px;
-    &__text{
-      font-size: 30px;
-      line-height: 42px;
-    }
+    top: -30px;
+    font-size: 30px;
   }
 }
 @media only screen and (min-width: 1199px){
   .section-title{
-    &__text{
-      font-size: 40px;
-      line-height: 53px;
-    }
+    
   }
 }

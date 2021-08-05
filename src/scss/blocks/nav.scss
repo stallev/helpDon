@@ -1,70 +1,46 @@
 .nav{
-	&--upper-nav{}
-	&--main-nav{}
+	&__list{
+		display: flex;
+		flex-direction: column;
+	}
+	&__item{
+		padding: 5px 0;
+	}
+	&__link{
+		display: block;
+		text-align: center;
+		font-family: Inter;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 24px;
+		text-transform: uppercase;
+	}
 }
-@media only screen and (min-width: 991px){
+@media only screen and (min-width: $desctop-width){
   .nav{
-		&--upper-nav{
-			display: flex;
-			justify-content: space-between;
-			width: fit-content;
-		}
-		&--main-nav{
-			display: flex;
-			justify-content: space-between;
-			width: 100%;
-			margin-right: 20px;
-		}
-    &__list{
-			&--main-nav{
-				display: flex;
-				justify-content: flex-start;
-				align-items: center;
-			}
+	  &__content-upper{
+		  border-bottom: 1px ;
+	  }
+		&__list{
+			flex-direction: row;
+			justify-content: space-around;
 		}
 		&__item{
-			position: relative;
-			&--main-nav{
-				padding: 0 5px;
-			}
+			width: fit-content;
+			padding: 0;
 		}
 		&__link{
-			display: block;
-			&--main-nav{
-				padding: 15px 10px;
-				font-size: 1.3rem;
-				color: #fff;
-				font-weight: 500;
-				transition: all .3s ease-in-out;
-				text-transform: uppercase;
-			}
+			width: fit-content;
+			font-size: 12px;
+			line-height: 18px;
 		}
   }
-  
-  .nav__item:hover .nav__sub1-list {
-    border-top: 35px;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
-  }
-	.nav__item:hover{
-		& a.nav__link{
-			color: $yellow;
-			&::before, &::after{
-				background-color: $yellow;
-			}
+}
+@media only screen and (min-width:$xl-width){
+	.nav{
+		&__link{
+			font-size: 15px;
+			line-height: 18px;
 		}
-		& .nav__sub1-list{
-			color: $content-color;
-		}
-	}
-	a.nav__link--sub-nav{
-		color: $content-color;
-	}
-	.nav__sub1-item:hover a{
-		color: $yellow;
-	}
-	.nav__list .nav__item:first-of-type .nav__link{
-		padding-left: 0;
 	}
 }
