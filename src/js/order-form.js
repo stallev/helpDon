@@ -15,9 +15,6 @@ function convertToArray(collection){
 //   $('.imaskjs__input_tel').mask('+{375}(00)000-00-00');
 // });
 
-$(document).ready(function() {
-  $('.imaskjs__input_tel').mask("+375 (99) 999-99-99");
-});
 
 //кастомизируем select
 

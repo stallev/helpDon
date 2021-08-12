@@ -1,47 +1,105 @@
 .social{
-  display: flex;
-  width: fit-content;
-  margin: 0 auto;
-  
-  &__link{
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-    margin: 0 5px;
-    border-radius: 50%;
-    text-align: center;
-    border: 1px solid $brd-c;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    transition: all .4s ease-in-out;
-    &--facebook{
-      color: $dark-blue;
+  &__list{
+    display: flex;
+  }
+  &__item{}
+  &--head{
+    & .social__list{
+      padding: 15px 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 74px;
+      background: linear-gradient(357.01deg, #FFFFFF 0%, rgba(255, 255, 255, 0.7) 90.39%);
+      border-radius: 0 30px 30px 0;
+      z-index: 6;
     }
-    &--twitter{
-      color: blue;
+    & .social__item{
+      margin-bottom: 28px;
+      &:nth-last-of-type(){
+        margin-bottom: 0;
+      }
     }
-    &--vk{
-      color: #26b;
+    & .social__item:hover{
+      transition: all .4s ease-in;
+      & span{
+        color: $pinkColor;
+      }
+      & svg{
+        opacity: 1;
+      }
+      & svg path{
+        fill: $pinkColor;
+      }
+      & svg rect{
+       stroke: $pinkColor;
+      }
     }
-    &:hover{
-      color: $white;
-      background-color: $red;
-      border-color: $red;
+    & .social__link span{
+      display: inline-block;
+      font-family: Inter;
+      font-weight: 700;
+      font-size: 9px;
+      line-height: 11px;
+      text-align: center;
+      color: #739AA8;
+    }
+
+  }
+  &--footer{
+    & .social__item{
+      margin-right: 15px;
+      &:last-of-type{
+        margin-right: 0;
+      }
+    }
+    & .social__link{
+      display: inline-block;
+      width: 44px;
+      height: 44px;
+      &:hover{
+        transition: all .3s ease-in;
+        & svg{
+          opacity: 1;
+        }
+        & svg path{
+          opacity: 1;
+        }
+        & svg rect{
+           opacity: 1;
+        }
+      }
+      & svg{
+        opacity: .5;
+      }
+      & svg path{
+        fill: #fff;
+      }
+      & svg rect{
+       stroke: #fff;
+      }
     }
   }
 }
-.social__link--store{
-  color: #fff;
-  &:hover{
-    color: #fff;
+
+@media only screen and (min-width:$tablet-width){
+  .social{
+    &__list{}
+    &__item{}
+    &__link{}
   }
 }
-.social__link--store:hover{
-  background-color: $red;
-  border-color: $red;
+@media only screen and (min-width: $desctop-width){
+  .social{
+    &__list{}
+    &__item{}
+    &__link{}
+  }
 }
-.social__link--team:hover{
-  background-color: $red;
-  border-color: $red;
+@media only screen and (min-width: $xl-width){
+  .social{
+    &__list{}
+    &__item{}
+    &__link{}
+  }
 }

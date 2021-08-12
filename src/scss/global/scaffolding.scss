@@ -1,5 +1,6 @@
 img{
   max-width: 100%;
+  //content-visibility: auto;
 }
 html{
   font-size: $font-size;
@@ -54,7 +55,7 @@ h1, h2, h3, h4, h5{
   display: none;
 }
 span, div{
-  transition: all .4s ease-in;
+  //transition: all .4s ease-in;
 }
 
 //убираем обводки при  нажатии

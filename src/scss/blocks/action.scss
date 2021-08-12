@@ -1,10 +1,15 @@
 .action{
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   box-sizing: border-box;
-  padding: 28px 0;
+  vertical-align: middle;
   border-radius: 15px;
   width: 238px;
+  height: 72px;
+  padding: 0 10px;
   text-align: center;
   font-family: Inter;
   font-style: normal;
@@ -12,14 +17,25 @@
   font-size: 15px;
   line-height: 18px;
   color: $white;
-  background: $btnBgColor;
+  box-sizing: border-box;
+  background: linear-gradient(137.06deg, #FA3D54 55.49%, #B5707C 142.05%);;
   text-transform: uppercase;
-  &--nobg{
+  transition: all .5s ease-in-out;
+  //transition: color 1s ease, background 1s ease;
+  &.action--nobg{
     background: rgba($color: #fff, $alpha: .7);
     border: 3.5px solid $pinkColor;
     color: $pinkColor;
+    &:hover{
+      background: linear-gradient(137.06deg, #FA3D54 55.49%, #FF0935 142.05%);
+      color: #fff;
+      border-width: 0;
+    }
   }
   &:hover{
+    background: linear-gradient(137.06deg, #FA3D54 55.49%, #FF0935 142.05%);
+    color: #fff;
+    font-weight: 900;
   }
   &__group{
     display: flex;
@@ -31,13 +47,25 @@
     & a:nth-of-type(1){
      margin-top: 0;
     }
+    &--portfolio{
+      margin-top: 40px;
+    }
+    &--about{
+      margin-bottom: 40px;
+    }
+    &--answers{
+      margin-top: 30px;
+      align-items: flex-end;
+    }
+    &--reviews{
+      & a{
+        margin: 0;
+      }
+    }
   }
   
 }
 @media only screen and (min-width:$tablet-width){
-  .action{}
-}
-@media only screen and (min-width: $desctop-width){
   .action{
     &__group{
       flex-direction: row;
@@ -45,8 +73,27 @@
         z-index: 5;
         margin-top: 0;
         &:nth-of-type(1){
+          margin-right: 32px;
+        }
+      }
+      &--answers{
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+@media only screen and (min-width: $desctop-width){
+  .action{
+    &__group{
+      flex-direction: row;
+      & a{
+        &:nth-of-type(1){
           margin-right: 52px;
         }
+      }
+      &--portfolio{
+        justify-content: center;
+        margin-top: 80px;
       }
     }
   }

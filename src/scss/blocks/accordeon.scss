@@ -1,0 +1,17 @@
+.accordeon{
+  position: relative;
+  
+}
+.accordeon__item-content{
+  max-height: 1px;
+  overflow-y: hidden;
+  // position: absolute;
+  // transform: translate(-10000px, -100000px);
+  //display: none;
+}
+.accordeon__item-content--active{
+  max-height: 100%;
+  // position: static;
+  // transform: translate(0, 0);
+  //display: block;
+}

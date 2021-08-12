@@ -1,0 +1,36 @@
+.swiper-button-prev,
+.swiper-button-next{
+   width: 45px;
+   height: 45px;
+   &::after{
+       width: 45px;
+       height: 45px;
+       display: block;
+       background-repeat: no-repeat;
+       background-size: cover;
+       border-radius: 50%;
+       font-size: 0;
+       background-image: url(../img/decor/icons/right-slider-btn-big-hover.svg);
+       opacity: .7;
+       transition: opacity .4s ease-in;
+   }
+   &:hover::after{
+      opacity: 1;
+   } 
+}
+.swiper-button-prev::after{
+   transform: rotate(180deg);
+}
+@media only screen and (min-width:$desctop-width){
+    .swiper-button-prev,
+    .swiper-button-next{
+       top: 50%;
+       width: 64px;
+       height: 64px;
+       margin-right: -50%;
+       &::after{
+           width: 64px;
+           height: 64px;
+       }
+   }
+}

@@ -1,6 +1,6 @@
 .section-title{
   position: relative;
-  top: -15px;
+  top: -11px;
   display: block;
   padding-left: 20px;
   font-family: Inter;
@@ -11,14 +11,15 @@
   color: #000000;
   text-transform: uppercase;
 }
-@media only screen and (min-width: 767px){
+@media only screen and (min-width: $tablet-width){
   .section-title{
-    
+    top: -18px;
+    font-size: 25px;
   }
 }
 @media only screen and (min-width: $desctop-width){
   .section-title{
-    top: -30px;
+    top: -18px;
     font-size: 30px;
   }
 }

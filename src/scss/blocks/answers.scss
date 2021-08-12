@@ -1,0 +1,157 @@
+.answers{
+    padding-bottom: 70px;
+    &__wrap{
+        display: flex;
+        flex-direction: column;
+    }
+    &__form-outer{
+        display: flex;
+        flex-direction: column;
+    }
+    &__form-title{
+        margin-bottom: 20px;
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    &__form-paragraph{
+        margin-bottom: 20px;
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 1.25;
+    }
+    &__form{
+        display: inline-block;
+        margin-bottom: 40px;
+    }
+    &__form-inner{
+        display: flex;
+        flex-direction: column;
+    }
+    &__form-text-field{
+        margin-bottom: 15px;
+        @include inputField;
+    }
+    &__form-textarea-field{
+        @include inputField;
+    }
+    &__info{}
+    &__slogan{
+        display: none;
+    }
+    &__invite-block{}
+    &__invitation{
+        display: inline-block;
+        margin-bottom: 20px;
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.25;
+    }
+    &__address{
+        display: inline-block;
+        margin-bottom: 20px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 1.25;
+        color: #000000;
+    }
+    &__phone{
+        display: inline-block;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 1.25;
+        color: #000000;
+        transition: all .2s ease;
+        &:hover{
+            color: $pinkColor;
+        }
+    }
+}
+
+@media only screen and (min-width:$tablet-width){
+    .answers{
+        &__wrap{
+            flex-direction: row-reverse;
+            padding-top: 30px;
+        }
+        &__form-outer{}
+        &__form-title{}
+        &__form-paragraph{}
+        &__form{}
+        &__form-inner{}
+        &__form-text-field{}
+        &__form-textarea-field{}
+        &__info{
+            padding-right: 50px;
+        }
+        &__slogan{
+            display: inline-block;
+            margin-bottom: 150px;
+            font-family: Inter;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 1.25;
+            color: #586F78;
+        }
+        &__invite-block{}
+        &__invitation{}
+        &__address{}
+        &__phone{}
+    }
+}
+@media only screen and (min-width: $desctop-width){
+    .answers{
+        &__wrap{}
+        &__form-outer{}
+        &__form-title{
+            font-size: 25px;
+        }
+        &__form-paragraph{
+            font-size: 20px;
+        }
+        &__form{}
+        &__form-inner{}
+        &__form-text-field{}
+        &__form-textarea-field{}
+        &__info{
+            padding-right: 80px;
+        }
+        &__slogan{
+            font-size: 25px;
+        }
+        &__invite-block{}
+        &__invitation{
+            font-size: 20px;
+        }
+        &__address{
+            font-size: 18px;
+        }
+        &__phone{
+            font-size: 30px;
+        }
+    }
+}
+@media only screen and (min-width: $xl-width){
+    .answers{
+        &__wrap{}
+        &__form-outer{}
+        &__form-title{}
+        &__form-paragraph{}
+        &__form{}
+        &__form-inner{}
+        &__form-text-field{}
+        &__form-textarea-field{}
+        &__info{}
+        &__slogan{}
+        &__invite-block{}
+        &__invitation{}
+        &__address{}
+        &__phone{}
+    }
+}

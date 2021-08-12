@@ -38,7 +38,7 @@
   width: 30px;
   height: 30px;
   background-color: transparent;
-  border: 1px solid $brd-c;
+  border: 3.5px solid $brd-c;
   border-radius: 50%;
   transition: all .3s ease-in;
   &::after, &::before{
@@ -109,5 +109,42 @@
     line-height: 17px;
     text-align: left;
     color: #000000;
+  }
+}
+@mixin aboutParagraph{
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.25;
+  @media only screen and (min-width: $tablet-width){
+  }
+  @media only screen and (min-width:$desctop-width){
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+@mixin inputField{
+  display: inline-block;
+  padding: 15px 12px;
+  border: 3.5px solid rgba(250, 61, 84, 1);
+  border-radius: 15px;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.25;
+  transition: all .4s ease-in;
+  opacity: 1;
+  &:focus, &:hover{
+    opacity: 1;
+    border-color: rgba(250, 61, 84, 0.6);
+  }
+  @media only screen and (min-width: $tablet-width){
+    border: 3.5px solid rgba(250, 61, 84, 1);
+  }
+  @media only screen and (min-width:$desctop-width){
+    padding: 23px 20px;
+    font-size: 20px;
+    line-height: 1.4;
+    border: 3.5px solid rgba(250, 61, 84, 1);
   }
 }
