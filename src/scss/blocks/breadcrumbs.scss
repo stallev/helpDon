@@ -1,0 +1,73 @@
+.breadcrumbs{
+  padding: 10px 0;
+  margin-bottom: 30px;
+  background-color: #D5DCDF;
+  &__list{
+    display: flex;
+    align-items: baseline;
+  }
+  &__item{
+    position: relative;
+    width: fit-content;
+    margin-right: 20px;
+    &::after{
+      position: absolute;
+      display: block; content: '';
+      width: 3px;
+      height: 3px;
+      background-color: #000;
+      border-radius: 50%;
+      right: -8px;
+      @include absoluteYCenter;
+    }
+    &:last-of-type::after{
+      display: none;
+    }
+  }
+  &__item:last-of-type .breadcrumbs__link{
+    margin-right: 0;
+    opacity: .6;
+    
+  }
+  &__link{
+    display: inline-block;
+    margin-right: 10px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    transition: all .4s ease-in;
+    &:hover{
+      color: $pinkColor;
+    }
+  }
+}
+@media only screen and (min-width:$tablet-width){
+  .breadcrumbs{
+    &__list{}
+    &__item{}
+    &__item:last-of-type .breadcrumbs__link{}
+    &__link{}
+  }
+  
+}
+@media only screen and (min-width: $desctop-width){
+  .breadcrumbs{
+    background-color: rgba(213, 220, 223, 0);
+    &__list{}
+    &__item{}
+    &__item:last-of-type .breadcrumbs__link{}
+    &__link{
+      font-size: 15px;
+    }
+  }
+}
+@media only screen and (min-width: $xl-width){
+  .breadcrumbs{
+    &__list{}
+    &__item{}
+    &__item:last-of-type .breadcrumbs__link{}
+    &__link{}
+  }
+}

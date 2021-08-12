@@ -1,4 +1,5 @@
 .section{
+  padding-bottom: 60px;
   background: linear-gradient(91.98deg, rgba(255, 255, 255, 0.7) 38.63%, rgba(255, 255, 255, 0.434) 57.11%, rgba(255, 255, 255, 0.63) 77.21%);
   &--gray{
     background: #D5DCDF;
@@ -22,12 +23,13 @@
     }
   }
   &__name-wrap{
-    overflow-y: hidden;
+    overflow: hidden;
     border-bottom: 2px solid rgba(213, 220, 223, .5);;
   }
 }
 @media only screen and (min-width: $tablet-width){
   .section{
+    padding-bottom: 70px;
     &__name{
       font-size: 120px;
       line-height: 100px;
@@ -37,16 +39,17 @@
 }
 @media only screen and (min-width: $desctop-width){
   .section{
+    padding-bottom: 80px;
     &__name{
       font-size: 150px;
       line-height: 120px;
       bottom: -45px;
       -webkit-text-stroke: 3px rgba(213, 220, 223, .5);
-    -webkit-text-fill-color: rgba(255, 255, 255, 1);
+      -webkit-text-fill-color: rgba(255, 255, 255, 1);
     &--gray{
       -webkit-text-stroke: 3px rgba(255, 255, 255, .8);
       -webkit-text-fill-color: rgba(255, 255, 255, 0);
-    }
+      }
     }
     &__name-wrap{
       border-bottom-width: 3px;
@@ -56,6 +59,7 @@
 
 @media only screen and (min-width: $xl-width){
   .section{
+    padding-bottom: 100px;
     &__name{
       font-size: 200px;
       line-height: 140px;

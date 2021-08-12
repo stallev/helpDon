@@ -1,0 +1,132 @@
+.seo-important{
+  &__list{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+  &__item{}
+  &__item-inner{
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    column-gap: 20px;
+    row-gap: 10px;
+  }
+  &__item-img-wrap{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    
+  }
+  &__item-img{
+    position: relative;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135.42deg, #739AA8 14.57%, rgba(115, 154, 168, 0.76) 116.43%);
+    & svg{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__item-title{
+    width: fit-content;
+    height: fit-content;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #586F78;
+    text-transform: uppercase;
+  }
+  &__content{
+  }
+  &__item-text{
+    @include aboutParagraph;
+  }
+}
+
+@media only screen and (min-width:$tablet-width){
+  .seo-important{
+    &__list{
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-row-gap: 30px;
+      column-gap: 30px;
+    }
+    &__item{}
+    &__item-inner{
+    }
+    
+    &__item-img-wrap{
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+    &__item-img{
+      
+    }
+    &__item-title{
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      align-self: center;
+      font-size: 16px;
+    }
+    &__content{
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    &__item-text{}
+  }
+}
+@media only screen and (min-width: $desctop-width){
+  .seo-important{
+    &__list{
+      grid-template-columns: 50% 50%;
+    }
+    &__item{}
+    &__item-inner{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    &__item-img-wrap{
+      
+    }
+    &__item-img{
+      height: 97px;
+      width: 97px;
+    }
+    &__content{
+      
+    }
+    &__item-title{
+
+    }
+    &__item-text{}
+  }
+}
+@media only screen and (min-width: $xl-width){
+  .seo-important{
+    &__list{}
+    &__item{}
+    &__item-inner{}
+    &__item-img-wrap{
+    }
+    &__item-img{}
+    &__item-title{
+      font-size: 25px;
+    }
+    &__item-text{}
+  }
+}

@@ -5,25 +5,45 @@
   width: 360px;
   max-width: 1200px;
 }
-
+.container--section-first{
+  position: relative;
+  top: -13px;
+}
+.container--section-first-2{
+  position: relative;
+  top: -29px;
+}
 @media only screen and (min-width: 575px){
   .container{
     
   }
 }
-@media only screen and (min-width: 767px){
+@media only screen and (min-width: $tablet-width){
   .container{
     padding: 0 30px;
     width: 700px;
+  }
+  .container--section-first{
+    top: -27px;
+  }
+  .container--section-first-2{
+    top: -63px;
   }
 }
 @media only screen and (min-width: $desctop-width){
   .container{
     width: 930px;
   }
+  .container--section-first{
+    top: -34px;
+  }
+  .container--section-first-2{
+    top: -75px;
+  }
 }
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: $xl-width){
   .container{
     width: 1140px;
   }
+  .container--section-first{}
 }

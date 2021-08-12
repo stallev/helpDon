@@ -1,5 +1,4 @@
 .about{
-  padding-bottom: 50px;
   color: #000;
   &__main-text-wrap{
   }
@@ -64,7 +63,6 @@
 }
 @media only screen and (min-width:$desctop-width){
   .about{
-    padding-bottom: 100px;
     background-image: url(../img/content/about-bg-d.jpg);
     background-repeat: no-repeat;
     background-position: right top;

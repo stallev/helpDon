@@ -1,5 +1,4 @@
 .answers{
-    padding-bottom: 70px;
     &__wrap{
         display: flex;
         flex-direction: column;
@@ -78,12 +77,13 @@
     .answers{
         &__wrap{
             flex-direction: row-reverse;
-            padding-top: 30px;
         }
         &__form-outer{}
         &__form-title{}
         &__form-paragraph{}
-        &__form{}
+        &__form{
+            margin-bottom: 0;
+        }
         &__form-inner{}
         &__form-text-field{}
         &__form-textarea-field{}

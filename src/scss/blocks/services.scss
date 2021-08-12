@@ -49,8 +49,6 @@
 @media only screen and (min-width: $tablet-width){
   .services{
     &__list{
-      padding-top: 30px;
-      padding-bottom: 80px;
       grid-template-columns: repeat(2, 46%);
       grid-row-gap: 50px;
       justify-content: space-between;

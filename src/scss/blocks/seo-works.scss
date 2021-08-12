@@ -1,0 +1,85 @@
+.seo-works{
+  background-repeat: no-repeat;
+  background: rgba(229, 229, 229, 1);
+  background-image: url(../img/content/seo/seo-work-bg-m.jpg);
+  box-shadow: inset 34vw 114px 65px 79px rgba(213, 220, 223, .92);
+  background-size: cover;
+  background-position: center;
+  &__list{
+    display: flex;
+    flex-direction: column;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+  &__item-number{
+    position: relative;
+    display: inline-flex;
+    width: 30px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 5px;
+    padding: 10px 20px 10px 0;
+    z-index: 2;
+    font-family: Inter;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FA3D54;
+    &::before{
+      position: absolute;
+      display: block;
+      content: '';
+      z-index: -2;
+      width: 1300px;
+      height: 100%;
+      right: 0;
+      border-top-right-radius: 15px;
+      background-color: #fff;
+    }
+  }
+  &__item-text{
+    @include aboutParagraph;
+  }
+}
+
+@media only screen and (min-width:$tablet-width){
+  .seo-works{
+    box-shadow: inset 79vw 114px 45vw 6vw rgba(213, 220, 223, .98);
+    &__list{}
+    &__item{}
+    &__item-number{
+      margin-right: 18px;
+    }
+    &__item-text{}
+  }
+  
+}
+@media only screen and (min-width: $desctop-width){
+  .seo-works{
+    &__list{}
+    &__item{}
+    &__item-number{
+      margin-right: 20px;
+      padding: 15px 30px 15px 0;
+      font-size: 25px;
+    }
+    &__item-text{}
+  }
+}
+@media only screen and (min-width: $xl-width){
+  .seo-works{
+    &__list{}
+    &__item{}
+    &__item-number{
+      font-size: 30px;
+      margin-right: 30px;
+    }
+    &__item-text{}
+  }
+}
