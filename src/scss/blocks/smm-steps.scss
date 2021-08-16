@@ -1,0 +1,100 @@
+.smm-steps{
+  &__list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+    margin-bottom: 30px;
+  }
+  &__item{
+    
+  }
+  &__item-inner{
+    display: flex;
+    flex-direction: column;
+  }
+  &__item-number{
+    display: flex;
+    width: 100%;
+    padding-bottom: 10px;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.25;
+    text-align: center;
+    color: #586F78;
+  }
+  &__item-description{
+    padding-top: 20px;
+    text-align: center;
+    padding: 20px 10px 0;
+    @include aboutParagraph;
+  }
+  &__promise{
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+    color: #586F78;
+  }
+}
+.smm-steps__item--active{
+  & .smm-steps__item-number{
+    color: $pinkColor;
+    border-bottom-color: $pinkColor;
+  }
+}
+@media only screen and (min-width:$tablet-width){
+  .smm-steps{
+    &__list{
+      grid-template-columns: 1fr 1fr 1fr;
+      margin: 0 auto 60px;
+    }
+    &__item{}
+    &__item-inner{}
+    &__item-number{}
+    &__item-description{
+      padding: 20px 20px 0;
+    }
+    &__promise{
+      font-size: 18px;
+    }
+  }
+}
+@media only screen and (min-width: $desctop-width){
+  .smm-steps{
+    &__list{
+      
+    }
+    &__item{}
+    &__item-inner{}
+    &__item-number{
+      font-size: 25px;
+    }
+    &__item-description{
+      padding: 30px 15px 0;
+    }
+    &__promise{
+      font-size: 22px;
+    }
+  }
+}
+@media only screen and (min-width: $xl-width){
+  .smm-steps{
+    &__list{
+      grid-template-columns: repeat(6, 1fr);
+    }
+    &__item{}
+    &__item-inner{}
+    &__item-number{
+      font-size: 30px;
+    }
+    &__item-description{}
+    &__promise{
+      font-size: 25px;
+    }
+  }
+}

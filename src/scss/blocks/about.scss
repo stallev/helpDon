@@ -1,3 +1,9 @@
+
+.safari .about{
+  &__main-img-wrap{
+    background-image: url(../img/content/about-bg.jpg);
+  }
+}
 .about{
   color: #000;
   &__main-text-wrap{
@@ -22,7 +28,7 @@
   &__main-img-wrap{
     width: 100%;
     height: 210px;
-    background-image: url(../img/content/about-bg.jpg);
+    background-image: url(../img/content/about-bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -62,8 +68,14 @@
 @media only screen and (min-width: $tablet-width){
 }
 @media only screen and (min-width:$desctop-width){
-  .about{
+  .safari .about{
     background-image: url(../img/content/about-bg-d.jpg);
+    &__main-img-wrap{
+      display: none;
+    }
+  }
+  .about{
+    background-image: url(../img/content/about-bg-d.webp);
     background-repeat: no-repeat;
     background-position: right top;
     background-size: 55% auto;

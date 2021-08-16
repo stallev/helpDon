@@ -1,0 +1,33 @@
+.advantages{
+  &__list{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+}
+
+@media only screen and (min-width:$tablet-width){
+  .advantages{
+    &__list{
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-row-gap: 30px;
+      column-gap: 30px;
+    }
+  }
+}
+@media only screen and (min-width: $desctop-width){
+  .advantages{
+    &__list{
+      grid-template-columns: 50% 50%;
+      row-gap: 40px;
+    }
+  }
+}
+@media only screen and (min-width: $xl-width){
+  .advantages{
+    &__list{
+      row-gap: 60px;
+    }
+  }
+}

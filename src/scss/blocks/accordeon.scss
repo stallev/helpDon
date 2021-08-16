@@ -3,13 +3,29 @@
   
 }
 .accordeon__item-content{
+  display: none;
+}
+.accordeon__item-content--active{
+  display: block;
+}
+.work-step__description--faq.accordeon__item-content{
+  transition: transform .4s ease-in;
+  transform: translate(0, -200px);
+}
+.work-step__description--faq.accordeon__item-content--active{
+  transform: translate(0, 0);
+}
+
+
+.portfolio .accordeon__item-content{
   max-height: 1px;
   overflow-y: hidden;
+  display: block;
   // position: absolute;
   // transform: translate(-10000px, -100000px);
   //display: none;
 }
-.accordeon__item-content--active{
+.portfolio .accordeon__item-content--active{
   max-height: 100%;
   // position: static;
   // transform: translate(0, 0);

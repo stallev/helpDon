@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link id="bgpreload" rel="preload" as="image" href="../img/content/img-main.webp" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
     <link rel="stylesheet" href="libs/fancybox/fancybox.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -54,7 +55,15 @@
             </div>
             <div class="header__content-nav nav">
               <ul class="nav__list">
-                <li class="nav__item"><a href="index.html" class="nav__link nav__link--parent">создание сайтов</a>
+                <li class="nav__item">
+                  <a href="index.html" class="nav__link parent-item">
+                    создание сайтов
+                    <span class="nav__link-toggler hidden-items-control">
+                      <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 2L9.5 10L2 2" stroke="black" stroke-width="3"/>
+                        </svg>
+                    </span>
+                  </a>
                     <ul class="nav__sublist">
                       <li class="nav__item"><a href="#" class="nav__link">одностраничные сайты</a></li>
                       <li class="nav__item"><a href="#" class="nav__link">многостраничные сайты</a></li>
@@ -127,7 +136,7 @@
                 Наша работа - новая ступень развития Вашего бизнеса в интернете
               </p>
             </div>
-            <div class="action__group">
+            <div class="action__group action__group--head">
               <a href="" class="action">рассчитать сайт</a>
               <a href="" class="action action--nobg">смотреть работы</a>
             </div>
@@ -302,8 +311,12 @@
                           <img loading="lazy"  src="../img/content/active-mobile-wrap-360.png" alt="" class="portfolio__slider-img-wrap">
                         </a>
                         <a href="#" class="portfolio__item-img-wrap portfolio__item-img-wrap--desctop">
+                          
                           <img loading="lazy"  src="../img/content/portfolio-slide-desctop1-1200.webp" alt="" class="portfolio__item-img">
-                          <img loading="lazy"  src="../img/content/active-desctop-wrap-1200.png" alt="" class="portfolio__slider-img-wrap">
+                          <picture class="portfolio__slider-img-wrap" loading="lazy">
+                            <source type="image/webp" srcset="../img/content/active-desctop-wrap-1200.webp">
+                            <img src="../img/content/active-desctop-wrap-1200.png" alt="">
+                          </picture>
                         </a>
                       </div>
                       <div class="portfolio__item swiper-slide">
@@ -313,7 +326,10 @@
                         </a>
                         <a href="#" class="portfolio__item-img-wrap portfolio__item-img-wrap--desctop">
                           <img loading="lazy"  src="../img/content/portfolio-slide-desctop1-1200.webp" alt="" class="portfolio__item-img">
-                          <img loading="lazy"  src="../img/content/active-desctop-wrap-1200.png" alt="" class="portfolio__slider-img-wrap">
+                          <picture class="portfolio__slider-img-wrap" loading="lazy">
+                            <source type="image/webp" srcset="../img/content/active-desctop-wrap-1200.webp">
+                            <img src="../img/content/active-desctop-wrap-1200.png" alt="">
+                          </picture>
                         </a>
                       </div>
                       <div class="portfolio__item swiper-slide">
@@ -323,7 +339,10 @@
                         </a>
                         <a href="#" class="portfolio__item-img-wrap portfolio__item-img-wrap--desctop">
                           <img loading="lazy"  src="../img/content/portfolio-slide-desctop1-1200.webp" alt="" class="portfolio__item-img">
-                          <img loading="lazy"  src="../img/content/active-desctop-wrap-1200.png" alt="" class="portfolio__slider-img-wrap">
+                          <picture class="portfolio__slider-img-wrap" loading="lazy">
+                            <source type="image/webp" srcset="../img/content/active-desctop-wrap-1200.webp">
+                            <img src="../img/content/active-desctop-wrap-1200.png" alt="">
+                          </picture>
                         </a>
                       </div>
                     </div>
@@ -341,7 +360,10 @@
                         </a>
                         <a href="#" class="portfolio__item-img-wrap portfolio__item-img-wrap--desctop">
                           <img loading="lazy"  src="../img/content/portfolio-slide-desctop1-1200.webp" alt="" class="portfolio__item-img">
-                          <img loading="lazy"  src="../img/content/active-desctop-wrap-1200.png" alt="" class="portfolio__slider-img-wrap">
+                          <picture class="portfolio__slider-img-wrap" loading="lazy">
+                            <source type="image/webp" srcset="../img/content/active-desctop-wrap-1200.webp">
+                            <img src="../img/content/active-desctop-wrap-1200.png" alt="">
+                          </picture>
                         </a>
                       </div>
                       <div class="portfolio__item swiper-slide">
@@ -351,7 +373,10 @@
                         </a>
                         <a href="#" class="portfolio__item-img-wrap portfolio__item-img-wrap--desctop">
                           <img loading="lazy"  src="../img/content/portfolio-slide-desctop1-1200.webp" alt="" class="portfolio__item-img">
-                          <img loading="lazy"  src="../img/content/active-desctop-wrap-1200.png" alt="" class="portfolio__slider-img-wrap">
+                          <picture class="portfolio__slider-img-wrap" loading="lazy">
+                            <source type="image/webp" srcset="../img/content/active-desctop-wrap-1200.webp">
+                            <img src="../img/content/active-desctop-wrap-1200.png" alt="">
+                          </picture>
                         </a>
                       </div>
                       <div class="portfolio__item swiper-slide">
@@ -361,7 +386,10 @@
                         </a>
                         <a href="#" class="portfolio__item-img-wrap portfolio__item-img-wrap--desctop">
                           <img loading="lazy"  src="../img/content/portfolio-slide-desctop1-1200.webp" alt="" class="portfolio__item-img">
-                          <img loading="lazy"  src="../img/content/active-desctop-wrap-1200.png" alt="" class="portfolio__slider-img-wrap">
+                          <picture class="portfolio__slider-img-wrap" loading="lazy">
+                            <source type="image/webp" srcset="../img/content/active-desctop-wrap-1200.webp">
+                            <img src="../img/content/active-desctop-wrap-1200.png" alt="">
+                          </picture>
                         </a>
                       </div>
                     </div>
@@ -379,7 +407,10 @@
                         </a>
                         <a href="#" class="portfolio__item-img-wrap portfolio__item-img-wrap--desctop">
                           <img loading="lazy"  src="../img/content/portfolio-slide-desctop1-1200.webp" alt="" class="portfolio__item-img">
-                          <img loading="lazy"  src="../img/content/active-desctop-wrap-1200.png" alt="" class="portfolio__slider-img-wrap">
+                          <picture class="portfolio__slider-img-wrap" loading="lazy">
+                            <source type="image/webp" srcset="../img/content/active-desctop-wrap-1200.webp">
+                            <img src="../img/content/active-desctop-wrap-1200.png" alt="">
+                          </picture>
                         </a>
                       </div>
                       <div class="portfolio__item swiper-slide">
@@ -389,7 +420,10 @@
                         </a>
                         <a href="#" class="portfolio__item-img-wrap portfolio__item-img-wrap--desctop">
                           <img loading="lazy"  src="../img/content/portfolio-slide-desctop1-1200.webp" alt="" class="portfolio__item-img">
-                          <img loading="lazy"  src="../img/content/active-desctop-wrap-1200.png" alt="" class="portfolio__slider-img-wrap">
+                          <picture class="portfolio__slider-img-wrap" loading="lazy">
+                            <source type="image/webp" srcset="../img/content/active-desctop-wrap-1200.webp">
+                            <img src="../img/content/active-desctop-wrap-1200.png" alt="">
+                          </picture>
                         </a>
                       </div>
                       <div class="portfolio__item swiper-slide">
@@ -399,7 +433,10 @@
                         </a>
                         <a href="#" class="portfolio__item-img-wrap portfolio__item-img-wrap--desctop">
                           <img loading="lazy"  src="../img/content/portfolio-slide-desctop1-1200.webp" alt="" class="portfolio__item-img">
-                          <img loading="lazy"  src="../img/content/active-desctop-wrap-1200.png" alt="" class="portfolio__slider-img-wrap">
+                          <picture class="portfolio__slider-img-wrap" loading="lazy">
+                            <source type="image/webp" srcset="../img/content/active-desctop-wrap-1200.webp">
+                            <img src="../img/content/active-desctop-wrap-1200.png" alt="">
+                          </picture>
                         </a>
                       </div>
                     </div>
@@ -618,7 +655,7 @@
           <div class="container container--section-first">
             <h2 class="section-title">блог</h2>
             <div class="blog-section__post-list">
-              <article class="blog-section__post"  style="background-image: url(../img/content/blog-1.png);">
+              <article class="blog-section__post">
                 <div class="blog-section__post-inner">
                   <h3 class="blog-section__post-title">
                     Чек-лист по созданию интернет-магазина
@@ -631,7 +668,7 @@
                   </a>
                 </div>
               </article>
-              <article class="blog-section__post"  style="background-image: url(../img/content/blog-1.png);">
+              <article class="blog-section__post">
                 <div class="blog-section__post-inner">
                   <h3 class="blog-section__post-title">
                     Чек-лист по созданию интернет-магазина
@@ -644,7 +681,7 @@
                   </a>
                 </div>
               </article>
-              <article class="blog-section__post"  style="background-image: url(../img/content/blog-1.png);">
+              <article class="blog-section__post">
                 <div class="blog-section__post-inner">
                   <h3 class="blog-section__post-title">
                     Чек-лист по созданию интернет-магазина

@@ -1,3 +1,6 @@
+.safari .blog-section__post{
+  background-image: url(../img/content/blog-1.png);
+}
 .blog-section{
   &__list-wrap{}
   &__post-list{
@@ -9,6 +12,7 @@
   }
   &__post{
     background: #586F78;
+    background-image: url(../img/content/blog-1.webp);
     background-repeat: no-repeat;
     background-size: cover;
   }

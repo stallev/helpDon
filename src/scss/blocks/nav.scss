@@ -17,12 +17,36 @@
 		line-height: 24px;
 		text-transform: uppercase; 
 		transition: color .4s ease-in;
-        &:hover{
-            color: #FA3D54;
-        }
+			&:hover{
+					color: #FA3D54;
+			}
+			&.parent-item{
+				padding-right: 10px;
+			}
+			&.open-state{
+				color: #ED2051;
+				& .hidden-items-control{
+					right: 24px;
+    			top: 1px;
+					transform: rotate(180deg);
+					& svg path{
+						stroke: $pinkColor;
+					}
+				}
+			}
+	}
+	& .hidden-items-control{
+		position: absolute;
+		right: 0;
+		top: 50%;
+  	transform: translate(0, -50%);
 	}
 	&__sublist{
 		display: none;
+		&.show{
+			margin-top: 10px;
+			display: block;
+		}
 	}
 }
 @media only screen and (min-width: $desctop-width){
@@ -67,6 +91,9 @@
 				opacity: 1;
 				height: 5px;
 			}
+		}
+		&__link-toggler{
+			display: none;
 		}
 		&__sublist{
 			position: absolute;

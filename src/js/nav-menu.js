@@ -45,19 +45,52 @@ if (isMobile.any()) {
 }
 
 //еслм Safari, то навесим класс
-function determineBrowser() { 
-	if(navigator.userAgent.indexOf("Safari") != -1) 
+// function determineBrowser() { 
+// 	if(navigator.userAgent.indexOf("Safari") != -1) 
+//  {
+// 		 document.body.classList.add('safari');
+//  }
+//  }
+
+	determineSafari();
+ 
+ function determineSafari() { 
+	if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 
  {
-		 document.body.classList.add('safari');
+		 
+ }
+ else if(navigator.userAgent.indexOf("Chrome") != -1 )
+ {
+		 
+ }
+ else if(navigator.userAgent.indexOf("Safari") != -1)
+ {
+	document.body.classList.add('safari');
+ }
+ else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
+ {
+			
+ }
+ else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
+ {
+	 
+ }  
+ else 
+ {
+		
  }
  }
+
+
+
+
 
 /* липкий header*/
 let header = document.querySelector(".header");
 if(header){
 	(function(){
 		window.onscroll = function() {stickyHeader()};
-		let sticky = header.offsetHeight;
+		let sticky = 0;
 		function stickyHeader() {
 			if (window.pageYOffset > sticky) {
 				header.classList.add("sticky-header");
@@ -89,8 +122,10 @@ if(hiddenItemsControls){
 			element.addEventListener('click', function(e){
 				e.preventDefault();
 				e.target.classList.toggle('open-state');
-				let sublist = e.target.closest('.sublist-title').nextSibling.nextElementSibling;
-				sublist.classList.toggle('hidden-items');
+				let parentElement = e.target.closest('.parent-item');
+				parentElement.classList.toggle('open-state');
+				let sublist = e.target.closest('.parent-item').nextSibling.nextElementSibling;
+				sublist.classList.toggle('show');
 			})
 		}
 	)

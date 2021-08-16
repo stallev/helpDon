@@ -60,6 +60,9 @@
       margin-top: 30px;
       align-items: flex-end;
     }
+    &--contact-us{
+      margin-top: 30px;
+    }
     &--reviews{
       & a{
         margin: 0;
@@ -72,15 +75,16 @@
   .action{
     &__group{
       flex-direction: row;
-      & a{
-        z-index: 5;
-        margin-top: 0;
-        &:nth-of-type(1){
-          margin-right: 32px;
-        }
-      }
+      
       &--head{
         margin-bottom: 50px;
+        & a{
+          z-index: 2;
+          margin-top: 0;
+          &:nth-of-type(1){
+            margin-right: 32px;
+          }
+        }
       }
       &--answers{
         justify-content: flex-end;
@@ -88,23 +92,55 @@
     }
   }
 }
+
 @media only screen and (min-width: $desctop-width){
   .action{
     &__group{
       flex-direction: row;
       & a{
         &:nth-of-type(1){
-          margin-right: 52px;
+          //margin-right: 52px;
         }
       }
       &--head{
         margin-bottom: 80px;
+        & a{
+          &:nth-of-type(1){
+            margin-right: 52px;
+          }
+        }
       }
       &--portfolio{
         justify-content: center;
         margin-top: 80px;
+        & a{
+          &:nth-of-type(1){
+            margin-right: 52px;
+          }
+          &:last-of-type{
+            margin-top: 0;
+          }
+        }
+      }
+      &--about{
+        margin-top: 80px;
+        & a{
+          &:nth-of-type(1){
+            margin-right: 52px;
+          }
+          &:last-of-type{
+            margin-top: 0;
+          }
+        }
+      }
+      &--contact-us{
+        margin-top: auto;
+        margin-right: 0;
       }
     }
+  }
+  .head--seo .action__group{
+    margin-top: 170px;
   }
 }
 @media only screen and (min-width: $xl-width){
@@ -114,5 +150,8 @@
         margin-bottom: 100px;
       }
     }
+  }
+  .head--seo .action__group{
+    margin-top: 190px;
   }
 }

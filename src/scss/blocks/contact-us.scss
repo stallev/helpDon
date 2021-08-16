@@ -1,0 +1,54 @@
+.contact-us{
+  &__promotion{
+    @include aboutParagraph;
+    margin-bottom: 20px;
+  }
+  &__form-inner{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__form{}
+  & input{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    @include inputField;
+    background-color: transparent;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media only screen and (min-width:$tablet-width){
+  .contact-us{
+    &__promotion{}
+    &__form-inner{}
+    &__form{}
+  }
+}
+@media only screen and (min-width: $desctop-width){
+  .contact-us{
+    &__promotion{}
+    &__form-inner{
+      flex-direction: row;
+    }
+    &__form{}
+    & input{
+      display: inline-block;
+      margin-bottom: 0;
+      margin-right: 20px;
+      max-height: 72px;
+      @include inputField;
+    }
+  }
+}
+@media only screen and (min-width: $xl-width){
+  .contact-us{
+    &__promotion{}
+    &__form-inner{}
+    &__form{}
+  }
+}
