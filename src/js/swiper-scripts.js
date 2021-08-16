@@ -107,24 +107,14 @@ var reviewsSlider = new Swiper(".reviews__list", {
   },
 });
 
-
-// document.addEventListener( 'DOMContentLoaded', function () {
-//     new Splide( '.team__list', {
-//       type: 'loop',
-//       focus    : 'center',
-//       pagination: false,
-//       arrows: false,
-//       autoWidth: true,
-//       gap: '55px',
-//       start: 1,
-//       easing: 'ease',
-//       arrows: true,
-//       perPage: 3,
-//       breakpoints: {
-//         991: {
-//           perPage: 1,
-//           autoWidth: false,
-//         },
-//       }
-//     } ).mount();
-//   } );
+var port_contekst_ads = new Swiper(".seo-cases__list--contekst-slider", {
+  loop: true,
+  slidesPerView: 1,
+  centeredSlides: true,
+  initialSlide: 0,
+  spaceBetween: 0,
+  navigation:{
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+});

@@ -34,12 +34,13 @@
     font-weight: 900;
     font-size: 16px;
     line-height: 19px;
-    background-color: $pinkColor;
-    color: #fff;
+    background-color: #fff;
+    color: $pinkColor;
+    border-top-right-radius: 15px;
     &::before{
       position: absolute;
       display: block;
-      content: '+';
+      content: '';
       font-size: 16px;
       line-height: 19px;
       z-index: -2;
@@ -48,7 +49,7 @@
       right: 0;
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
-      background-color: $pinkColor;
+      background-color: #fff;
     }
     &-active{
       display: none;
@@ -58,6 +59,11 @@
     }
     &--faq{
       cursor: pointer;
+      background-color: $pinkColor;
+      color: #fff;
+      &::before{
+        background-color: $pinkColor;
+      }
     }
   }
   &__title{

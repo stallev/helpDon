@@ -50,6 +50,14 @@
     &--head{
       margin-bottom: 30px;
     }
+    &--head-bottom{
+      margin-top: 30px;
+      & .action{
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+    }
     &--portfolio{
       margin-top: 40px;
     }
@@ -83,6 +91,23 @@
           margin-top: 0;
           &:nth-of-type(1){
             margin-right: 32px;
+          }
+        }
+      }
+      &--head-bottom{
+        & .action{
+          margin-right: 30px;
+          &:last-of-type{
+            margin-top: 0;
+          }
+        }
+      }
+      &--portfolio{
+        & .action{
+          margin-right: 20px;
+          &:last-of-type{
+            margin-top: 0;
+            margin-right: 0;
           }
         }
       }
@@ -139,7 +164,7 @@
       }
     }
   }
-  .head--seo .action__group{
+  .action__group--head{
     margin-top: 170px;
   }
 }
@@ -151,7 +176,10 @@
       }
     }
   }
-  .head--seo .action__group{
+  .action__group--head{
     margin-top: 190px;
+  }
+  .action__group--head-bottom{
+    margin-top: 100px;
   }
 }

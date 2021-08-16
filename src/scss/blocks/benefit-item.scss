@@ -23,6 +23,15 @@
     border-radius: 50%;
     background: linear-gradient(135.42deg, #B9CAD1 14.57%, rgba(115, 154, 168, 0.76) 116.43%);
   }
+  &__number--img{
+    position: relative;
+  }
+  &__number--img svg{
+    position: absolute;
+    width: 65%;
+    height: 65%;
+    @include absoluteAllCenter;
+  }
   &__content{
     display: flex;
     align-items: center

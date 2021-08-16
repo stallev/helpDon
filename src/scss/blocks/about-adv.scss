@@ -1,0 +1,74 @@
+.about-adv{
+  &__inner{
+    display: flex;
+    flex-direction: column;
+  }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    &--we{
+      border: 3px solid #586F78;
+      border-radius: 15px;
+      background: rgba($color: #fff, $alpha: 0.3);
+    }
+    &--other{}
+  }
+  &__item{
+    @include aboutParagraph;
+    margin-top: 15px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    &:last-of-type{
+      border-bottom: none;
+    }
+  }
+  &__list-title{
+    margin-bottom: 20px;
+  }
+  &__item-text{}
+}
+
+@media only screen and (min-width:$tablet-width){
+  .about-adv{
+    &__inner{}
+    &__list{
+      &--we{}
+      &--other{}
+    }
+    &__item{}
+    &__title{}
+    &__item-text{}
+  }
+}
+@media only screen and (min-width: $desctop-width){
+  .about-adv{
+    &__inner{
+      flex-direction: row;
+    }
+    &__list{
+      &--we{}
+      &--other{}
+    }
+    &__item{
+      padding: 30px 0 50px;
+    }
+    &__list-title{}
+    &__item-text{}
+  }
+}
+@media only screen and (min-width: $xl-width){
+  .about-adv{
+    &__inner{}
+    &__list{
+      &--we{}
+      &--other{}
+    }
+    &__item{
+      padding: 30px 0 60px;
+    }
+    &__title{}
+    &__item-text{}
+  }
+}

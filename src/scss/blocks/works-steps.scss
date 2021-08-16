@@ -1,19 +1,31 @@
+.safari .works-steps{
+  &--seo{
+    background-image: url(../img/content/seo/seo-work-bg-m.jpg);
+  }
+  &--contekst{
+    background-image: url(../img/content/contekst/work-bg.jpg);
+  }
+}
 .works-steps{
   background-repeat: no-repeat;
-  &--seo{
-    background: rgba(229, 229, 229, 1);
-    background-image: url(../img/content/seo/seo-work-bg-m.jpg);
-    box-shadow: inset 34vw 114px 65px 79px rgba(213, 220, 223, .92);
+  background: rgba(229, 229, 229, 1);
+  box-shadow: inset 34vw 114px 65px 79px rgba(213, 220, 223, .92);
     background-size: cover;
     background-position: center;
+  &--seo{
+    background-image: url(../img/content/seo/seo-work-bg-m.webp);
+  }
+  &--contekst{
+    background-image: url(../img/content/contekst/work-bg.webp);
   }
   
 }
 
 @media only screen and (min-width:$tablet-width){
   .works-steps{
+    box-shadow: inset 79vw 114px 45vw 6vw rgba(213, 220, 223, .98);
     &--seo{
-      box-shadow: inset 79vw 114px 45vw 6vw rgba(213, 220, 223, .98);
+      
     }
     &__list{}
     &__item{}
