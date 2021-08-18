@@ -1,0 +1,152 @@
+.site-blocks{
+  &__inner{}
+  &__list{
+    padding-top: 70px;
+    & .swiper-button-prev,
+    & .swiper-button-next{
+      top: 25px;
+    }
+    & .swiper-button-prev{
+      left: auto;
+      right: 120px;
+    }
+    & .swiper-button-next{
+      right: 40px;
+    }
+  }
+  &__slider-item{
+    & img{
+      width: 100%;
+    }
+    &--1{
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+    }
+    &--2{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__item-img-link{}
+  &__item-img{}
+  &__text-content{
+    position: relative;
+    width: 28%;
+    & span{
+      position: absolute;
+      display: inline-block;
+      text-align: center;
+      @include aboutParagraph;
+    }
+  }
+  &__text-1{
+    top: 50px;
+  }
+  &__text-2{
+    top: 230px;
+  }
+  &__text-3{
+    top: 660px;
+  }
+  &__text-4{
+    top: 1020px;
+  }
+}
+
+
+@media only screen and (min-width:$tablet-width){
+  .site-blocks{
+    &__inner{}
+    &__list{}
+    &__slider-item{
+      
+    }
+    &__item-img-link{}
+    &__item-img{}
+    &__text-content{
+
+    }
+    &__text-1{
+      top: 100px;
+    }
+    &__text-2{
+      top: 400px;
+    }
+    &__text-3{
+      top: 1140px;
+    }
+    &__text-4{
+      top: 1730px;
+    }
+  }
+}
+@media only screen and (min-width: $desctop-width){
+  .site-blocks{
+    &__inner{}
+    &__list{}
+    &__slider-item{
+      &--1{
+        width: 51%;
+      }
+      &--2{
+        width: 49%;
+      }
+      
+    }
+    &__item-img-link{}
+    &__item-img{}
+    &__text-content{
+      width: 26%;
+      & span{
+        //font-size: 20px;
+      }
+    }
+    &__text-1{
+      top: 50px;
+    }
+    &__text-2{
+      top: 270px;
+    }
+    &__text-3{
+      top: 810px;
+    }
+    &__text-4{
+      top: 1280px;
+    }
+  }
+}
+@media only screen and (min-width: $xl-width){
+  .site-blocks{
+    &__inner{}
+    &__list{}
+    &__slider-item{
+      &--1{
+        width: 50%;
+      }
+      &--2{
+        width: 50%;
+      }
+    }
+    &__item-img-link{}
+    &__item-img{}
+    &__text-content{
+      width: 26%;
+      & span{
+        padding-left: 20px;
+      }
+    }
+    &__text-1{
+      top: 80px;
+    }
+    &__text-2{
+      top: 340px;
+    }
+    &__text-3{
+      top: 1010px;
+    }
+    &__text-4{
+      top: 1550px;
+    }
+  }
+}

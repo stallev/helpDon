@@ -145,12 +145,15 @@
   }
   &__subtitle{
     margin-bottom: 20px;
+  }
+  &__subtitle-text{
     font-family: Inter;
     font-weight: 900;
     font-size: 16px;
     line-height: 1.4;
     text-transform: uppercase;
   }
+  &__subtitle-description{}
   &__social{
     position: fixed;
     top: 50%;
@@ -225,12 +228,15 @@
       margin-bottom: 30px;
     }
     &__subtitle{
-      font-size: 18px;
       margin-bottom: 30px;
       &--secondary-page{
         margin-bottom: 40px;
       }
     }
+    &__subtitle-text{
+      font-size: 18px;
+    }
+    &__subtitle-description{}
     &__description-list{
       &--grid{
         grid-template-columns: 1fr 1fr;
@@ -289,12 +295,15 @@
       }
     }
     &__subtitle{
-      font-size: 22px;
       margin-bottom: 40px;
       &--secondary-page{
         margin-bottom: 60px;
       }
     }
+    &__subtitle-text{
+      font-size: 22px;
+    }
+    &__subtitle-description{}
     &__description-list--grid{
       grid-template-columns: repeat(2, 1fr);
       column-gap: 30px;
@@ -363,9 +372,12 @@
       }
     }
     &__subtitle{
-      font-size: 25px;
       margin-bottom: 50px;
     }
+    &__subtitle-text{
+      font-size: 25px;
+    }
+    &__subtitle-description{}
     &__description-list--grid{
       grid-template-columns: repeat(4, 1fr);
       column-gap: 30px;

@@ -118,3 +118,26 @@ var port_contekst_ads = new Swiper(".seo-cases__list--contekst-slider", {
     prevEl: '.swiper-button-prev'
   },
 });
+
+var site_blocks = new Swiper(".site-blocks__list", {
+  loop: true,
+  slidesPerView: 1,
+  centeredSlides: true,
+  initialSlide: 1,
+  spaceBetween: 0,
+  navigation:{
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  breakpoints: {
+    // when window width is >= 991px
+    991: {
+      centeredSlides: false,
+      slidesPerView: 2,
+      initialSlide: 0,
+      spaceBetween: 10,
+      slidesPerView: "auto",
+      grabCursor: false,
+    },
+  },
+});

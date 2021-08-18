@@ -25,7 +25,10 @@
     background-image: url(../img/content/development/works-bg.webp);
     box-shadow: inset 63vw 52vw 41vw 7vw rgba(255, 255, 255, .92);
   }
-  
+  &--landings{
+    background-image: url(../img/content/development/works-bg.webp);
+    box-shadow: inset 44vw 3vw 9vw 7vw rgba(229, 229, 229, .87);
+  }
 }
 
 @media only screen and (min-width:$tablet-width){
