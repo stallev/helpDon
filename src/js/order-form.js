@@ -5,15 +5,9 @@ function convertToArray(collection){
  }
 
 //маска номера телефона
-// var elements = document.getElementsByClassName('imaskjs__input_tel');
-// for (var i = 0; i < elements.length; i++) {
-//   new IMask(elements[i], {
-//     mask: '+{375}(00)000-00-00',
-//   });
-// }
-// $(function() {
-//   $('.imaskjs__input_tel').mask('+{375}(00)000-00-00');
-// });
+$(document).ready(function () {
+  $('.phone-field').mask("+375 (99) 999-99-99");
+});
 
 
 //кастомизируем select

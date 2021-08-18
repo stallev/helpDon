@@ -8,24 +8,30 @@
 }
 .works-steps{
   background-repeat: no-repeat;
-  background: rgba(229, 229, 229, 1);
-  box-shadow: inset 34vw 114px 65px 79px rgba(213, 220, 223, .92);
-    background-size: cover;
-    background-position: center;
+  
+  background-size: cover;
+  background-position: center;
   &--seo{
+    background-color: rgba(229, 229, 229, 1);
     background-image: url(../img/content/seo/seo-work-bg-m.webp);
+    box-shadow: inset 34vw 114px 65px 79px rgba(213, 220, 223, .92);
   }
   &--contekst{
+    background-color: rgba(229, 229, 229, 1);
     background-image: url(../img/content/contekst/work-bg.webp);
+    box-shadow: inset 34vw 114px 65px 79px rgba(213, 220, 223, .92);
+  }
+  &--develop{
+    background-image: url(../img/content/development/works-bg.webp);
+    box-shadow: inset 63vw 52vw 41vw 7vw rgba(255, 255, 255, .92);
   }
   
 }
 
 @media only screen and (min-width:$tablet-width){
   .works-steps{
-    box-shadow: inset 79vw 114px 45vw 6vw rgba(213, 220, 223, .98);
-    &--seo{
-      
+    &--seo, &--contekst{
+      box-shadow: inset 79vw 114px 45vw 6vw rgba(213, 220, 223, .98);
     }
     &__list{}
     &__item{}

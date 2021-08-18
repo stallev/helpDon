@@ -57,6 +57,12 @@
     &-inactive{
       display: inline-block;
     }
+    &--gray{
+      background-color: #D5DCDF;
+      &::before{
+        background-color: #D5DCDF;
+      }
+    }
     &--faq{
       cursor: pointer;
       background-color: $pinkColor;
@@ -65,6 +71,7 @@
         background-color: $pinkColor;
       }
     }
+    
   }
   &__title{
     display: flex;
@@ -92,11 +99,14 @@
 .work-step__number.accordeon__item-nav-link{
   background-color: transparent;
 }
-.work-step__number.accordeon__item-nav-link--active{
+.accordeon__item-nav-link--active.work-step__number{
   color: $pinkColor;
   &::before{
     background-color: #fff;
     color: $pinkColor;
+  }
+  &--faq-gray::before{
+    background-color: #D5DCDF;
   }
 }
 @keyframes appearText {

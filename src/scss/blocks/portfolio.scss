@@ -275,8 +275,8 @@
     
 }
 @media only screen and (min-width:$xl-width){
-    .portfolio{
-
+    .portfolio.section{
+        padding-bottom: 70px;
     }
     .portfolio-slider{
         & .swiper-slide-active{

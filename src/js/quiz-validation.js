@@ -1,133 +1,58 @@
 //квиз
-let quizWindow = document.querySelector('.order-form__content--quiz');
-let quizNextBtn1 = document.querySelector('.quiz__action--1');
-let quizNextBtn2 = document.querySelector('.quiz__action--2');
-let quizNextBtn3 = document.querySelector('.quiz__action--3');
-let quizNextBtn4 = document.querySelector('.quiz__action--4');
-let quizNextBtn5 = document.querySelector('.quiz__action--5');
-let quizNextBtn6 = document.querySelector('.quiz__action--6');
+
 let quizSubmitBtn = document.querySelector('.quiz__action--submit');
+let labelsArray = convertToArray(document.querySelectorAll('.quiz__item:not(:last-of-type) label'));
+let backBtnsQuizArray = convertToArray(document.querySelectorAll('.quiz__action-back'));
+let pageScrollTop = 0;
+if(labelsArray){
+  labelsArray.forEach(
+    label => {
+      label.addEventListener('click', function(e) {
+        let mainParent = e.target.closest('.quiz__item');
+        displayNextStep(mainParent);
+      })
+    }
+  )
+}
+if(backBtnsQuizArray){
+  backBtnsQuizArray.forEach(
+    btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        let mainParent = e.target.closest('.quiz__item');
+        displayPreviousStep(mainParent);
+      })
+    }
+  )
+}
 function displayNextStep(parent) {
   parent.nextElementSibling.style.display = "flex";
   parent.style.display = "none";
+  //pageScrollTop = document.scrollTop;
   parent.closest('.order-form__content--quiz').scrollTop = 0;
 }
-if(quizNextBtn1){
-  quizNextBtn1.addEventListener('click', function(e) {
-    e.preventDefault();
-    let mainParent = e.target.closest('.quiz__item');
-    let quizInput = document.querySelector('.quiz__item--1 input');
-    //$('.quiz__item--1 input').focusout(checkNull);
-    checkLength('.quiz__item--1 input', 25);
-    if(quizInput.value!="Например: 5 метров"&&quizInput.value!=""){
-      displayNextStep(mainParent);
-    }
-    else{
-      $('.quiz__item--1 input').notify("Поле нужно заполнить", "error"); 
-      $('.quiz__item--1 input').addClass("errtextbox");
-    }
-  })
-}
-if(quizNextBtn2){
-  quizNextBtn2.addEventListener('click', function(e) {
-    e.preventDefault();
-    let mainParent = e.target.closest('.quiz__item');
-    let quizInput = document.querySelector('.quiz__item--2 select');
-    if(quizInput.value!="Выберите"){
-      displayNextStep(mainParent);
-    }
-    else{
-      $('.quiz__item--2 .nice-select').addClass("errtextbox");
-    }
-  })
-}
-if(quizNextBtn3){
-  quizNextBtn3.addEventListener('click', function(e) {
-    e.preventDefault();
-    let mainParent = e.target.closest('.quiz__item');
-    displayNextStep(mainParent);
-  })
-}
-if(quizNextBtn4){
-  quizNextBtn4.addEventListener('click', function(e) {
-    e.preventDefault();
-    let mainParent = e.target.closest('.quiz__item');
-    displayNextStep(mainParent);
-  })
-}
-if(quizNextBtn5){
-  quizNextBtn5.addEventListener('click', function(e) {
-    e.preventDefault();
-    let mainParent = e.target.closest('.quiz__item');
-    let quizInput = document.querySelector('.quiz__item--5 select');
-    if(quizInput.value!="Выберите"){
-      displayNextStep(mainParent);
-    }
-    else{
-      $('.quiz__item--5 .nice-select').addClass("errtextbox");
-    }
-  })
-}
-if(quizNextBtn6){
-  quizNextBtn6.addEventListener('click', function(e) {
-    e.preventDefault();
-    let mainParent = e.target.closest('.quiz__item');
-    let quizInput = document.querySelector('.quiz__item--6 input');
-    if(quizInput.value.match(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/)){
-      displayNextStep(mainParent);
-    }
-    else{
-      $('.quiz__item--6 input').notify("Поле не заполнено или заполнено некорректно", "error"); 
-      $('.quiz__item--6 input').addClass("errtextbox");
-    }
-  })
+function displayPreviousStep(parent) {
+  parent.previousElementSibling.style.display = "flex";
+  parent.style.display = "none";
+  parent.closest('.order-form__content--quiz').scrollTop = 0;
+  //document.scrollTop = pageScrollTop;
 }
 
-let submitQuizBtn = document.querySelector('.quiz__action--submit');
-if(submitQuizBtn){
-  let quizInput7 = document.querySelector('.quiz__item--7 [type=tel]');
-  let personPhoneQuizValidity=false;
-  quizInput7.addEventListener("blur", function(){
-    //console.log('blur2');
-    if (quizInput7.value=="Ваш телефон"||quizInput7.value=="") { 
-      console.log('personPhoneQuizValidity не валидно');
-      personPhoneQuizValidity=false;
-      $('.quiz__item--7 [type=tel]').notify("Поле необходимо заполнить", "error"); 
-      $('.quiz__item--7 [type=tel]').addClass("errtextbox");
-      personPhoneQuizValidity=false;
-      console.log('personPhoneQuizValidity равно '+personPhoneQuizValidity);
-    }
-    else{
-      personPhoneQuizValidity=true;
-      $('.quiz__item--7 [type=tel]').removeClass("errtextbox");
-      console.log('personPhoneQuizValidity равно '+personPhoneQuizValidity);
-    }
-  })
-  submitQuizBtn.addEventListener('click', function(){
-    if(personPhoneQuizValidity){
-      $('form.order-form__form--quiz').submit();
-      document.body.removeAttribute("class");
-    }
-    else{
-      e.preventDefault();
-      $('.quiz__item--7 [type=tel]').notify("Поле нужно заполнить", "error"); 
-      $('.quiz__item--7 [type=tel]').addClass("errtextbox");
-    }
-  });
-}
+
+
 
 //форма расчета стоимости
-$(".order-form__content--palisade1 input[name=mail]").focusout(function(){
-  var value = $(this).val().trim();
-  if (value.search(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/) != 0) {
-    $(this).notify("E-mail введён не корректно", "error");
-    $(this).addClass("errtextbox");
-    errorMail = true;
-  } else { 
-    $(this).removeClass("errtextbox");
-    errorMail = false;
-  }
-});
+// $(".order-form__content--palisade1 input[name=mail]").focusout(function(){
+//   var value = $(this).val().trim();
+//   if (value.search(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/) != 0) {
+//     $(this).notify("E-mail введён не корректно", "error");
+//     $(this).addClass("errtextbox");
+//     errorMail = true;
+//   } else { 
+//     $(this).removeClass("errtextbox");
+//     errorMail = false;
+//   }
+// });
 
 function checkNull(element) {
   $(element).focusout(function(){

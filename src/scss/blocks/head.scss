@@ -8,6 +8,9 @@
   &--contekst-bg{
     background-image: url(../img/content/contekst/head-bg.jpg);
   }
+  &--development-bg{
+    background-image: url(../img/content/development/head-bg.png);
+  }
 }
 .head .container{
   z-index: 5;
@@ -19,14 +22,19 @@
   position: relative;
   padding: 0 0 60px;
   background-repeat: no-repeat;
-  background-size: cover;
+  
   &--main{
     padding: 54px 0 125px;
     background-image: url(../img/content/img-main.webp);
-    box-shadow: inset 0vw 1vw 29px 35px rgba(213,220,223,0.48);
+    box-shadow: inset 0vw 1vw 29px 35px rgba(229,229,229,0.48);
+    background-size: cover;
   }
   &--seo{
-    box-shadow: inset -27vw -69vw 35vw 24vw rgba(213,220,223,0.88);
+    box-shadow: inset -27vw -69vw 35vw 24vw rgba(229,229,229,0.88);
+    background-size: auto 120px;
+    background-position: right top;
+  }
+  &--development{
     background-size: auto 120px;
     background-position: right top;
   }
@@ -51,6 +59,16 @@
     background-image: url(../img/content/contekst/head-bg.webp);
     background-position: center 50px;
     padding-bottom: 80px;
+  }
+  &--development-bg{
+    background: #E5E5E5;
+    background-size: auto 120px;
+    background-image: url(../img/content/development/head-bg.webp);
+    background-repeat: no-repeat;
+    box-shadow: none;
+  }
+  &.head--small-pb{
+    padding-bottom: 0;
   }
   &__content-smm{
     
@@ -197,6 +215,9 @@
       background-size: auto 200px;
       box-shadow: inset 61vw 7vw 43vw -8vw rgba(213,220,223,0.86);
     }
+    &--development{
+      background-size: auto 200px;
+    }
     &::before{
       
     }
@@ -258,6 +279,9 @@
       background-size: auto 280px;
       box-shadow: inset 63vw 7vw 43vw -8vw rgba(213,220,223,0.86);
     }
+    &--development{
+      background-size: auto 280px;
+    }
     &__paragraph{
       margin-bottom: 30px;
       &:last-of-type{
@@ -265,7 +289,7 @@
       }
     }
     &__subtitle{
-      font-size: 25px;
+      font-size: 22px;
       margin-bottom: 40px;
       &--secondary-page{
         margin-bottom: 60px;
@@ -327,6 +351,9 @@
     &--seo{
       background-size: auto 300px;
     }
+    &--development{
+      background-size: auto 300px;
+    }
     &__content--smm{
     }
     &__paragraph{
@@ -336,7 +363,7 @@
       }
     }
     &__subtitle{
-      font-size: 30px;
+      font-size: 25px;
       margin-bottom: 50px;
     }
     &__description-list--grid{

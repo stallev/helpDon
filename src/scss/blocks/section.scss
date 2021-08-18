@@ -7,6 +7,12 @@
       border-color: #fff;
     }
   }
+  &--lightgray{
+    background: #E5E5E5;
+    & .section__name-wrap{
+      border-color: #fff;
+    }
+  }
   &__name{
     position: relative;
     bottom: -25px;

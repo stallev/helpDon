@@ -31,9 +31,16 @@
     &__form-text-field{
         margin-bottom: 15px;
         @include inputField;
+        background-color: transparent;
+        &--finish{
+            width: 238px;
+            min-height: 72px;
+            margin-bottom: 0;
+        }
     }
     &__form-textarea-field{
         @include inputField;
+        background-color: transparent;
     }
     &__info{}
     &__slogan{
@@ -117,7 +124,11 @@
         }
         &__form{}
         &__form-inner{}
-        &__form-text-field{}
+        &__form-text-field{
+            &--finish{
+                padding: 19px 19px;
+            }
+        }
         &__form-textarea-field{}
         &__info{
             padding-right: 80px;

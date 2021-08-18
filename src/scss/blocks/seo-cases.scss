@@ -176,7 +176,11 @@
     &__list{}
     &__item{}
     &__item-content{}
-    &__item-description{}
+    &__item-description{
+      &--top{
+        width: 50%;
+      }
+    }
     &__item-project-img-wrap{
       width: 580px;
       &--contekst{

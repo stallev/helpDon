@@ -8,7 +8,7 @@
     }
   }
   &--secondary{
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
   &__text{
     font-family: Inter;
@@ -36,6 +36,10 @@
     &--main-page{
       margin-bottom: 60px;
     }
+    &--secondary{
+      margin-top: 30px;
+      margin-bottom: 60px;
+    }
     &__text{
       font-size: 50px;
       line-height: 66px;
@@ -54,6 +58,7 @@
       margin-bottom: 84px;
     }
     &--secondary{
+      margin-top: 30px;
       margin-bottom: 90px;
     }
     &__text{
@@ -73,7 +78,8 @@
       
     }
     &--secondary{
-      margin-bottom: 120px;
+      margin-top: 40px;
+      margin-bottom: 150px;
     }
     &__text{
     }
