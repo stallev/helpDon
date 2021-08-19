@@ -1,3 +1,4 @@
+//стили для секции со слайдером
 .portfolio{
     &__wrap{
         position: relative;
@@ -141,7 +142,45 @@
         }
     }
 }
+
+//стили для секции на странице портфолио
+.portfolio{
+    &__list--portfolio-page{}
+    &__thumbs-list{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+    }
+    &__thumb{
+        display: flex;
+        flex-direction: column;
+        & .portfolio__thumb-description{
+            text-align: center;
+            width: 100%;
+        }
+        & .portfolio__thumb-title{
+            text-align: center;
+        }
+    }
+    &__thumbs-img-wrap{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    &__thumbs-img{}
+    &__thumb-description{
+        display: inline-block;
+        margin-bottom: 5px;
+        @include aboutParagraph;
+        text-align: center;
+    }
+    &__thumbs-title{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
 @media only screen and (min-width: $tablet-width){
+    //стили для секции со слайдером
     .portfolio{
         & .swiper-slide-active{
             & .portfolio__item-img-wrap--desctop{
@@ -154,8 +193,30 @@
             }
         }
     }
+    //стили для секции на странице портфолио
+    .portfolio{
+        &__list--portfolio-page{}
+        &__thumbs-list{
+            grid-template-columns: 1fr 1fr;
+            column-gap: 40px;
+        }
+        &__thumb{
+            & .portfolio__thumb-description{
+                text-align: left;
+                width: 100%;
+            }
+            & .portfolio__thumb-title{
+                text-align: left;
+            }
+        }
+        &__thumbs-img-wrap{}
+        &__thumbs-img{}
+        &__thumb-description{}
+        &__thumbs-title{}
+    }
 }
 @media only screen and (min-width:$desctop-width){
+    //стили для секции со слайдером
     .portfolio{
         &__wrap{
             position: relative;
@@ -273,8 +334,23 @@
         }
     }
     
+    //стили для секции на странице портфолио
+    .portfolio{
+        &__list--portfolio-page{}
+        &__thumbs-list{
+            grid-template-columns: 1fr 1fr;
+            row-gap: 40px;
+            column-gap: 40px;
+        }
+        &__thumbs{}
+        &__thumbs-img-wrap{}
+        &__thumbs-img{}
+        &__thumb-description{}
+        &__thumbs-title{}
+    }
 }
 @media only screen and (min-width:$xl-width){
+    //стили для секции со слайдером
     .portfolio.section{
         padding-bottom: 70px;
     }
@@ -305,5 +381,19 @@
                 }
             }
         }
+    }
+
+    //стили для секции на странице портфолио
+    .portfolio{
+        &__list--portfolio-page{}
+        &__thumbs-list{
+            row-gap: 60px;
+            column-gap: 60px;
+        }
+        &__thumbs{}
+        &__thumbs-img-wrap{}
+        &__thumbs-img{}
+        &__thumb-description{}
+        &__thumbs-title{}
     }
 }
