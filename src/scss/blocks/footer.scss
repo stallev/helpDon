@@ -75,12 +75,12 @@
     }
   }
   &__content-link-img-wrap{
-
     min-width: 45px;
     & svg{
       width: auto;
       height: auto;
       opacity: .8;
+      stroke-width: 2px;
     }
   }
 }
@@ -118,6 +118,11 @@
       &--icons{
         display: flex;
         align-items: center;
+      }
+    }
+    &__content-link-img-wrap{
+      & svg{
+        stroke-width: 3px;
       }
     }
   }

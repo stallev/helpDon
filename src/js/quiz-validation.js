@@ -28,14 +28,10 @@ if(backBtnsQuizArray){
 function displayNextStep(parent) {
   parent.nextElementSibling.style.display = "flex";
   parent.style.display = "none";
-  //pageScrollTop = document.scrollTop;
-  parent.closest('.order-form__content--quiz').scrollTop = 0;
 }
 function displayPreviousStep(parent) {
   parent.previousElementSibling.style.display = "flex";
   parent.style.display = "none";
-  parent.closest('.order-form__content--quiz').scrollTop = 0;
-  //document.scrollTop = pageScrollTop;
 }
 
 

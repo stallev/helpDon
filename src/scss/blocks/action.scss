@@ -76,6 +76,9 @@
         margin: 0;
       }
     }
+    &--product{
+      margin: 30px auto 0 auto;
+    }
   }
   
 }
@@ -113,6 +116,10 @@
       }
       &--answers{
         justify-content: flex-end;
+      }
+      &--product{
+        margin-top: 40px;
+        margin-right: auto;
       }
     }
   }
@@ -173,6 +180,9 @@
     &__group{
       &--head{
         margin-bottom: 100px;
+      }
+      &--product{
+        margin-top: 30px;
       }
     }
   }

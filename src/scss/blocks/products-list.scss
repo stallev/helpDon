@@ -63,6 +63,9 @@
       position: relative;
       padding-right: 40%;
       margin-bottom: 60px;
+      &--internet-shop{
+        margin-bottom: 80px;
+      }
     }
     &__item-title{}
     &__item-img-wrap{
@@ -83,6 +86,9 @@
     &__inner{}
     &__item{
       margin-bottom: 80px;
+      &--internet-shop{
+        margin-bottom: 100px;
+      }
     }
     &__item-title{}
     &__item-img-wrap{}

@@ -62,8 +62,11 @@
     grid-template-columns: 1fr 1fr;
     row-gap: 50px;
     column-gap: 30px;
-    &--vertical{
+    &--vertical--4{
       grid-template-columns: repeat(4, 1fr);
+    }
+    &--vertical--3{
+      grid-template-columns: repeat(3, 1fr);
     }
   }
   .benefit-item{
