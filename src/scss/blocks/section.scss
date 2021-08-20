@@ -1,14 +1,14 @@
 .section{
   padding-bottom: 60px;
-  background: linear-gradient(91.98deg, rgba(255, 255, 255, 0.7) 38.63%, rgba(255, 255, 255, 0.434) 57.11%, rgba(255, 255, 255, 0.63) 77.21%);
+  //background: linear-gradient(91.98deg, rgba(255, 255, 255, 0.7) 38.63%, rgba(255, 255, 255, 0.434) 57.11%, rgba(255, 255, 255, 0.63) 77.21%);
   &--gray{
-    background: #D5DCDF;
+    background-color: #D5DCDF;
     & .section__name-wrap{
       border-color: #fff;
     }
   }
   &--lightgray{
-    background: #E5E5E5;
+    background-color: #E5E5E5;
     & .section__name-wrap{
       border-color: #fff;
     }

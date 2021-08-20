@@ -1,0 +1,98 @@
+.blog-page{
+  background-color: #E5E5E5;;
+}
+.blog-thumb-list{}
+.blog-thumb{
+  margin-bottom: 40px;
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+  &__inner{
+    display: flex;
+    flex-direction: column;
+  }
+  &__img-wrap{
+    width: 100%;
+  }
+  &__img{
+    display: inline-block;
+    width: 100%;
+  }
+  &__text-content{
+    display: flex;
+    flex-direction: column;
+  }
+  &__title{
+    margin-bottom: 5px;
+  }
+  &__excerpt{
+    margin-bottom: 15px;
+    @include aboutParagraph;
+  }
+  &__link{
+    display: inline-block;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.25;
+    color: #739AA8;
+    transition: color .4s ease-in;
+    &:hover{
+      color: $pinkColor;
+    }
+  }
+}
+
+
+@media only screen and (min-width:$tablet-width){
+  .blog-thumb-list{}
+  .blog-thumb{
+    &__inner{
+      flex-direction: row;
+    }
+    &__img-wrap{
+      width: 250px;
+      min-width: 250px;
+      margin-right: 20px;
+    }
+    &__img{}
+    &__text-content{}
+    &__title{}
+    &__excerpt{}
+    &__link{}
+  }
+}
+@media only screen and (min-width: $desctop-width){
+  .blog-thumb-list{}
+  .blog-thumb{
+    &__inner{
+      flex-direction: row;
+    }
+    &__img-wrap{
+      width: 290px;
+      min-width: 290px;
+      margin-right: 20px;
+    }
+    &__img{}
+    &__text-content{}
+    &__title{}
+    &__excerpt{
+      margin-bottom: 20px;
+    }
+    &__link{
+      font-size: 20px;
+    }
+  }
+}
+@media only screen and (min-width: $xl-width){
+  .blog-thumb-list{}
+  .blog-thumb{
+    &__inner{}
+    &__img-wrap{}
+    &__img{}
+    &__text-content{}
+    &__title{}
+    &__excerpt{}
+    &__link{}
+  }
+}

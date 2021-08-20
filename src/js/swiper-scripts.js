@@ -88,7 +88,7 @@ var port_shops = new Swiper(".portfolio__shops", {
   },
 });
 
-var reviewsSlider = new Swiper(".reviews__list", {
+var reviewsSlider = new Swiper(".reviews__list--slider", {
   loop: true,
   slidesPerView: 1,
   centeredSlides: true,

@@ -1,4 +1,5 @@
 .reviews{
+  //стили для слайдера с отзывами
   &__list{
     //положение стрелок
     position: relative;
@@ -76,7 +77,7 @@
     margin-bottom: 5px;
     font-family: Inter;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.2;
     color: #586F78;
   }
@@ -95,6 +96,59 @@
     font-size: 12px;
     line-height: 1.25;
     color: #000000;
+  }
+}
+//стили для страницы отзывов
+.reviews.reviews--page{
+  &.section{
+    background-color: #E5E5E5;
+  }
+  & .reviews__list{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    
+  }
+  & .reviews__item{
+    padding-top: 60px;
+    &:nth-of-type(2n){
+      background-color: #fff;
+    }
+    &:nth-of-type(1){
+      padding-top: 10px;
+    }
+    &:last-of-type{
+      padding-bottom: 0;
+    }
+  }
+  & .reviews__item-inner{
+    align-items: flex-start;
+  }
+  & .reviews__item-img-wrap{
+    width: 100%;
+    order: 2;
+  }
+  & .reviews__item-img{}
+  & .reviews__item-main-content{
+    order: 3;
+  }
+  & .reviews__item-paragraph{}
+  & .reviews__item-company-block{
+    order: 1;
+  }
+  & .reviews__item-company-img{}
+  & .reviews__item-company-info{}
+  & .reviews__item-company-name{}
+  & .reviews__item-company-person{}
+  & .reviews__item-company-position{}
+  & .reviews__action{
+    order: 4;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    & a{
+      margin-right: 0;
+    }
   }
 }
 @media only screen and (min-width:$tablet-width){
@@ -149,6 +203,30 @@
     }
     &__item-company-person{}
     &__item-company-position{}
+  }
+  //стили для страницы отзывов
+  .reviews.reviews--page{
+    & .reviews__list{}
+    & .reviews__item{}
+    & .reviews__item-inner{
+      display: block;
+    }
+    & .reviews__item-img-wrap{
+      width: 30%;
+      float: left;
+    }
+    & .reviews__item-img{}
+    & .reviews__item-main-content{}
+    & .reviews__item-paragraph{}
+    & .reviews__item-company-block{}
+    & .reviews__item-company-img{}
+    & .reviews__item-company-info{}
+    & .reviews__item-company-name{}
+    & .reviews__item-company-person{}
+    & .reviews__item-company-position{}
+    & .reviews__action{
+      justify-content: flex-end;
+    }
   }
 }
 @media only screen and (min-width: $desctop-width){
@@ -261,7 +339,67 @@
     &__item-company-position{}
     
   }
-  
+  //стили для страницы отзывов
+  .reviews.reviews--page{
+    & .reviews__list{
+      margin-bottom: -30px;
+    }
+    & .reviews__item{
+      padding-bottom: 60px;
+    }
+    & .reviews__item-inner{
+      display: grid;
+      grid-template-columns: 28% auto 240px;
+      //grid-auto-rows: minmax(100px, auto);
+      align-items: flex-start;
+      row-gap: 10px;
+    }
+    & .reviews__item-img-wrap{
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      width: 100%;
+      padding-right: 30px;
+      margin-right: 0;
+    }
+    & .reviews__item-img{}
+    & .reviews__item-main-content{
+      grid-column-start: 2;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    & .reviews__item-paragraph{
+      margin-bottom: 30px;
+    }
+    & .reviews__item-company-block{
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      max-height: 20px;
+      margin: 0;
+    }
+    & .reviews__item-company-img{}
+    & .reviews__item-company-info{}
+    & .reviews__item-company-name{}
+    & .reviews__item-company-person{}
+    & .reviews__item-company-position{}
+    & .reviews__action{
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      justify-content: flex-start;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
 }
 @media only screen and (min-width: $xl-width){
   .reviews{
@@ -330,5 +468,21 @@
     &__item-company-position{
       font-size: 18px;
     }
+  }
+  //стили для страницы отзывов
+  .reviews.reviews--page{
+    & .reviews__list{}
+    & .reviews__item{}
+    & .reviews__item-inner{}
+    & .reviews__item-img-wrap{}
+    & .reviews__item-img{}
+    & .reviews__item-main-content{}
+    & .reviews__item-paragraph{}
+    & .reviews__item-company-block{}
+    & .reviews__item-company-img{}
+    & .reviews__item-company-info{}
+    & .reviews__item-company-name{}
+    & .reviews__item-company-person{}
+    & .reviews__item-company-position{}
   }
 }

@@ -14,6 +14,12 @@
   &__upper--portfolio{
     background-image: url(../img/content/portfolio/head-bg.png);
   }
+  &__upper--reviews{
+    background-image: url(../img/content/reviews/head-bg.png);
+  }
+  &__upper--blog{
+    background-image: url(../img/content/blog/head-bg.png);
+  }
 
 }
 .head .container{
@@ -78,11 +84,10 @@
   &.head--small-pb{
     padding-bottom: 0;
   }
+  &.head--reviews{
+    padding-bottom: 1px;
+  }
   &__upper{
-    & .container{
-      position: relative;
-      overflow-x: clip;
-    }
     &--development{
       background-image: url(../img/content/development/head-bg.webp);
       background-size: cover;
@@ -93,10 +98,18 @@
       background-size: cover;
       box-shadow: inset 50vw -25vw 40px 85px rgba(229,229,229,.3);
     }
+    &--blog{
+      background-image: url(../img/content/blog/head-bg.webp);
+      background-size: cover;
+      box-shadow: inset 50vw -25vw 40px 85px rgba(229,229,229,.3);
+    }
   }
   &__bottom{
     position: relative;
     &--development{
+      box-shadow: 0px -33px 26px 26px rgba(229,229,229,1);
+    }
+    &--portfolio{
       box-shadow: 0px -33px 26px 26px rgba(229,229,229,1);
     }
   }
@@ -313,7 +326,7 @@
 }
 @media only screen and (min-width: $desctop-width){
   .head{
-    padding: 0 0 80px 90px;
+    padding: 0 0 80px 0;
     &--main{
       padding: 140px 0 250px 90px;
     }
@@ -386,7 +399,7 @@
     
     &__social{
       position: fixed;
-      transform: translate(-74px, -250px);
+      transform: translate(16px, -250px);
     }
     &__social-clk{
       display: none;
