@@ -86,3 +86,67 @@ if(accordeonFaq){
     }
   )
 }
+
+let mainPortfolioAccord = convertToArray(document.querySelectorAll('.accordeon1.portfolio__wrap'));
+if(mainPortfolioAccord){
+  mainPortfolioAccord.forEach(
+    block => {
+      let accordeonTab1Links = convertToArray(block.querySelectorAll('.accordeon__item-nav-link.portfolio__nav-item--main-link'));
+      let accordeonItemsContentList = convertToArray(block.querySelectorAll('.accordeon__item-content.portfolio__list-item--parent'));
+      if(accordeonTab1Links&&accordeonItemsContentList){
+        accordeonTab1Links.forEach(
+          link => {
+            link.addEventListener('click', function(e){
+              e.preventDefault();
+              accordeonTab1Links.forEach(
+                navLink => {
+                  navLink.classList.remove('accordeon__item-nav-link--active');
+                }
+              );
+              accordeonItemsContentList.forEach(
+                accordeonItemsContent => {
+                  accordeonItemsContent.classList.remove('accordeon__item-content--active');
+                }
+              );
+              let activeAccordeonItemID = e.target.getAttribute('data-tab-id');
+              e.target.classList.add('accordeon__item-nav-link--active');
+              document.getElementById(activeAccordeonItemID).classList.add('accordeon__item-content--active');
+            })
+          }
+        )
+      }
+    }
+  )
+}
+
+let subPortfolioAccord = convertToArray(document.querySelectorAll('.subaccordeon'));
+if(subPortfolioAccord){
+  mainPortfolioAccord.forEach(
+    block => {
+      let accordeonTab2Links = convertToArray(block.querySelectorAll('.accordeon__item-nav-link.portfolio__nav-item--sub-link'));
+      let accordeonItemsContentList = convertToArray(block.querySelectorAll('.accordeon__item-content.portfolio__list-item--sub'));
+      if(accordeonTab2Links&&accordeonItemsContentList){
+        accordeonTab2Links.forEach(
+          link => {
+            link.addEventListener('click', function(e){
+              e.preventDefault();
+              accordeonTab2Links.forEach(
+                navLink => {
+                  navLink.classList.remove('accordeon__item-nav-link--active');
+                }
+              );
+              accordeonItemsContentList.forEach(
+                accordeonItemsContent => {
+                  accordeonItemsContent.classList.remove('accordeon__item-content--active');
+                }
+              );
+              let activeAccordeonItemID = e.target.getAttribute('data-tab-id');
+              e.target.classList.add('accordeon__item-nav-link--active');
+              document.getElementById(activeAccordeonItemID).classList.add('accordeon__item-content--active');
+            })
+          }
+        )
+      }
+    }
+  )
+}

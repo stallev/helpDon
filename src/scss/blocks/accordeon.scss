@@ -16,18 +16,3 @@
   transform: translate(0, 0);
 }
 
-
-.portfolio .accordeon__item-content{
-  max-height: 1px;
-  overflow-y: hidden;
-  display: block;
-  // position: absolute;
-  // transform: translate(-10000px, -100000px);
-  //display: none;
-}
-.portfolio .accordeon__item-content--active{
-  max-height: 100%;
-  // position: static;
-  // transform: translate(0, 0);
-  //display: block;
-}
