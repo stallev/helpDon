@@ -1,0 +1,31 @@
+.choose-us{
+  padding: 60px 0;
+  background-color: #E5E5E5;
+  &__title{
+    margin-bottom: 10px;
+  }
+  &__description{
+    margin-bottom: 20px;
+    @include aboutParagraph;
+  }
+}
+
+@media only screen and (min-width:$tablet-width){}
+@media only screen and (min-width: $desctop-width){
+  .choose-us{
+    padding: 80px 0;
+    &__title{
+      margin-bottom: 2px;
+    }
+    &__description{
+      margin-bottom: 40px;
+    }
+  }
+}
+@media only screen and (min-width: $xl-width){
+  .choose-us{
+    padding: 100px 0;
+    &__title{}
+    &__description{}
+  }
+}

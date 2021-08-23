@@ -20,6 +20,12 @@
   &__upper--blog{
     background-image: url(../img/content/blog/head-bg.png);
   }
+  &__upper--company{
+    background-image: url(../img/content/company/head-bg.png);
+  }
+  &__upper--contact-us{
+    background-image: url(../img/content/contacts/head-bg.png);
+  }
 
 }
 .head .container{
@@ -103,6 +109,16 @@
       background-size: cover;
       box-shadow: inset 50vw -25vw 40px 85px rgba(229,229,229,.3);
     }
+    &--company{
+      background-image: url(../img/content/company/head-bg.webp);
+      background-size: cover;
+      box-shadow: inset 50vw -25vw 40px 85px rgba(229,229,229,.3);
+    }
+    &--contacts{
+      background-image: url(../img/content/contacts/head-bg.webp);
+      background-size: cover;
+      box-shadow: inset 50vw -25vw 40px 85px rgba(229,229,229,.3);
+    }
   }
   &__bottom{
     position: relative;
@@ -113,8 +129,11 @@
       box-shadow: 0px -33px 26px 26px rgba(229,229,229,1);
     }
   }
-  &__content-smm{
-    
+  &__content-company {
+    margin-bottom: 40px;
+    & p{
+      text-align: center;
+    }
   }
   &__paragraph{
     @include aboutParagraph;
@@ -195,6 +214,9 @@
     font-size: 16px;
     line-height: 1.4;
     text-transform: uppercase;
+    &--contacts{
+      text-align: center;
+    }
   }
   &__subtitle-description{
     margin-top: 15px;
@@ -283,6 +305,9 @@
     }
     &__subtitle-text{
       font-size: 18px;
+      &--contacts{
+        text-align: center;
+      }
     }
     &__subtitle-description{}
     &__description-list{
@@ -365,6 +390,15 @@
     }
     &__subtitle-text{
       font-size: 22px;
+      &--contacts{
+        text-align: left;
+      }
+    }
+    &__content-company {
+      margin-bottom: 60px;
+      & p{
+        text-align: left;
+      }
     }
     &__subtitle-description{}
     &__description-list--grid{

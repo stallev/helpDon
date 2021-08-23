@@ -33,6 +33,17 @@
             }
         }
     }
+    &__nav-item.portfolio__nav-item--sub-link{
+        background: #fff;
+        color: #586F78;
+        &:hover{
+            color: #FA3D54;
+        }
+        &.accordeon__item-nav-link--active{
+            background: #fff;
+            color: #FA3D54;
+        }
+    }
     &__toggle{
         position: absolute;
         top: 150px;
@@ -81,6 +92,10 @@
     &__slider-img-wrap{
         display: none;
     } 
+}
+.portfolio__list-item--parent .portfolio__nav{
+    margin-top: 60px;
+    background: #fff;
 }
 .portfolio__list--changed .portfolio__item-img-wrap--mobile{
     display: none;

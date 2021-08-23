@@ -1,8 +1,14 @@
 .services{
+  &--head{
+    padding-bottom: 60px;
+  }
   &__list{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-row-gap: 30px;
+  }
+  &__subtitle{
+    margin-bottom: 20px;
   }
   &__item{
     background-size: cover;
@@ -107,8 +113,14 @@
 }
 @media only screen and (min-width: $desctop-width){
   .services{
+    &--head{
+      padding-bottom: 80px;
+    }
     &__list{
       grid-row-gap: 60px;
+    }
+    &__subtitle{
+      margin-bottom: 30px;
     }
     &__item{
       height: 261px;
@@ -138,6 +150,9 @@
 }
 @media only screen and (min-width: $desctop-width){
   .services{
+    &--head{
+      padding-bottom: 100px;
+    }
     &__item-excerpt, &__item-link{
       font-size: 20px;
     }

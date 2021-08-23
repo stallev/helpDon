@@ -20,7 +20,7 @@
   box-sizing: border-box;
   background: linear-gradient(137.06deg, #FA3D54 55.49%, #B5707C 142.05%);;
   text-transform: uppercase;
-  transition: all .5s ease-in-out;
+  transition: all .5s linear;
   //transition: color 1s ease, background 1s ease;
   &.action--nobg{
     background: rgba($color: #fff, $alpha: .7);
@@ -46,6 +46,7 @@
     }
     & a:nth-of-type(1){
      margin-top: 0;
+     margin-bottom: 30px;
     }
     &--head{
       margin-bottom: 30px;
@@ -57,6 +58,9 @@
           margin-bottom: 0;
         }
       }
+    }
+    &--company{
+      margin-bottom: 30px;
     }
     &--portfolio{
       margin-top: 40px;
@@ -73,7 +77,7 @@
     }
     &--reviews{
       & a{
-        margin: 0;
+        margin-top: 0;
       }
     }
     &--product{
@@ -84,8 +88,25 @@
 }
 @media only screen and (min-width:$tablet-width){
   .action{
+    margin-right: 30px;
+
+    &:last-of-type{
+      margin-right: 0;
+    }
     &__group{
       flex-direction: row;
+      & a{
+        margin-top: 0;
+        &:nth-of-type(1){
+          margin-bottom: 0;
+        }
+        &:nth-of-type(2){
+          margin-top: 0;
+        }
+      }
+      &--company{
+        margin-bottom: 30px;
+      }
       
       &--head{
         margin-bottom: 50px;
@@ -129,9 +150,15 @@
   .action{
     &__group{
       flex-direction: row;
+
       & a{
         &:nth-of-type(1){
           //margin-right: 52px;
+        }
+      }
+      & a{
+        &:nth-of-type(2){
+          margin-top: 0;
         }
       }
       &--head{
@@ -191,5 +218,9 @@
   }
   .action__group--head-bottom{
     margin-top: 100px;
+  }
+  .action__group--company{
+    margin-top: 20px;
+    margin-bottom: 40px;
   }
 }

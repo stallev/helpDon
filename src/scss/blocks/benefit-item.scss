@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 30px;
+  &--choose-us{
+    margin-bottom: 50px;
+  }
 }
 .benefit-item{
   &__inner{
@@ -62,6 +65,9 @@
     grid-template-columns: 1fr 1fr;
     row-gap: 50px;
     column-gap: 30px;
+    &--choose-us{
+      margin-bottom: 60px;
+    }
     &--vertical--4{
       grid-template-columns: repeat(4, 1fr);
     }
