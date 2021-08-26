@@ -7,7 +7,7 @@
 }
 .container--section-first{
   position: relative;
-  top: -13px;
+  top: -29px;
 }
 .container--section-first-2{
   position: relative;
@@ -15,6 +15,10 @@
 }
 .container.container--reviews{
   
+}
+.container.container--breadcrumbs{
+  width: 100%;
+  overflow-x: auto;
 }
 @media only screen and (min-width: 575px){
   .container{
@@ -27,7 +31,7 @@
     width: 700px;
   }
   .container--section-first{
-    top: -27px;
+    top: -63px;
   }
   .container--section-first-2{
     top: -63px;
@@ -38,7 +42,7 @@
     width: 930px;
   }
   .container--section-first{
-    top: -34px;
+    top: -75px;
   }
   .container--section-first-2{
     top: -75px;

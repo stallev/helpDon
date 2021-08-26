@@ -93,16 +93,54 @@
         display: none;
     } 
 }
-.portfolio__list-item--parent .portfolio__nav{
-    margin-top: 60px;
-    background: #fff;
-}
+
 .portfolio__list--changed .portfolio__item-img-wrap--mobile{
     display: none;
 }
 .portfolio__list--changed .portfolio__item-img-wrap--desctop{
     display: inline-block;
 }
+//страница проекта дизайна
+.portfolio--design{
+    padding-top: 70px;
+    background-color: #E5E5E5;
+}
+.portfolio--design .portfolio__toggle{
+    top: -60px;
+    right: 0;
+}
+.portfolio--design .portfolio__item-img-wrap--desctop{
+    & .portfolio__item-img{
+        position: absolute;
+        top: 10px;
+        left: 42px;
+        width: 241px;
+        height: auto;
+    }
+    & .portfolio__slider-img-wrap{
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        height: 100%;
+        width: 260px;
+    }
+
+}
+.portfolio--design .portfolio__item-img-wrap--mobile .portfolio__slider-img-wrap{
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 100%;
+}
+//////////
 .portfolio-slider{
     padding-top: 80px;
     position: relative;
@@ -229,6 +267,31 @@
         &__thumb-description{}
         &__thumbs-title{}
     }
+    //страница проекта дизайна
+    .portfolio--design .portfolio__item-img-wrap--desctop{
+        & .portfolio__item-img{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -56px;
+            bottom: 0;
+            margin: auto;
+            width: 241px;
+            height: auto;
+        }
+        & .portfolio__slider-img-wrap{
+            position: absolute;
+            display: block;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 100%;
+            width: 260px;
+        }
+
+    }
 }
 @media only screen and (min-width:$desctop-width){
     //стили для секции со слайдером
@@ -348,7 +411,13 @@
             }
         }
     }
-    
+    .portfolio__list-item--parent .portfolio__nav{
+        margin-top: 60px;
+        background-color: #fff;
+        & span{
+            background-color: #fff;
+        }
+    }
     //стили для секции на странице портфолио
     .portfolio{
         &__list--portfolio-page{}
@@ -362,6 +431,32 @@
         &__thumbs-img{}
         &__thumb-description{}
         &__thumbs-title{}
+    }
+
+    //страница проекта дизайна
+    .portfolio--design .portfolio__item-img-wrap--desctop{
+        & .portfolio__item-img{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -93px;
+            bottom: 0;
+            margin: auto;
+            width: 460px;
+            height: auto;
+        }
+        & .portfolio__slider-img-wrap{
+            position: absolute;
+            display: block;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 100%;
+            width: 500px;
+        }
+
     }
 }
 @media only screen and (min-width:$xl-width){
@@ -410,5 +505,37 @@
         &__thumbs-img{}
         &__thumb-description{}
         &__thumbs-title{}
+    }
+
+    //страница проекта дизайна
+    .portfolio--design .portfolio__item-img-wrap--mobile .portfolio__slider-img-wrap{
+        top: 60px;
+    }
+    .portfolio__item-img-wrap--mobile .portfolio__item-img{
+        top: 60px;
+    }
+    .portfolio--design .portfolio__item-img-wrap--desctop{
+        & .portfolio__item-img{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -60px;
+            bottom: 0;
+            margin: auto;
+            width: 507px;
+            height: auto;
+        }
+        & .portfolio__slider-img-wrap{
+            position: absolute;
+            display: block;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 100%;
+            width: 550px;
+        }
+
     }
 }

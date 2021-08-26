@@ -1,0 +1,114 @@
+.gallery{
+  &__list{
+    position: relative;
+    padding: 100px 0 0;
+    & .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+      display: none;
+    }
+    & .swiper-pagination{
+      display: none;
+    }
+    & .swiper-button-prev,
+    & .swiper-button-next{
+        top: 40px;
+    }
+    & .swiper-button{
+        position: relative;
+        &::after{
+            display: block;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+            font-size: 0;
+        }
+        &-prev{
+            left: auto;
+            right: 120px;
+        }
+        &-next{
+            right: 40px;
+        }
+    }
+  }
+  &__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__item-img-wrap{
+    display: block;
+    width: 80%;
+    height: 45%;
+    min-width: 300px;
+    min-height: 170px;
+    max-width: 906px;
+    max-height: 510px;
+  }
+}
+
+
+@media only screen and (min-width:$tablet-width){
+  .gallery{
+    &__list{}
+    &__item{}
+    &__item-img-wrap{}
+  }
+}
+@media only screen and (min-width: $desctop-width){
+  .gallery{
+    & .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+      position: absolute;
+      display: block;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+    }
+    & .swiper-pagination{
+      display: block;
+    }
+    & .swiper-button-prev,
+    & .swiper-button-next{
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, 0);
+        &::after{
+            width: 64px;
+            height: 64px;
+        }
+    }
+    & .swiper-button-prev{
+        left: 5%;
+    }
+    & .swiper-button-next{
+        left: 95%;
+    }
+    & .swiper-pagination-bullet{
+      width: 24px;
+      height: 24px;
+      &-active{
+        background: linear-gradient(137.06deg, #FA3D54 55.49%, #B5707C 142.05%);
+        opacity: 0.7;
+      }
+    }
+    & .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+      margin-right: 24px;
+      &:last-of-type{
+        margin-right: 0;
+      }
+    }
+    &__list{
+      padding: 0;
+      padding-bottom: 60px;
+    }
+    &__item{}
+    &__item-img-wrap{}
+  }
+}
+@media only screen and (min-width: $xl-width){
+  .gallery{
+    &__list{}
+    &__item{}
+    &__item-img-wrap{}
+  }
+}

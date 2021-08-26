@@ -1,5 +1,5 @@
 .page-title{
-  margin-bottom: 50px;
+  //margin-bottom: 50px;
   text-align: center;
   &--main-page{
     margin-bottom: 70px;
@@ -9,7 +9,10 @@
   }
   &--secondary{
     padding-bottom: 20px;
-    margin-bottom: 30px;
+    //margin-bottom: 30px;
+  }
+  &--portfolio-item{
+    padding-bottom: 20px;
   }
   &__text{
     font-family: Inter;
@@ -41,6 +44,10 @@
       margin-top: 30px;
       padding-bottom: 60px;
     }
+    &--portfolio-item{
+      margin-top: 30px;
+      padding-bottom: 40px;
+    }
     &__text{
       font-size: 50px;
       line-height: 66px;
@@ -62,6 +69,10 @@
       margin-top: 30px;
       padding-bottom: 100px;
     }
+    &--portfolio-item{
+      margin-top: 30px;
+      padding-bottom: 60px;
+    }
     &__text{
       font-size: 60px;
       line-height: 66px;
@@ -81,6 +92,10 @@
     &--secondary{
       margin-top: 40px;
       padding-bottom: 170px;
+    }
+    &--portfolio-item{
+      margin-top: 40px;
+      padding-bottom: 120px;
     }
     &__text{
     }

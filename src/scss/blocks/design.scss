@@ -1,0 +1,84 @@
+.design{
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+  &__img-wrap{
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  &__img-wrap img{
+    display: block;
+    width: 100%;
+  }
+  &__description{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 20px;
+  }
+  &__param-name{
+    display: inline-block;
+    margin-right: 20px;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    color: #586F78;
+  }
+  &__param-value{
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.25;
+    color: #586F78;
+  }
+}
+
+
+@media only screen and (min-width:$tablet-width){
+  .design{
+    &__inner{}
+    &__img-wrap{}
+    &__img-wrap img{}
+    &__description{}
+    &__param-name{}
+    &__param-value{}
+  }
+}
+@media only screen and (min-width: $desctop-width){
+  .design{
+    &__inner{
+      padding: 0 15%;
+    }
+    &__img-wrap{
+      margin-bottom: 40px;
+    }
+    &__img-wrap img{}
+    &__description{
+      margin-top: 40px;
+    }
+    &__param-name{
+      font-size: 20px;
+    }
+    &__param-value{
+      font-size: 20px;
+    }
+  }
+}
+@media only screen and (min-width: $xl-width){
+  .design{
+    &__inner{}
+    &__img-wrap{}
+    &__img-wrap img{}
+    &__description{
+      margin-top: 70px;
+    }
+    &__param-name{}
+    &__param-value{}
+  }
+}

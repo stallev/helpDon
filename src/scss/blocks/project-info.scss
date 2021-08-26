@@ -1,0 +1,406 @@
+.project-info{
+  background-color: #EAEDEF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &--gray{
+    background-color: #E5E5E5;
+  }
+  &--gray2{
+    background-color: #D5DCDF;
+  }
+  &__header{
+    margin-bottom: 40px;
+  }
+  &__header-inner{
+    display: flex;
+    &--logo{
+      flex-direction: column;
+    }
+  }
+  &__logo-wrap{
+    width: 100%;
+    & svg{
+      display: block;
+      width: 100%;
+    }
+  }
+  &__short-company-description{
+    & p{
+      @include aboutParagraph;
+      text-align: center;
+    }
+  }
+  &__content{
+    position: relative;
+    &--seo{
+      margin-bottom: 40px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    &--seo2{
+      margin-bottom: 40px;
+    }
+  }
+  &__img-wrap{
+    width: 100%;
+    margin-bottom: 4px;
+    &--seo{
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    &--seo2{
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+    &--smm{}
+  }
+  &__img{
+    display: block;
+    width: 100%;
+  }
+  &__content-text{
+    &--design{}
+    &--seo{}
+    &--smm{}
+  }
+  &__text-block{
+    margin-bottom: 40px;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+    &--graph{}
+  }
+  &__text-block-title{
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: #000000;
+    &--seo{
+      text-transform: none;
+      margin-bottom: 40px;
+    }
+    &--seo12{
+      text-align: left;
+      margin: 10px 0;
+    }
+    &--seo-footer{}
+  }
+  &__text-block p{
+    @include aboutParagraph;
+  }
+  &__graphs-block{
+  }
+  &__graphs-columns-list{
+    display: flex;
+    align-items: flex-end;
+  }
+  &__graphs-column{
+    position: relative;
+    margin-right: 20px;
+    width: 140px;
+    &:last-of-type{
+      margin-right: 0;
+    }
+    
+  }
+  &__graphs-column-value{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+    border-radius: 15px 15px 0 0;
+    font-family: Inter;
+    font-weight: 900;
+    font-size: 20px;
+    color: #FFFFFF;
+    &--old{
+      background: linear-gradient(135.42deg, #739AA8 14.57%, rgba(115, 154, 168, 0.76) 116.43%);
+    }
+    &--new{
+      background: linear-gradient(137.06deg, #FA3D54 55.49%, #B5707C 142.05%);
+    }
+  }
+  &__graphs-column-capture{
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+    display: inline-block;
+    margin-top: 15px;
+    min-height: 60px;
+    width: 100%;
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.3;
+    color: #000000;
+  }
+  &__graphs-value{
+
+  }
+  &__params-list{
+    display: flex;
+    flex-direction: column;
+  }
+  &__params-item{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 1.3;
+    color: #000000;
+  }
+  &__param-name{
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: 700;
+  }
+  &__param-value{}
+  &__footer{
+    &--seo1{
+      margin-top: 60px;
+    }
+  }
+  &__seo-calc{}
+  &__seo-calc-result{}
+  &__seo-calc-up{
+    color: $pinkColor;
+  }
+  &__seo-calc-bottom{}
+}
+
+
+@media only screen and (min-width:$tablet-width){
+  .project-info{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    &__header{}
+    &__header-inner{
+      &--logo{
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    &__logo-wrap{
+      width: 40%;
+      & svg{}
+    }
+    &__short-company-description{
+      width: 50%;
+      & p{
+        text-align: left;
+      }
+    }
+    &__content{
+      &--seo2{
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    &__img-wrap{
+      &--seo{
+      }
+      &--smm{
+      }
+      &--seo2{
+        width: 70%;
+        align-self: center;
+      }
+    }
+    &__img{}
+    &__content-text{
+      &--design{}
+      &--seo{}
+      &--smm{}
+    }
+    &__text-block{
+      &--graph{}
+    }
+    &__text-block-title{
+      text-align: left;
+      font-size: 16px;
+      &--seo-footer{}
+    }
+    &__graphs-block{
+      display: flex;
+      justify-content: center;
+    }
+    &__graphs-columns-list{
+      
+    }
+    &__text-block p{}
+    &__params-list{}
+    &__params-item{
+      font-size: 14px;
+    }
+    &__param-name{}
+    &__param-value{}
+    &__footer{}
+    &__seo-calc{}
+    &__seo-calc-result{}
+    &__seo-calc-up{}
+    &__seo-calc-bottom{}
+  }
+}
+@media only screen and (min-width: $desctop-width){
+  .project-info{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    &__header{
+      margin-bottom: 45px;
+    }
+    &__header-inner{
+      &--logo{
+        
+      }
+    }
+    &__logo-wrap{
+      width: 31%;
+      & svg{}
+    }
+    &__short-company-description{
+      width: 61%;
+      & p{
+        
+      }
+    }
+    &__content{
+      &--smm{
+        margin-bottom: 60px;
+      }
+      &--seo{
+        margin-top: 80px;
+        margin-bottom: 0;
+      }
+    }
+    &__img-wrap{
+      &--smm{
+        position: absolute;
+        right: 0;
+        top: 2px;
+        width: 35%;
+      }
+      &--seo{
+        position: absolute;
+        right: 0;
+        top: -65px;
+        width: 45%;
+      }
+      &--seo2{
+        position: absolute;
+        top: 30px;
+        right: 0;
+        width: 50%;
+      }
+    }
+    &__graphs-block--bottom{
+      margin-top: 60px;
+    }
+    &__graphs-column-capture{
+      font-size: 20px;
+    }
+    &__img{}
+    &__content-text{
+      &--design{}
+      &--smm{
+        width: 60%;
+      }
+      &--seo{
+        width: 55%;
+      }
+    }
+    &__text-block{
+      margin-bottom: 60px;
+      &--graph{}
+    }
+    &__text-block-title{
+      margin-bottom: 15px;
+      font-size: 25px;
+      &--seo{
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      &--seo-footer{}
+    }
+    &__text-block p{}
+    &__graphs-block{
+      justify-content: flex-start;
+    }
+    &__footer{
+      &--seo1{
+        margin-top: 80px;
+      }
+    }
+    &__params-list{}
+    &__params-item{
+      justify-content: flex-start;
+      font-size: 18px;
+    }
+    &__param-name{}
+    &__param-value{}
+    &__footer{}
+    &__seo-calc{}
+    &__seo-calc-result{}
+    &__seo-calc-up{}
+    &__seo-calc-bottom{}
+  }
+}
+@media only screen and (min-width: $xl-width){
+  .project-info{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    &__header{}
+    &__header-inner{
+      &--logo{
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    &__logo-wrap{
+      width: 31%;
+      & svg{}
+    }
+    &__short-company-description{
+      width: 61%;
+      & p{}
+    }
+    &__content{}
+    &__img-wrap{
+      &--seo{}
+      &--smm{}
+    }
+    &__img{}
+    &__content-text{
+      &--design{}
+      &--seo{}
+      &--smm{}
+    }
+    &__text-block{
+      &--graph{}
+    }
+    &__text-block-title{
+      font-size: 30px;
+      &--seo-footer{}
+    }
+    &__text-block p{}
+    &__params-list{}
+    &__params-item{
+      font-size: 18px;
+    }
+    &__param-name{}
+    &__param-value{}
+    &__footer{}
+    &__seo-calc{}
+    &__seo-calc-result{}
+    &__seo-calc-up{}
+    &__seo-calc-bottom{}
+  }
+}

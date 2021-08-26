@@ -1,9 +1,13 @@
 .breadcrumbs{
-  padding: 10px 0;
-  margin-bottom: 30px;
   background-color: #D5DCDF;
+  overflow-x: hidden;
+  & .container{
+    width: 100%;
+    overflow-x: auto;
+  }
   &__list{
     display: flex;
+    padding: 10px 0;
   }
   &__item{
     position: relative;
@@ -26,14 +30,13 @@
     }
   }
   &__item:last-of-type .breadcrumbs__link{
-    margin-right: 0;
     opacity: .6;
     
   }
   &__link{
     display: inline-block;
     margin-right: 10px;
-    width: fit-content;
+    width: max-content;
     text-align: center;
     font-family: Roboto;
     font-weight: 400;

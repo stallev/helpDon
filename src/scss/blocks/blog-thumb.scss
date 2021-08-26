@@ -1,5 +1,6 @@
 .blog-page{
-  background-color: #E5E5E5;;
+  padding-top: 30px;
+  background-color: #E5E5E5;
 }
 .blog-thumb-list{}
 .blog-thumb{
@@ -63,6 +64,9 @@
   }
 }
 @media only screen and (min-width: $desctop-width){
+  .blog-page{
+    padding-top: 50px;
+  }
   .blog-thumb-list{}
   .blog-thumb{
     &__inner{

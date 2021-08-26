@@ -141,3 +141,19 @@ var site_blocks = new Swiper(".site-blocks__list", {
     },
   },
 });
+
+//галерея в портфолио
+var gallerySlider = new Swiper(".gallery__list", {
+  loop: true,
+  slidesPerView: 1,
+  initialSlide: 1,
+  spaceBetween: 0,
+  navigation:{
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
