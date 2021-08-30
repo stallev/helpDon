@@ -50,10 +50,8 @@ function openCalcForm(btnClass){
     )
   }
 }
-openCalcForm('palisade-1');
-openCalcForm('gateway-1');
-openCalcForm('quiz-form');
 openCalcForm('call-form');
+openCalcForm('quiz-popup');
 
 // let closeCallForm =document.querySelector('.order-form__content--call-form .order-form__submit');
 
@@ -62,47 +60,4 @@ openCalcForm('call-form');
 //     document.body.removeAttribute("class");
 //   });
 // }
-
-//скрытие списка полей
-let fieldGroupTitles = convertToArray(document.querySelectorAll('.order-form__field-group-title'));
-if(fieldGroupTitles){
-  fieldGroupTitles.forEach(
-    fieldGroupTitle => {
-      fieldGroupTitle.addEventListener('click', function(){
-        fieldGroupTitle.classList.toggle('order-form__field-group-title--hidden');
-      });
-    }
-  )
-}
-//стилизация чекбоксов
-let formLabels = convertToArray(document.querySelectorAll('.gateways .wpcf7-list-item-label'));
-if(formLabels){
-  formLabels.forEach(
-    formLabel => {
-      formLabel.addEventListener('click', function(){
-        formLabel.classList.toggle('label--checked');
-      });
-    }
-  )
-}
-//стилизация радио в квизе
-// let quizRadioLabels = convertToArray(document.querySelectorAll('.order-form__content--quiz .wpcf7-list-item-label'));
-// if(quizRadioLabels){
-//   quizRadioLabels.forEach(
-//     quizRadioLabel => {
-//       quizRadioLabel.addEventListener('click', function(){
-//         quizRadioLabel.classList.toggle('label--checked');
-//       });
-//     }
-//   )
-// }
-
-//форма заказа расчета забора1
-// let palisade1Btn = document.querySelector('.palisade-1');
-// palisade1Btn.addEventListener('click', function(e){
-//   e.preventDefault();
-//   document.body.classList.add('order-form-view');
-//   document.body.classList.add('palisade-1');
-// });
-//форма заказа расчета забора2
 

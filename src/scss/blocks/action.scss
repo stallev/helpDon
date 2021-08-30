@@ -42,16 +42,18 @@
     flex-direction: column;
     align-items: center;
     & a{
-      //margin-top: 30px;
+      margin-bottom: 30px;
     }
-    & a:nth-of-type(1){
-     margin-top: 0;
-     margin-bottom: 30px;
+    & a:last-of-type{
+     margin: 0;
     }
     &--head{
       margin-bottom: 30px;
     }
     &--head-bottom{
+      margin-bottom: 30px;
+    }
+    &--head-bottom-contekst{
       margin-top: 30px;
       & .action{
         &:last-of-type{
@@ -129,7 +131,7 @@
           }
         }
       }
-      &--head-bottom{
+      &--head-bottom-contekst{
         & .action{
           margin-right: 30px;
           &:last-of-type{
@@ -172,6 +174,9 @@
           margin-top: 0;
         }
       }
+      &--head-bottom{
+        margin-bottom: 50px;
+      }
       &--head{
         margin-bottom: 80px;
         & a{
@@ -198,6 +203,7 @@
       }
       &--about{
         margin-top: 80px;
+        margin-bottom: 0;
         & a{
           &:nth-of-type(1){
             margin-right: 52px;
@@ -231,7 +237,7 @@
   .action__group--head{
     margin-top: 190px;
   }
-  .action__group--head-bottom{
+  .action__group--head-bottom-contekst{
     margin-top: 100px;
   }
   .action__group--company{

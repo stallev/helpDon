@@ -1,5 +1,6 @@
-.nav{
+.header__content-nav .nav{
 	padding-bottom: 20px;
+	
 	&__list{
 		display: flex;
 		flex-direction: column;
@@ -49,9 +50,32 @@
 		}
 	}
 }
+.nav--footer{
+	padding-bottom: 0;
+	& .nav__link{
+		display: inline-block;
+		margin-bottom: 10px;
+		font-family: Roboto;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+		transition: all .4s ease;
+		&:hover{
+			color: #fff;
+		}
+	}
+}
 @media only screen and (min-width: $desctop-width){
-  .nav{
+  .header__content-nav .nav{
 	  padding-bottom: 0;
+		&.nav--footer{
+			padding-bottom: 0;
+			& .nav__link{
+				margin-bottom: 10px;
+				font-size: 16px;
+				line-height: 19px;
+			}
+		}
 	  &__content-upper{
 		  border-bottom: 1px ;
 	  }
@@ -119,6 +143,14 @@
 			}
 		}
   }
+	.nav--footer{
+		padding-bottom: 0;
+		& .nav__link{
+			margin-bottom: 10px;
+			font-size: 16px;
+			line-height: 19px;
+		}
+	}
   .nav__link--parent:hover .nav__sublist{
 	  display: flex;
   }
@@ -127,10 +159,18 @@
   }
 }
 @media only screen and (min-width:$xl-width){
-	.nav{
+	.header__content-nav .nav{
 		&__link{
 			font-size: 15px;
 			line-height: 18px;
+		}
+	}
+	.nav--footer{
+		padding-bottom: 0;
+		& .nav__link{
+			margin-bottom: 10px;
+			font-size: 18px;
+			line-height: 21px;
 		}
 	}
 }

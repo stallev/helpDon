@@ -373,7 +373,7 @@
   .head{
     padding: 0 0 80px 0;
     &--main{
-      padding: 140px 0 250px 90px;
+      padding: 140px 0 250px 0;
     }
     &--seo{
       background-size: auto 280px;
@@ -458,7 +458,7 @@
     
     &__social{
       position: fixed;
-      transform: translate(16px, -250px);
+      transform: translate(10px, -50%);
     }
     &__social-clk{
       display: none;
@@ -467,7 +467,7 @@
       font-size: 300px;
       line-height: 334px;
       bottom: 20px;
-      right: 5vw;
+      right: 0;
       -webkit-text-stroke: 6px rgba(213, 220, 223, 1);
       -webkit-text-fill-color: rgba(255, 255, 255, .1);
       &--secondary-page{

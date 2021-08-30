@@ -386,6 +386,9 @@
         }
         & .swiper-slide-active{
             //для разных экранов
+            & .portfolio__item-img-wrap--mobile .portfolio__slider-img-wrap{
+                top: -15px;
+            }
             & .portfolio__item-img-wrap--desctop{
                 & .portfolio__item-img{
                     position: absolute;
@@ -465,8 +468,18 @@
         padding-bottom: 70px;
     }
     .portfolio-slider{
+        & .portfolio__item-img-wrap--mobile .portfolio__item-img{
+            top: 0;
+        }
         & .swiper-slide-active{
             //для разных экранов
+            & .portfolio__item-img-wrap--mobile .portfolio__slider-img-wrap{
+                top: 0px;
+            }
+            
+            & .portfolio__item-img-wrap--mobile .portfolio__slider-img{
+                width: 95%;
+            }
             & .portfolio__item-img-wrap--desctop{
                 & .portfolio__item-img{
                     position: absolute;

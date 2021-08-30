@@ -79,7 +79,40 @@
         }
     }
 }
-
+.answers--call-form.answers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #D5DCDF;
+    & .answers__form-title{
+        margin-bottom: 10px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 1.4;
+        text-align: center;
+        color: #000000;
+    }
+    & .answers__description{
+        @include aboutParagraph;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    & .answers__form{
+        width: 100%;
+        margin-bottom: 0;
+    }
+    & .answers__form-inner{
+        width: 100%;
+    }
+    & .action__group--answers-form{
+        margin-top: 15px;
+    }
+    & .answers__form-text-field:last-of-type{
+        margin-bottom: 0;
+    }
+}
 @media only screen and (min-width:$tablet-width){
     .answers{
         &__wrap{
@@ -110,6 +143,9 @@
         &__invitation{}
         &__address{}
         &__phone{}
+    }
+    .answers--call-form.answers{
+    
     }
 }
 @media only screen and (min-width: $desctop-width){
@@ -147,6 +183,33 @@
             font-size: 30px;
         }
     }
+    .answers--call-form.answers{
+        padding: 60px 100px;
+        & .answers__form-title{
+            margin-bottom: 10px;
+            font-size: 45px;
+        }
+        & .answers__description{
+            margin-bottom: 40px;
+        }
+        & .answers__form{
+            width: 100%;
+            margin-bottom: 0;
+        }
+        & .answers__form-inner{
+            width: 100%;
+        }
+        & .action__group--answers-form{
+            margin-top: 40px;
+            justify-content: flex-end;
+        }
+        & .answers__form-text-field{
+            margin-bottom: 40px;
+        }
+        & .answers__form-text-field:last-of-type{
+            margin-bottom: 0;
+        }
+    }
 }
 @media only screen and (min-width: $xl-width){
     .answers{
@@ -166,5 +229,8 @@
         &__invitation{}
         &__address{}
         &__phone{}
+    }
+    .answers--call-form.answers{
+    
     }
 }

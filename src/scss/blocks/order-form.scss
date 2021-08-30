@@ -16,22 +16,21 @@
   right: 0;
   height: 100%;
   background-color: #222;
-  opacity: .8;
+  opacity: .7;
 }
 .order-form__icon-close-wrap{
-  position: fixed;
+  position: absolute;
   top: 35px;
   right: 15px;
   width: 30px;
   height: 30px;
-  border-radius: 50%;
-  background-color: $orange;
+  background-color: transparent;
   cursor: pointer;
 }
 .order-form__icon-close{
   position: absolute;
   display: block;
-  top: 4px;
+  top: -17px;
   left: 34px;
   width: 1px;
   height: 1px;
@@ -43,8 +42,8 @@
     top: 10px;
     right: 10px;
     width: 20px;
-    height: 2px;
-    background-color: $white;
+    height: 3px;
+    background-color: #586F78;
   }
   &::after{
     transform: rotate(45deg);
@@ -57,24 +56,24 @@
   position: absolute;
   background-color: #fff;
   max-height: 80vh;
-  padding: 6rem 2.8rem;
+  padding: 40px 20px 50px;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -100vh);
   overflow-y: auto;
   background: #222529;
-  width: 320px;
+  width: 300px;
   transition: transform .4s ease-in-out;
   border-radius: 20px;
 }
 .order-form-view .order-form__content,
 .order-form-view-call .order-form__content,
 .order-form-view-consult .order-form__content{
-  background-color: #fff;
+  //background-color: #fff;
 }
 .order-form-view .order-form__wrap,
 .order-form-view-call .order-form__wrap,
-.order-form-view-consult .order-form__wrap{
+.order-form-view-quiz .order-form__wrap{
   visibility: visible;
 }
 
@@ -83,7 +82,7 @@
 .palisade-3 .order-form__content--palisade3,
 .palisade-4 .order-form__content--palisade4,
 .gateway-1 .order-form__content--gateway1,
-.quiz-form .order-form__content--quiz,
+.quiz-popup .order-form__content--quiz,
 .call-form .order-form__content--call-form,
 .order-form-view-call .order-form__content--consult{
   top: 50%;
@@ -102,121 +101,6 @@ input{
   &__form--quiz{
     padding: 0;
   }
-  &__title{
-    margin-bottom: 25px;
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: center;
-  }
-  &__field-wrap{
-    margin-bottom: 20px;
-    width: 100%;
-    &--count{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-  &__field-group{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-  &__field-name{
-    display: inline-block;
-    font-size: 1.6rem;
-    line-height: 19.5px;
-    margin-bottom: 10px;
-  }
-  &__field-group-title{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.6rem;
-    line-height: 19.5px;
-    margin-bottom: 10px;
-    & i{
-      color: $orange;
-      font-size: 26px;
-    }
-    &--hidden i{
-      transform: rotate(180deg);
-    }
-  }
-  &__field--text{
-    display: block;
-    width: 100%;
-    padding: 16px 21px;
-    color: rgba($color: #000000, $alpha: 0.5);
-    border: 3px solid $orange;
-    border-radius: 5px;
-    font-size: 1.6rem;
-    font-weight: 500;
-  }
-  &__field-group-sublist, &__gateway-checkbox{
-    display: flex;
-    flex-direction: column;
-  }
-  &__field-group-subitem,
-  & .order-form__gateway-checkbox .wpcf7-list-item{
-    margin-bottom: 20px;
-  }
-  &__field-group-subitem-chk,
-  &__field--radio{
-    display: none;
-  }
-  //стилизация радио в квизе
-  &__field-list--radio{
-    display: flex;
-    flex-direction: column;
-  }
-  &__field-name--radio{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 20px;
-    & i{
-      display: inline-block;
-      font-size: 20px;
-      color: $orange;
-    }
-  }
-  &__field-name-img{
-    display: inline-block;
-    margin-bottom: 5px;
-  }
-  &__field-group-subitem-label{
-    position: relative;
-    padding-left: 40px;
-    margin-bottom: 20px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    color: #000000;
-    //opacity: .7;
-    &::before{
-      position: absolute;
-      content: '';
-      display: block;
-      width: 26px;
-      height: 26px;
-      background-image: url(../img/decor/icons/chk-empty.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      @include absoluteYCenter;
-    }
-    &:hover::before{
-      background-image: url(../img/decor/icons/chk-empty-hover.svg);
-    }
-  }
-  &__hidden{
-    display: none;
-    font-size: 0;
-    opacity: 0;
-    visibility: hidden;
-  }
   &__submit{
     display: block;
     width: 100%;
@@ -226,139 +110,7 @@ input{
   }
 }
 //стилизация checkbox
-.gateways{
-  & .order-form__gateway-checkbox .wpcf7-list-item{
-    margin-bottom: 20px;
-  }
-  & .wpcf7-list-item input[type=checkbox],
-  & .wpcf7-list-item input[type=radio]{
-    display: none;
-  }
-  & .wpcf7-list-item-label{
-    position: relative;
-    display: inline-block;
-    padding-left: 40px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    color: #000000;
-    //opacity: .7;
-    &::before{
-      position: absolute;
-      content: '';
-      display: block;
-      width: 26px;
-      height: 26px;
-      left: 0;
-      background-image: url(../img/decor/icons/chk-empty.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      @include absoluteYCenter;
-    }
-    &:hover::before{
-      background-image: url(../img/decor/icons/chk-empty-hover.svg);
-    }
-  }
-  & .wpcf7-list-item-label.label--checked::before{
-    background-image: url(../img/decor/icons/chk-checked.svg);
-  }
-}
-//стилизация select
-.wpcf7-form-control-wrap.quiz2,
-.wpcf7-form-control-wrap.quiz5{
-  display: block;
-  width: 100%;
-  padding: 16px 21px;
-  color: rgba($color: #000000, $alpha: 0.5);
-  border-radius: 5px;
-  font-size: 1.6rem;
-  font-weight: 500;
-  & .nice-select{
-    margin: 0 auto;
-    float: none;
-  }
-}
-.palisade-q, .gateways-q{
-  width: 100%;
-  & .wpcf7-list-item{
-    display: inline-block;
-    margin-bottom: 50px;
-    margin-left: 0;
-  }
-  & .wpcf7-radio{
-    display: flex;
-    flex-direction: column;
-  }
-  & .order-form__palisade-radio{
-    width: 100%;
-  }
-  & .wpcf7-list-item input[type=radio]{
-    display: inline-block;
-    width: 100%;
-    height: 20px;
-    display: none;
-    background-image: url(../img/decor/icons/chk-empty.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  & .wpcf7-list-item input[type=checkbox]{
-    display: none;
-  }
-  & .wpcf7-list-item-label{
-    position: relative;
-    display: inline-block;
-    height: 0;
-    padding-top: 134px;
-    padding-left: 36px;
-    line-height: 45px;
-    width: 100%;
-    font-size: 16px;
-    font-family: 'Roboto Slab';
-    font-weight: 700;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    //opacity: .7;
-    &::before{
-      position: absolute;
-      content: '';
-      display: block;
-      width: 26px;
-      height: 26px;
-      bottom: -35px;
-      left: 0;
-      background-image: url(../img/decor/icons/radio-empty.png);
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  }
-  & .wpcf7-list-item input:checked +.wpcf7-list-item-label::before{
-    background-image: url(../img/decor/icons/radio-checked.svg);
-  }
-}
-.palisade-q .wpcf7-list-item:nth-of-type(1) .wpcf7-list-item-label{
-  background-image: url(../img/content/zabor-1.jpg);
-}
-.palisade-q .wpcf7-list-item:nth-of-type(2) .wpcf7-list-item-label{
-  background-image: url(../img/content/zabor-2.jpg);
-}
-.palisade-q .wpcf7-list-item:nth-of-type(3) .wpcf7-list-item-label{
-  background-image: url(../img/content/zabor-3.jpg);
-}
-.palisade-q .wpcf7-list-item:nth-of-type(4) .wpcf7-list-item-label{
-  background-image: url(../img/content/zabor-4.jpg);
-}
-.gateways-q .wpcf7-list-item:nth-of-type(1) .wpcf7-list-item-label{
-  background-image: url(../img/content/gateway-1.jpg);
-}
-.gateways-q .wpcf7-list-item:nth-of-type(2) .wpcf7-list-item-label{
-  background-image: url(../img/content/gateway-2.jpg);
-}
-.gateways-q .wpcf7-list-item:nth-of-type(3) .wpcf7-list-item-label{
-  background-image: url(../img/content/gateway-3.jpg);
-}
+
 
 .count-product-field-wrap{
   display: inline-block;
@@ -369,25 +121,7 @@ input{
   padding: 10px;
   font-size: 1.7rem;
 }
-.order-form__form .order-form__submit{
-  padding: 15px 20px;
-}
-//скрытие и открытие списка полей
-.order-form__field-group-title--hidden+p .order-form__field-group-sublist{
-  display: none;
-}
-//стилизация checkbox в различных состояниях
-.order-form__field-group-subitem-label>i.fa-check-square{
-  display: none;
-}
-.order-form__field-group-subitem-chk:checked+.order-form__field-group-subitem-label>i.fa-check-square{
-  display: inline-block;
-  color: linear-gradient(90.04deg, #F75135 44.02%, #F73A18 80.12%);
-}
 
-.order-form__field-group-subitem-chk:checked+.order-form__field-group-subitem-label>i.fa-square{
-  display: none;
-}
 //стилизация radio в различных состояниях
 .order-form__field--radio+label>.fa-dot-circle{
   display: none;
@@ -399,155 +133,13 @@ input{
   display: inline-block;
 }
 
-//стилизация модального окна подтверждения
-.swal-modal{
-  width: 350px;
-  border-radius: 8px;
-  & .swal-title{
-    text-align: center;
-  }
-  & .swal-icon{
-    text-align: center;
-  }
-  & .swal-text{
-    text-align: center;
-  }
-  & .swal-footer{
-    order: 4;
-    display: flex;
-    justify-content: center;
-  }
-}
-.swal-text{text-align: center;}
-.swal-button,
-.swal-button:focus,
-.swal-button:hover{
-  box-shadow: none;border-radius: 0px;
-}
-.swal-button{
-  background-color: $orange ;
-  color: #fff;
-  border: 1px solid $orange;
-  font-size: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-family: $content-ff;
-  border-radius: 5px;
-}
-.swal-button:not([disabled]):hover{
-  background-color: $orange;
-  color: #fff ;
-  box-shadow: none;
-}
-/*style check success form*/
-.swal-icon--success__ring {
-  border: 2px solid $orange;
-  background-color: $orange;
-}
-.swal-icon--success__line {
-  background-color: $white;
-  height: 10px;
-  border-radius: 6px;
-  z-index: 5;
-}
+
 
 @media only screen and (min-width:$tablet-width){
-  .wpcf7-form-control-wrap.quiz2{
-    max-width: 340px;
-  }
-  .order-form{
-    &__field-list--radio{
-      flex-direction: row;
-    }
-    &__field-name--radio{
-      margin-right: 20px;
-      :last-of-type{
-        margin-right: 0;
-      }
-    }
-    &__content--quiz .order-form__field--select{
-      width: 340px;
-    }
-    &__content{
-      width: 650px;
-      &--call-form{
-        width: 400px;
-      }
-    }
-    &__field-group{
-      flex-direction: row;
-      &--call-form{
-        flex-direction: column;
-        //align-items: center;
-      }
-      & .order-form__field-wrap{
-        margin-right: 20px;
-      }
-      & .order-form__field-wrap:last-of-type{
-        margin-right: 0;
-      }
-    }
-    &__field-group--hidden{
-      flex-direction: column;
-    }
-    &__field-group-title{
-      width: 250px;
-      justify-content: flex-start;
-      & i{
-        margin-left: 20px;
-      }
-    }
-    & .order-form__gateway-checkbox .wpcf7-list-item{
-      margin-bottom: 30px;
-    }
-    &__field-group-sublist, &__gateway-checkbox{
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-column-gap: 20px;
-      align-items: center;
-    }
-  }
-  .gateways{
-    & .order-form__gateway-checkbox{
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-column-gap: 20px;
-      align-items: center;
-    }
-  }
-  .palisade-q, .gateways-q{
-    & .wpcf7-list-item-label{
-      font-size: 19px;
-    }
-  }
-  .order-form__form .action{
-    margin: 0;
-    margin-left: auto;
-    width: 270px;
-    padding: 13px 0;
-    font-size: 20px;
-    line-height: 26px;
-    &.order-form__submit--call{
-      margin: 0 auto;
-    }
-  }
-  .quiz .order-form__field--text{
-    max-width: 340px;
-  }
+  
 }
 @media only screen and (min-width: $desctop-width){
-  .palisade-q .wpcf7-radio{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 20px;
-    align-items: center;
-  }
-  .gateways-q .wpcf7-radio{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 20px;
-    align-items: center;
-  }
+  
   .order-form{
     &__field--text{
       max-width: 100%;
@@ -555,7 +147,7 @@ input{
     &__content{
       width: 900px;
       &--call-form{
-        width: 400px;
+        width: 800px;
       }
     }
   }
@@ -564,9 +156,6 @@ input{
   .order-form{
     &__content{
       width: 1100px;
-      &--call-form{
-        width: 400px;
-      }
     }
   }
 }

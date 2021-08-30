@@ -62,6 +62,15 @@
     margin: 0 auto;
   }
   &__link-wrap{
+    & svg rect, & svg path{
+      transition: all .4s linear;
+    }
+    &:hover svg rect{
+      stroke: $pinkColor;
+    }
+    &:hover svg path{
+      fill: $pinkColor;
+    }
   }
   &__link{
     display: flex;
@@ -153,6 +162,15 @@
       & svg path{
         //fill: $pinkColor;
       }
+    }
+    & svg rect, & svg path{
+      transition: all .4s linear;
+    }
+    &:hover svg rect{
+      //stroke: $pinkColor;
+    }
+    &:hover svg path.filling{
+      fill: $pinkColor;
     }
   }
   &__messengers-link{

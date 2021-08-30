@@ -1,0 +1,117 @@
+.safari .additional{
+  &--404{
+    background-image: url(../img/content/404.jpg);
+  }
+  &--thanks{
+    background-image: url(../img/content/thanks.jpg);
+  }
+}
+.additional{
+  position: relative;
+  height: 580px;
+  &--404{
+    background-image: url(../img/content/404.webp);
+  }
+  &--thanks{
+    background-image: url(../img/content/thanks.webp);
+  }
+  &__content{
+    position: absolute;
+    overflow: clip;
+    @include absoluteAllCenter;
+    width: 300px;
+    padding: 50px 18px;
+    border-radius: 15px;
+    background-color: rgba(213, 220, 223, .8);
+  }
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title{
+    margin-bottom: 20px;
+    font-family: Inter;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+    color: #000000;
+  }
+  &__description{
+    margin-bottom: 20px;
+    @include aboutParagraph;
+    text-align: center;
+  }
+  &__decorate-text{
+    position: absolute;
+    display: inline-block;
+    z-index: -1;
+    font-family: Inter;
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 1.3;
+    color: #D5DCDF;
+    -webkit-text-stroke: 1px #D5DCDF;
+    -webkit-text-fill-color: rgba(255, 255, 255, .1);
+    &--1{
+      font-size: 100px;
+      -webkit-text-stroke: 2px #D5DCDF;
+      top: -50px;
+      left: 2px;
+    }
+    &--2{
+      bottom: -20px;
+      right: 9px;
+    }
+  }
+}
+
+
+@media only screen and (min-width:$tablet-width){
+  .additional{
+    &--404{}
+    &--thanks{}
+    &__content{
+      width: 950px;
+      padding: 100px 120px;
+    }
+    &__inner{}
+    &__title{
+      font-size: 45px;
+    }
+    &__description{}
+  }
+}
+@media only screen and (min-width: $desctop-width){
+  .additional{
+    height: 800px;
+    &--404{}
+    &--thanks{}
+    &__content{
+    }
+    &__inner{}
+    &__title{}
+    &__description{}
+    &__decorate-text{
+      font-size: 100px;
+      -webkit-text-stroke: 3px #D5DCDF;
+      &--1{
+        font-size: 300px;
+        -webkit-text-stroke: 6px #D5DCDF;
+        top: -100px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: $xl-width){
+  .additional{
+    &--404{}
+    &--thanks{}
+    &__content{
+    }
+    &__inner{}
+    &__title{}
+    &__description{}
+  }
+}
