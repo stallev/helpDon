@@ -73,18 +73,13 @@
 }
 .order-form-view .order-form__wrap,
 .order-form-view-call .order-form__wrap,
-.order-form-view-quiz .order-form__wrap{
+.order-form-view .order-form__content--order-online{
   visibility: visible;
 }
 
-.palisade-1 .order-form__content--palisade1,
-.palisade-2 .order-form__content--palisade2,
-.palisade-3 .order-form__content--palisade3,
-.palisade-4 .order-form__content--palisade4,
-.gateway-1 .order-form__content--gateway1,
-.quiz-popup .order-form__content--quiz,
 .call-form .order-form__content--call-form,
-.order-form-view-call .order-form__content--consult{
+.order-form-view-call .order-form__content--consult,
+.order-online .order-form__content--order-online{
   top: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);

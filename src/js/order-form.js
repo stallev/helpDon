@@ -51,6 +51,7 @@ function openCalcForm(btnClass){
   }
 }
 openCalcForm('call-form');
+openCalcForm('order-online');
 openCalcForm('quiz-popup');
 
 // let closeCallForm =document.querySelector('.order-form__content--call-form .order-form__submit');

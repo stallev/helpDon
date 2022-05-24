@@ -8,8 +8,7 @@
   vertical-align: middle;
   border-radius: 15px;
   width: 238px;
-  height: 72px;
-  padding: 0;
+  padding: 15px 25px;
   text-align: center;
   font-family: Inter;
   font-style: normal;
@@ -18,80 +17,27 @@
   line-height: 18px;
   color: $white;
   box-sizing: border-box;
-  background: linear-gradient(137.06deg, #FA3D54 55.49%, #B5707C 142.05%);;
+  background: $yellow-color;
   text-transform: uppercase;
   transition: all .5s linear;
   //transition: color 1s ease, background 1s ease;
+  &__group {
+    display: flex;
+    justify-content: center;
+  }
   &.action--nobg{
     background: rgba($color: #fff, $alpha: .7);
     border: 3.5px solid $pinkColor;
     color: $pinkColor;
     &:hover{
-      background: linear-gradient(137.06deg, #FA3D54 55.49%, #FF0935 142.05%);
+      background: $dark-yellow-color;
       color: #fff;
       border-width: 0;
     }
   }
   &:hover{
-    background: linear-gradient(137.06deg, #FA3D54 55.49%, #FF0935 142.05%);
+    background: $dark-yellow-color;
     color: #fff;
-    font-weight: 900;
-  }
-  &__group{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    & a{
-      margin-bottom: 30px;
-    }
-    & a:last-of-type{
-     margin: 0;
-    }
-    &--head{
-      margin-bottom: 30px;
-    }
-    &--head-bottom{
-      margin-bottom: 30px;
-    }
-    &--head-bottom-contekst{
-      margin-top: 30px;
-      & .action{
-        &:last-of-type{
-          margin-bottom: 0;
-        }
-      }
-    }
-    &--seo-head{
-      margin-top: 20px;
-      margin-bottom: 30px;
-    }
-    &--company{
-      margin-bottom: 30px;
-    }
-    &--portfolio{
-      margin-top: 40px;
-    }
-    &--portfolio-project{
-      margin-top: 30px;
-    }
-    &--about{
-      margin-bottom: 40px;
-    }
-    &--answers{
-      margin-top: 30px;
-      align-items: flex-end;
-    }
-    &--contact-us{
-      margin-top: 30px;
-    }
-    &--reviews{
-      & a{
-        margin-top: 0;
-      }
-    }
-    &--product{
-      margin: 30px auto 0 auto;
-    }
   }
   
 }
@@ -102,146 +48,11 @@
     &:last-of-type{
       margin-right: 0;
     }
-    &__group{
-      flex-direction: row;
-      & a{
-        margin-top: 0;
-        &:nth-of-type(1){
-          margin-bottom: 0;
-        }
-        &:nth-of-type(2){
-          margin-top: 0;
-        }
-      }
-      &--seo-head{
-        margin-top: 20px;
-        margin-bottom: 40px;
-      }
-      &--company{
-        margin-bottom: 30px;
-      }
-      
-      &--head{
-        margin-bottom: 50px;
-        & a{
-          z-index: 2;
-          margin-top: 0;
-          &:nth-of-type(1){
-            margin-right: 32px;
-          }
-        }
-      }
-      &--head-bottom-contekst{
-        & .action{
-          margin-right: 30px;
-          &:last-of-type{
-            margin-top: 0;
-          }
-        }
-      }
-      &--portfolio{
-        & .action{
-          margin-right: 20px;
-          &:last-of-type{
-            margin-top: 0;
-            margin-right: 0;
-          }
-        }
-      }
-      &--answers{
-        justify-content: flex-end;
-      }
-      &--product{
-        margin-top: 40px;
-        margin-right: auto;
-      }
-    }
   }
 }
 
 @media only screen and (min-width: $desctop-width){
-  .action{
-    &__group{
-      flex-direction: row;
-
-      & a{
-        &:nth-of-type(1){
-          //margin-right: 52px;
-        }
-      }
-      & a{
-        &:nth-of-type(2){
-          margin-top: 0;
-        }
-      }
-      &--head-bottom{
-        margin-bottom: 50px;
-      }
-      &--head{
-        margin-bottom: 80px;
-        & a{
-          &:nth-of-type(1){
-            margin-right: 52px;
-          }
-        }
-      }
-      &--portfolio{
-        justify-content: center;
-        margin-top: 80px;
-        & a{
-          &:nth-of-type(1){
-            margin-right: 52px;
-          }
-          &:last-of-type{
-            margin-top: 0;
-          }
-        }
-      }
-      &--portfolio-project{
-        justify-content: center;
-        margin-top: 50px;
-      }
-      &--about{
-        margin-top: 80px;
-        margin-bottom: 0;
-        & a{
-          &:nth-of-type(1){
-            margin-right: 52px;
-          }
-          &:last-of-type{
-            margin-top: 0;
-          }
-        }
-      }
-      &--contact-us{
-        margin-top: auto;
-        margin-right: 0;
-      }
-    }
-  }
   .action__group--head{
     margin-top: 170px;
-  }
-}
-@media only screen and (min-width: $xl-width){
-  .action{
-    &__group{
-      &--head{
-        margin-bottom: 100px;
-      }
-      &--product{
-        margin-top: 30px;
-      }
-    }
-  }
-  .action__group--head{
-    margin-top: 190px;
-  }
-  .action__group--head-bottom-contekst{
-    margin-top: 100px;
-  }
-  .action__group--company{
-    margin-top: 20px;
-    margin-bottom: 40px;
   }
 }

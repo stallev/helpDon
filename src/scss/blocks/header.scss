@@ -1,28 +1,35 @@
 .header{
-	background: $white;
+	background: $yellow-color;
 	box-shadow: 0px 6px 8px 0px rgba(34, 60, 80, 0.2);
 	&__wrapper{
 		position: relative;
 		display: flex;
-		justify-content: space-between;
+		flex-direction: column;
 		align-items: center;
 		padding-top: 20px;
 		padding-bottom: 20px;
 	}
-	&__logo-toggle{
+	&__top{
 		display: flex;
 		align-items: center;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		margin: 0 auto;
 		padding: 0 16px;
 		box-sizing: border-box;
-		width: 360px;
+		min-width: 300px;
+		width: calc(100% - 20px);		
 	}
-	&__info{
-		//margin-right: 27px;
+	&__phones {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin: 15px auto 0;
+		order: 3;
 	}
-	&__logo{
-		
+	&__logo {
+		order: 1;
 	}
 	&__logo a{
 		display:inline-block;
@@ -36,25 +43,47 @@
 	&__messengers-list{
 		display: flex;
 		width: fit-content;
-	}
-	&__messengers-list--desctop{
-		display: none;
+		margin-right: 20px;
 	}
 	&__messengers-item{
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-left: 20px;
-		width: 45px;
-		height: 45px;
+		width: 25px;
+		height: 25px;
 		border-radius: 5px;
 		background-color: $messengerBgColor;
-		transition: all .2s ease;
-		&:nth-of-type(1){
-			margin-left: 0;
+		transition: all .2s ease;	
+		& svg {
+			width: 15px;
+			height: auto;
+			@media only screen and (min-width: 580px) {
+				width: 18px;
+			}
+		}
+		&:not(:nth-of-type(1)){
+			margin-left: 10px;
 		}
 		&:hover{
 			background-color: $messengerBgColorHover;
+		}
+
+		@media only screen and (min-width: 580px)	{
+			width: 30px;
+			height: 30px;
+		}
+
+		&--viber,
+		&--telegram,
+		&--whatsapp{
+			display: none;
+		}
+		@media only screen and (min-width: 410px) {
+			&--viber,
+			&--telegram,
+			&--whatsapp{
+				display: flex;
+			}
 		}
 	}
 	&__cross-img{
@@ -70,16 +99,15 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			background: linear-gradient(91.98deg, rgba(255, 255, 255, 1) 38.63%, rgba(255, 255, 255, 1) 57.11%, rgba(255, 255, 255, 1) 77.21%);
+			background: $yellow-color;
 			opacity: 1;
+			left: -17px;
 			z-index:6;
 			&::after{
 				position: absolute;
 				display: block;
 				content: '';
-				height: 27px;
 				width: 100%;
-				background-color: #fff;
 				border-bottom: 1px solid #ccc;
 			}
 		}
@@ -93,6 +121,7 @@
 		min-width: 28px;
 		height: fit-content;
 		cursor: pointer;
+		order: 2;
 	}
 	&__hamburger-img{
 		display: block;
@@ -109,69 +138,23 @@
 		flex-direction: column;
 		align-items: center;
 	}
-	&__company-name, &__company-shedule{
-		display: inline-block;
-		padding: 5px 0;
-		width: fit-content;
-		margin: 0 auto;
-		font-family: Roboto;
-		font-style: normal;
-		font-weight: 400;
-		font-size: 16px;
-		line-height: 19px;
-	}
-	&__contacts-consult{
-		display: flex;
-		flex-direction: column-reverse;
-		align-items: center;
-	}
 	&__content-upper-phone{
 		display: inline-block;
 		width: fit-content;
 		padding: 5px 0;
-	}
-	&__content-upper-phone{
-		display: inline-block;
-		width: fit-content;
 		color: $messengerBgColorHover;
 		opacity: .7;
 		font-family: Roboto;
 		font-style: normal;
 		font-weight: bold;
-		font-size: 20px;
-		line-height: 23px;
+		font-size: 16px;
+		line-height: 20px;
+		@media only screen and (min-width: 410px) {
+			font-size: 20px;
+			line-height: 23px;
+		}
 		&:hover{
 			opacity: 1;
-		}
-	}
-	&__consult-action{
-		position: relative;
-		display: inline-block;
-		width: fit-content;
-		margin-bottom: 20px;
-		font-family: Roboto;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 16px;
-		line-height: 1.5;
-		text-transform: uppercase;
-		cursor: pointer;
-		z-index: 7;
-		transition: all .4s ease;
-		&:hover{
-			font-weight: 700;
-			&::after{
-				height: 4px;
-			}
-		}
-		&::after{
-			position: absolute;
-			content: '';
-			display: block;
-			width: 100%;
-			height: 2px;
-			background-color: $messengerBgColorHover;
-			transition: all .4s ease;
 		}
 	}
 
@@ -185,13 +168,41 @@
 	}
 }
 
+@media only screen and (min-width: 580px) {
+	.header {
+		&__logo {
+			order: 1;
+		}
+		&__phones {
+			width: fit-content;
+			margin-top: 0;
+			order: 2;
+		}
+		&__tooggle-menu {
+			order: 3;
+		}
+	}
+}
+
 @media only screen and (min-width: $tablet-width){
 	.header{
 		&__logo a img{
 			max-width: 70px;
 		}
-		&__logo-toggle{
-			width: 700px;
+		&__phones {
+			margin: 0;
+		}
+		&__top{
+			width: 100%;
+		}
+		&__content{
+			position: static;
+			display: flex;
+			align-self: flex-start;
+			flex-direction: column;
+		}
+		&__tooggle-menu{
+			display: none;
 		}
 	}
 }
@@ -202,10 +213,10 @@
 			padding: 0 30px;
     	width: 930px;
 		}
-		&__logo-toggle{
+		&__top{
 			margin: 0;
 			padding: 0;
-			width: fit-content;
+			// width: fit-content;
 		}
 		&__logo a{
 			width: 91px;
@@ -213,19 +224,7 @@
 		}
 		&__logo a img{
 			max-width: 100%;
-		}
-		&__tooggle-menu{
-			display: none;
-		}
-		&__content{
-			position: static;
-			display: flex;
-			flex-grow: 2;
-			flex-direction: column;
-			margin-left: 20px;
-		}
-		&__content-nav{
-		}
+		}		
 		&__content-upper{
 			flex-direction: row;
 			align-items: flex-end;
@@ -239,25 +238,11 @@
 			flex-wrap: nowrap;
 			margin-left: auto;
 		}
-		&__contacts-consult{
-			margin-bottom: 0;
-			margin-right: auto;
-			flex-direction: column;
-		}
 		&__consult{
 			width: fit-content;
 		}
 		&__consult-action{
 			margin-bottom: 0;
-		}
-		&__messengers-list--mobile{
-			display: none;
-		}
-		&__messengers-list--desctop{
-			display: flex;
-			max-width: fit-content;
-			margin-right: 20px;
-
 		}
 		&__messengers-item{
 			border-radius: 5px 5px 0 0;
