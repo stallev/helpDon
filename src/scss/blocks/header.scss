@@ -29,12 +29,12 @@
 		order: 3;
 	}
 	&__logo {
+		background-color: $white;
+		border: 2px solid $yellow-color;
 		order: 1;
 	}
 	&__logo a{
 		display:inline-block;
-		width: 71px;
-		height: 55px;
 	}
 	&__logo a img{
 		width: 100%;
@@ -52,7 +52,7 @@
 		width: 25px;
 		height: 25px;
 		border-radius: 5px;
-		background-color: $messengerBgColor;
+		// background-color: $messengerBgColor;
 		transition: all .2s ease;	
 		& svg {
 			width: 15px;
@@ -94,14 +94,14 @@
 		display: none;
 		&--visible{
 			position: absolute;
-			width: 100vw;
+			width: 100%;
 			top: 100%;
 			display: flex;
+			padding-left: 20px;
 			flex-direction: column;
-			align-items: center;
 			background: $yellow-color;
 			opacity: 1;
-			left: -17px;
+			left: 0;
 			z-index:6;
 			&::after{
 				position: absolute;
@@ -116,12 +116,15 @@
 		display: flex;
 		flex-direction: column-reverse;
 	}
-	&__tooggle-menu{
+	&__tooggle-menu {
 		display: block;
 		min-width: 28px;
 		height: fit-content;
 		cursor: pointer;
 		order: 2;
+		svg path{
+			stroke: $white;
+		}
 	}
 	&__hamburger-img{
 		display: block;
@@ -142,19 +145,19 @@
 		display: inline-block;
 		width: fit-content;
 		padding: 5px 0;
-		color: $messengerBgColorHover;
-		opacity: .7;
+		color: $red-color;
 		font-family: Roboto;
 		font-style: normal;
 		font-weight: bold;
 		font-size: 16px;
 		line-height: 20px;
+		transition: color .4s ease-in;
 		@media only screen and (min-width: 410px) {
 			font-size: 20px;
 			line-height: 23px;
 		}
 		&:hover{
-			opacity: 1;
+			color: $white;
 		}
 	}
 
@@ -186,20 +189,32 @@
 
 @media only screen and (min-width: $tablet-width){
 	.header{
-		&__logo a img{
-			max-width: 70px;
-		}
-		&__phones {
-			margin: 0;
-		}
+		&__logo{
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 1;
+			grid-row-end: 3;
+		}		
 		&__top{
-			width: 100%;
+			// width: 100%;
+			display: grid;
+			grid-template-columns: 200px minmax(150px auto) minmax(150px auto);
+			margin: 0;
+			padding: 0;
 		}
+		
 		&__content{
 			position: static;
 			display: flex;
 			align-self: flex-start;
-			flex-direction: column;
+			flex-direction: row;
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 1;
+			grid-row-end: 2;
+			order: 2;
+			margin-right: 0;
+			// padding: $gutter-xs 0;
 		}
 		&__tooggle-menu{
 			display: none;
@@ -213,14 +228,20 @@
 			padding: 0 30px;
     	width: 930px;
 		}
-		&__top{
-			margin: 0;
-			padding: 0;
-			// width: fit-content;
+		&__content-upper-phone {
+			font-size: 26px;
 		}
-		&__logo a{
-			width: 91px;
-			height: 76px;
+		&__logo {
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 1;
+			grid-row-end: 3;
+		}
+		&__phones {
+			
+		}
+		&__content {
+			margin-left: auto;
 		}
 		&__logo a img{
 			max-width: 100%;

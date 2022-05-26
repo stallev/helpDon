@@ -1,5 +1,5 @@
-<svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 2L28 2" stroke="#586F78" stroke-width="3"/>
-<path d="M0 9L28 9" stroke="#586F78" stroke-width="3"/>
-<path d="M0 16L28 16" stroke="#586F78" stroke-width="3"/>
+<svg class="header__hamburger-img" width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 2L28 2" stroke="#586F78" stroke-width="3"/>
+  <path d="M0 9L28 9" stroke="#586F78" stroke-width="3"/>
+  <path d="M0 16L28 16" stroke="#586F78" stroke-width="3"/>
 </svg>
