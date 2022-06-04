@@ -1,236 +1,286 @@
-.answers{
-    &__wrap{
-        display: flex;
-        flex-direction: column;
+.answers {  
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  &__form-outer {
+    display: flex;
+    flex-direction: column;
+  }
+  &__form-title {
+    margin-bottom: 20px;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  &__form-paragraph {
+    margin-bottom: 20px;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 1.25;
+  }
+  &__form {
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+  &__form-inner {
+    display: flex;
+    flex-direction: column;
+  }
+  &__form-text-field {
+    margin-bottom: 15px;
+    @include inputField;
+    background-color: transparent;
+    &--finish {
+      width: 238px;
+      min-height: 72px;
+      margin-bottom: 0;
     }
-    &__form-outer{
-        display: flex;
-        flex-direction: column;
+  }
+  &__form-textarea-field {
+    margin-bottom: 20px;
+    @include inputField;
+    background-color: transparent;
+  }
+  &__info {
+  }
+  &__slogan {
+    display: none;
+  }
+  &__invite-block {
+  }
+  &__invitation {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+  &__address {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.25;
+    color: #000000;
+  }
+  &__phone {
+    display: inline-block;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1.25;
+    color: #000000;
+    transition: all 0.2s ease;
+    &:hover {
+      color: $pinkColor;
     }
-    &__form-title{
-        margin-bottom: 20px;
-        font-family: Inter;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 19px;
-    }
-    &__form-paragraph{
-        margin-bottom: 20px;
-        font-family: Roboto;
-        font-size: 14px;
-        line-height: 1.25;
-    }
-    &__form{
-        display: inline-block;
-        margin-bottom: 40px;
-    }
-    &__form-inner{
-        display: flex;
-        flex-direction: column;
-    }
-    &__form-text-field{
-        margin-bottom: 15px;
-        @include inputField;
-        background-color: transparent;
-        &--finish{
-            width: 238px;
-            min-height: 72px;
-            margin-bottom: 0;
-        }
-    }
-    &__form-textarea-field{
-        @include inputField;
-        background-color: transparent;
-    }
-    &__info{}
-    &__slogan{
-        display: none;
-    }
-    &__invite-block{}
-    &__invitation{
-        display: inline-block;
-        margin-bottom: 20px;
-        font-family: Roboto;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 1.25;
-    }
-    &__address{
-        display: inline-block;
-        margin-bottom: 20px;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 1.25;
-        color: #000000;
-    }
-    &__phone{
-        display: inline-block;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 1.25;
-        color: #000000;
-        transition: all .2s ease;
-        &:hover{
-            color: $pinkColor;
-        }
-    }
-}
-.answers--call-form.answers{
+  }
+  &__contacts {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #D5DCDF;
-    & .answers__form-title{
-        margin-bottom: 10px;
-        font-family: Inter;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 20px;
-        line-height: 1.4;
-        text-align: center;
-        color: #000000;
-    }
-    & .answers__description{
-        @include aboutParagraph;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    & .answers__form{
-        width: 100%;
-        margin-bottom: 0;
-    }
-    & .answers__form-inner{
-        width: 100%;
-    }
-    & .action__group--answers-form{
-        margin-top: 15px;
-    }
-    & .answers__form-text-field:last-of-type{
-        margin-bottom: 0;
-    }
+    margin-top: 25px;
+  }
+  &__contact-item {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+  }
+  &__contact-item-name {
+    @include aboutParagraph;
+    margin-bottom: 15px;
+  }
+  &__contact-item-value {
+    @include aboutParagraph;
+    cursor: pointer;
+    color: $bright-color;
+  }
 }
-@media only screen and (min-width:$tablet-width){
-    .answers{
-        &__wrap{
-            flex-direction: row-reverse;
-        }
-        &__form-outer{}
-        &__form-title{}
-        &__form-paragraph{}
-        &__form{
-            margin-bottom: 0;
-        }
-        &__form-inner{}
-        &__form-text-field{}
-        &__form-textarea-field{}
-        &__info{
-            padding-right: 50px;
-        }
-        &__slogan{
-            display: inline-block;
-            margin-bottom: 150px;
-            font-family: Inter;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 1.25;
-            color: #586F78;
-        }
-        &__invite-block{}
-        &__invitation{}
-        &__address{}
-        &__phone{}
-    }
-    .answers--call-form.answers{
-    
-    }
+.answers--call-form.answers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $white;
+  & .answers__form-title {
+    margin-bottom: 10px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+    color: #000000;
+  }
+  & .answers__description {
+    @include aboutParagraph;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  & .answers__form {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  & .answers__form-inner {
+    width: 100%;
+  }
+  & .action__group--answers-form {
+    margin-top: 15px;
+  }
+  & .answers__form-text-field:last-of-type {
+    margin-bottom: 0;
+  }
 }
-@media only screen and (min-width: $desctop-width){
-    .answers{
-        &__wrap{}
-        &__form-outer{}
-        &__form-title{
-            font-size: 25px;
-        }
-        &__form-paragraph{
-            font-size: 20px;
-        }
-        &__form{}
-        &__form-inner{}
-        &__form-text-field{
-            &--finish{
-                padding: 19px 19px;
-            }
-        }
-        &__form-textarea-field{}
-        &__info{
-            padding-right: 80px;
-        }
-        &__slogan{
-            font-size: 25px;
-        }
-        &__invite-block{}
-        &__invitation{
-            font-size: 20px;
-        }
-        &__address{
-            font-size: 18px;
-        }
-        &__phone{
-            font-size: 30px;
-        }
+@media only screen and (min-width: $tablet-width) {
+  .answers {
+    &__wrap {
+      flex-direction: row-reverse;
     }
-    .answers--call-form.answers{
-        padding: 60px 100px;
-        & .answers__form-title{
-            margin-bottom: 10px;
-            font-size: 45px;
-        }
-        & .answers__description{
-            margin-bottom: 40px;
-        }
-        & .answers__form{
-            width: 100%;
-            margin-bottom: 0;
-        }
-        & .answers__form-inner{
-            width: 100%;
-        }
-        & .action__group--answers-form{
-            margin-top: 40px;
-            justify-content: flex-end;
-        }
-        & .answers__form-text-field{
-            margin-bottom: 40px;
-        }
-        & .answers__form-text-field:last-of-type{
-            margin-bottom: 0;
-        }
+    &__form-outer {
     }
+    &__form-title {
+    }
+    &__form-paragraph {
+    }
+    &__form {
+      margin-bottom: 0;
+    }
+    &__form-inner {
+    }
+    &__form-text-field {
+    }
+    &__form-textarea-field {
+    }
+    &__info {
+      padding-right: 50px;
+    }
+    &__slogan {
+      display: inline-block;
+      margin-bottom: 150px;
+      font-family: Inter;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.25;
+      color: #586f78;
+    }
+    &__invite-block {
+    }
+    &__invitation {
+    }
+    &__address {
+    }
+    &__phone {
+    }
+  }
+  .answers--call-form.answers {
+  }
 }
-@media only screen and (min-width: $xl-width){
-    .answers{
-        &__wrap{}
-        &__form-outer{}
-        &__form-title{}
-        &__form-paragraph{}
-        &__form{}
-        &__form-inner{}
-        &__form-text-field{}
-        &__form-textarea-field{}
-        &__info{}
-        &__slogan{
-            margin-bottom: 200px;
-        }
-        &__invite-block{}
-        &__invitation{}
-        &__address{}
-        &__phone{}
+@media only screen and (min-width: $desctop-width) {
+  .answers {
+    &__wrap {
     }
-    .answers--call-form.answers{
-    
+    &__form-outer {
     }
+    &__form-title {
+      font-size: 25px;
+    }
+    &__form-paragraph {
+      font-size: 20px;
+    }
+    &__form {
+    }
+    &__form-inner {
+    }
+    &__form-text-field {
+      &--finish {
+        padding: 19px 19px;
+      }
+    }
+    &__form-textarea-field {
+    }
+    &__info {
+      padding-right: 80px;
+    }
+    &__slogan {
+      font-size: 25px;
+    }
+    &__invite-block {
+    }
+    &__invitation {
+      font-size: 20px;
+    }
+    &__address {
+      font-size: 18px;
+    }
+    &__phone {
+      font-size: 30px;
+    }
+  }
+  .answers--call-form.answers {
+    padding: 60px 100px;
+    & .answers__form-title {
+      margin-bottom: 10px;
+      font-size: 45px;
+    }
+    & .answers__description {
+      margin-bottom: 40px;
+    }
+    & .answers__form {
+      width: 100%;
+      margin-bottom: 0;
+    }
+    & .answers__form-inner {
+      width: 100%;
+    }
+    & .action__group--answers-form {
+      margin-top: 40px;
+      justify-content: flex-end;
+    }
+    & .answers__form-text-field {
+      margin-bottom: 40px;
+    }
+    & .answers__form-text-field:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+@media only screen and (min-width: $xl-width) {
+  .answers {
+    &__wrap {
+    }
+    &__form-outer {
+    }
+    &__form-title {
+    }
+    &__form-paragraph {
+    }
+    &__form {
+    }
+    &__form-inner {
+    }
+    &__form-text-field {
+    }
+    &__form-textarea-field {
+    }
+    &__info {
+    }
+    &__slogan {
+      margin-bottom: 200px;
+    }
+    &__invite-block {
+    }
+    &__invitation {
+    }
+    &__address {
+    }
+    &__phone {
+    }
+  }
+  .answers--call-form.answers {
+  }
 }

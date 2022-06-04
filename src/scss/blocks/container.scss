@@ -1,25 +1,9 @@
 .container{
   margin: 0 auto;
-  padding: 0 16px;
   box-sizing: border-box;
   min-width: 300px;
 	width: calc(100% - 20px);
   max-width: 1200px;
-}
-.container--section-first{
-  position: relative;
-  top: -29px;
-}
-.container--section-first-2{
-  position: relative;
-  top: -29px;
-}
-.container.container--reviews{
-  
-}
-.container.container--breadcrumbs{
-  width: 100%;
-  overflow-x: auto;
 }
 @media only screen and (min-width: 575px){
   .container{
@@ -31,27 +15,14 @@
     padding: 0 30px;
     width: 700px;
   }
-  .container--section-first{
-    top: -63px;
-  }
-  .container--section-first-2{
-    top: -63px;
-  }
 }
 @media only screen and (min-width: $desctop-width){
   .container{
     width: 930px;
-  }
-  .container--section-first{
-    top: -75px;
-  }
-  .container--section-first-2{
-    top: -75px;
   }
 }
 @media only screen and (min-width: $xl-width){
   .container{
     width: 1140px;
   }
-  .container--section-first{}
 }

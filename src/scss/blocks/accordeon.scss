@@ -3,10 +3,14 @@
   
 }
 .accordeon__item-content{
-  display: none;
+  height: 0;
+  opacity: 0;
 }
 .accordeon__item-content--active{
-  display: block;
+  display: flex;
+  height: auto;
+  transition: opacity 1.3s linear;
+  opacity: 1;
 }
 .work-step__description--faq.accordeon__item-content{
   transition: transform .4s ease-in;

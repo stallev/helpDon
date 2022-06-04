@@ -1,0 +1,133 @@
+.connect {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    max-width: 200px;
+    border: 1px solid $bright-color;
+    border-radius: 10px;
+    &:not(:last-of-type){
+      margin-bottom: 45px;
+    }
+  }
+  &__item-icon {
+    display: flex;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+
+    svg path {
+      fill: $bright-color;
+    }
+
+    &--form svg{
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+    }
+
+    &--call svg{
+      display: inline-block;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+    }
+
+    &--messengers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+      margin-bottom: 20px;
+      
+    }
+  }
+  &__item-messenger {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 4px;
+    padding: 4px;
+    &--viber svg path{
+      fill: #7360f2;
+    }
+    &--telegram svg path{
+      fill: #229ED9;
+    }
+    &--whatsapp svg path{
+      fill: #25D366;
+    }
+    &--instagram svg path{
+      fill: $white;
+    }
+    &:hover {
+      transition: background-color .3s linear;
+      background-color: $bright-color;
+      svg path {
+        fill: $white;
+      }
+    }
+  }
+  &__item-messenger-link {
+    display: inline-block;
+    width: fit-content;
+  }
+  &__item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__item-title {
+    @include subTitle;
+    text-align: center;
+    margin-bottom: 10px;
+    color: $bright-color;
+  }
+  &__item-description {
+    @include aboutParagraph;
+    text-align: center;
+    color: $white;
+  }
+}
+
+@media only screen and (min-width: $tablet-width){
+  .connect {
+    &__list {}
+    &__item {}
+    &__item-icon {}
+    &__item-title {}
+  }
+}
+@media only screen and (min-width: $desctop-width){
+  .connect {
+    &__list {
+      flex-direction: row;
+      align-items: stretch;
+    }
+    &__item {
+      max-width: 230px;
+      margin-bottom: 0;
+      &:not(:last-of-type){
+        margin-bottom: 0;
+      }
+    }
+    &__item-icon {}
+    &__item-title {}
+  }
+}
+@media only screen and (min-width: 1199px){
+  .connect {
+    &__list {}
+    &__item {}
+    &__item-icon {}
+    &__item-title {}  
+  }
+}

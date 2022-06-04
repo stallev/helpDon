@@ -1,102 +1,66 @@
 .page-title{
-  //margin-bottom: 50px;
-  text-align: center;
-  &--main-page{
-    margin-bottom: 70px;
-    & .page-title__text{
-      margin-bottom: 10px;
-    }
-  }
-  &--secondary{
-    padding-bottom: 50px;
-    padding-top: 20px;
-  }
-  &--portfolio-item{
-    padding-bottom: 20px;
-  }
+  width: fit-content;
+  margin-bottom: 18px;
   &__text{
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 22px;
-    line-height: 27px;
-    color: $yellow-color;
-  }
-  &__description{
-    text-align: center;
     font-family: Roboto;
     font-style: normal;
     font-weight: 700;
+    font-size: 22px;
+    line-height: 1.2;
+    color: $white;
+    @media only screen and (min-width: 450px){
+      font-size: 28px;
+    }
+    @media only screen and (min-width: 550px){
+      font-size: 34px;
+    }
+  }
+  &__description{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
     font-size: 14px;
     line-height: 1.5;
-    text-align: center;
     color: $white;
+    @media only screen and (min-width: 450px){
+      font-size: 20px;
+    }
+    @media only screen and (min-width: 550px){
+      font-size: 23px;
+    }
   }
 }
 @media only screen and (min-width: $tablet-width){
   .page-title{
-    
-    &--main-page{
-      margin-bottom: 60px;
-    }
-    &--secondary{
-      margin-top: 30px;
-      padding-bottom: 60px;
-    }
-    &--portfolio-item{
-      margin-top: 30px;
-      padding-bottom: 40px;
-    }
+    margin-bottom: 30px;    
     &__text{
       font-size: 50px;
-      line-height: 66px;
       
       text-align: left;
     }
     &__description{
       text-align: left;
-      font-size: 18px;
+      font-size: 23px;
     }
   }
 }
 @media only screen and (min-width: $desctop-width){
-  .page-title{
-    &--main-page{
-      margin-bottom: 84px;
-    }
-    &--secondary{
-      margin-top: 30px;
-      padding-bottom: 100px;
-    }
-    &--portfolio-item{
-      margin-top: 30px;
-      padding-bottom: 60px;
-    }
+  .page-title{    
     &__text{
-      font-size: 60px;
-      line-height: 66px;
+      font-size: 70px;
       text-align: left;
     }
     &__description{
-      font-size: 24px;
+      font-size: 26px;
       line-height: 1.7;
     }
   }
 }
 @media only screen and (min-width: $xl-width){
   .page-title{
-    &--main-page{
-      
-    }
-    &--secondary{
-      margin-top: 40px;
-      padding-bottom: 170px;
-    }
-    &--portfolio-item{
-      margin-top: 40px;
-      padding-bottom: 120px;
-    }
+    
     &__text{
+      font-size: 85px;
     }
     &__description{
     }

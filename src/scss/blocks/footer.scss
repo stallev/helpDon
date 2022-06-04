@@ -1,163 +1,72 @@
 .footer{
   padding: 35px 0;
-  background-color: #586F78;
+  background-color: #333;
   &__inner{
     display: flex;
-    flex-direction: column-reverse;
+    justify-content: center;
+    padding: 20px 0;
   }
-  &__logo-wrap{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    & .footer__image-wrap{
-      display: block;
-      width: 119px;
-      height: 93px;
-      & img{
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-  &__logo{
-    margin-bottom: 20px;
-    width: 119px;
-    height: 93px;
-  }
-  &__content{
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    justify-content: space-between;
-    row-gap: 38px;
-  }
-  &__content-item{
-  }
-  &__content-item--contacts{
-    width: 250px;
-  }
-  &__content-item-title{
-    margin-bottom: 12px;
-    font-family: Inter;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    text-transform: uppercase;
-  }
-  &__content-link{
-    display: inline-block;
-    margin-bottom: 10px;
-    font-family: Roboto;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    transition: all .4s ease;
-    & svg{
-    }
-    & svg path, & svg g{
-      opacity: .6;
-      fill-opacity: .6;
-    }
-    & svg rect{
+  &__messengers{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@media only screen and (min-width: 680px) {
+			align-self: center;
+		}
+	}
+	&__messengers-list{
+		display: flex;
+		width: fit-content;
+	}
+	&__messengers-item{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 25px;
+		height: 25px;
+		border-radius: 5px;
+		// background-color: $messengerBgColor;
+		transition: all .2s ease;	
+		svg path {
+			fill: $white;
+		}
+		& svg {
+			width: 15px;
+			height: auto;
+			@media only screen and (min-width: 580px) {
+				width: 18px;
+			}
+		}
+		&:not(:nth-of-type(1)){
+			margin-left: 3px;
+			@media only screen and (min-width: 340px) {
+				margin-left: 10px;
+			}  
+		}
+		&:hover {
+			background-color: $bright-color;
+			svg path {
+				fill: $white;
+			}
+		}
 
-    }
-    &:hover{
-      color: #fff;
-      & svg path, & svg g{
-        opacity: 1;
-      }
-    }
-    &.footer__content-link--location{
-      opacity: 1;
-      & svg path, & svg g{
-        opacity: .8;
-      }
-      &:hover{
-        color: #fff;
-        & svg path, & svg g{
-          opacity: 1;
-        }
-      }
-    }
-    &--icons{
-      display: flex;
-      align-items: center;
-    }
-  }
-  &__content-link-img-wrap{
-    min-width: 45px;
-    & svg{
-      width: auto;
-      height: auto;
-      opacity: .8;
-      stroke-width: 2px;
-    }
-  }
-  &__content-link-wrap:last-of-type .footer__content-link-img-wrap svg{
-    opacity: .6;
-  }
+		@media only screen and (min-width: 580px)	{
+			width: 30px;
+			height: 30px;
+		}
+	}
 }
 
 @media only screen and (min-width:$tablet-width){}
 @media only screen and (min-width: $desctop-width){
   .footer{
-    &__inner{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
-    &__logo-wrap{
-      margin-right: 20px;
-    }
-    &__content{
-      display: grid;
-      grid-template-columns: 30% 30% 40%;
-      justify-content: space-between;
-      align-items: flex-start; 
-      column-gap: 20px;
-      width: 75%;
-    }
-    &__content-item-title{
-      margin-bottom: 15px;
-      font-size:18px;
-      line-height: 24px;
-    }
-    &__content-link{
-      display: inline-block;
-      margin-bottom: 10px;
-      font-size: 16px;
-      line-height: 19px;
-      &--icons{
-        display: flex;
-        align-items: center;
-      }
-    }
-    &__content-link-img-wrap{
-      & svg{
-        stroke-width: 3px;
-      }
-    }
+    &__messengers-item{
+			border-radius: 5px 5px 0 0;
+		}
   }
 }
 @media only screen and (min-width: $xl-width){
   .footer{
-    &__content-item-title{
-      margin-bottom: 17px;
-      font-size: 20px;
-      line-height: 24px;
-    }
-    &__logo-wrap{
-      margin-right: 0;
-    }
-    &__content-link{
-      display: inline-block;
-      margin-bottom: 10px;
-      font-size: 18px;
-      line-height: 21px;
-      &--icons{
-        display: flex;
-        align-items: center;
-      }
-    }
+    
   }
 }

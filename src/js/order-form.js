@@ -43,6 +43,7 @@ function openCalcForm(btnClass){
       btn => {
         btn.addEventListener('click', function(e){
           e.preventDefault();
+          console.log('Hello');
           document.body.classList.add('order-form-view');
           document.body.classList.add(btnClass);
         });
@@ -52,7 +53,7 @@ function openCalcForm(btnClass){
 }
 openCalcForm('call-form');
 openCalcForm('order-online');
-openCalcForm('quiz-popup');
+openCalcForm('order-bus');
 
 // let closeCallForm =document.querySelector('.order-form__content--call-form .order-form__submit');
 

@@ -143,11 +143,14 @@ var site_blocks = new Swiper(".site-blocks__list", {
 });
 
 //галерея в портфолио
-var gallerySlider = new Swiper(".gallery__list", {
+var gallerySlider = new Swiper(".car__photo-wrap", {
   loop: true,
   slidesPerView: 1,
   initialSlide: 1,
   spaceBetween: 0,
+  autoplay: {
+    delay: 4000,
+  },
   navigation:{
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'

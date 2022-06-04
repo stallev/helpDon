@@ -4,6 +4,36 @@
     grid-template-columns: 1fr;
     row-gap: 20px;
   }
+  &__item-wrap {
+    display: flex;
+    justify-content: center;
+  }
+  &__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;    
+  }
+  &__item-icon {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin-bottom: 20px;
+    svg {
+      display: inline-block;
+      width: 70px;
+      height: 70px;
+      fill: $bright-color;
+    }
+  }
+  &__item-title{
+    @include subTitle;
+    text-align: center;
+  }
+  &__item-description{
+    @include aboutParagraph;
+    text-align: center;
+  }
 }
 
 @media only screen and (min-width:$tablet-width){
@@ -14,14 +44,20 @@
       grid-row-gap: 30px;
       column-gap: 30px;
     }
+    &__item{}
+    &__item-icon{}
+    &__item-description{}
   }
 }
 @media only screen and (min-width: $desctop-width){
   .advantages{
     &__list{
-      grid-template-columns: 50% 50%;
+      grid-template-columns: repeat(3, 1fr);
       row-gap: 40px;
     }
+    &__item{}
+    &__item-icon{}
+    &__item-description{}
   }
 }
 @media only screen and (min-width: $xl-width){
@@ -29,5 +65,8 @@
     &__list{
       row-gap: 60px;
     }
+    &__item{}
+    &__item-icon{}
+    &__item-description{}
   }
 }

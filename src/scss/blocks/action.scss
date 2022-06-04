@@ -6,18 +6,17 @@
   flex-wrap: wrap;
   box-sizing: border-box;
   vertical-align: middle;
-  border-radius: 15px;
   width: 238px;
   padding: 15px 25px;
   text-align: center;
-  font-family: Inter;
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 15px;
   line-height: 18px;
   color: $white;
   box-sizing: border-box;
-  background: $yellow-color;
+  background: $bright-color;
   text-transform: uppercase;
   transition: all .5s linear;
   //transition: color 1s ease, background 1s ease;
@@ -30,13 +29,13 @@
     border: 3.5px solid $pinkColor;
     color: $pinkColor;
     &:hover{
-      background: $dark-yellow-color;
-      color: #fff;
+      background: $white;
+      color: $textColor;
       border-width: 0;
     }
   }
   &:hover{
-    background: $dark-yellow-color;
+    background: $bright-color-hover;
     color: #fff;
   }
   

@@ -1,0 +1,109 @@
+.transport-item {
+  justify-content: space-between;
+  &__image-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 2;
+  }
+  &__image-inner{
+    width: fit-content;
+  }
+  &__params-list{    
+    padding: 16px;
+    font-size: 16px;
+    background-color: $bright-color;
+  }
+  &__params-row{
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 5px;
+    height: 40px;
+    border-bottom: 1px solid $white;
+  }
+  &__params-name {
+    display: inline-block;
+    width: 190px;
+  }
+  &__params-value{
+    display: inline-block;
+    width: 40px;
+  }
+  &__title {
+    font-size: 35px;
+  }
+  &__info {}
+  &__photo {
+  }
+  &__parameters{
+
+  }
+
+  &__parameter-name {
+
+  }
+  &__parameter-value {
+
+  }
+}
+@media only screen and (min-width: $tablet-width){
+  .transport-item {
+    &__title {
+  
+    }
+    &__info {}
+    &__photo {
+    }
+    &__parameters{
+  
+    }
+  
+    &__parameter-name {
+  
+    }
+    &__parameter-value {
+  
+    }
+  }
+}
+@media only screen and (min-width: $desctop-width){
+  .transport-item {
+    &__title {
+  
+    }
+    &__info {}
+    &__photo {
+    }
+    &__parameters{
+  
+    }
+  
+    &__parameter-name {
+  
+    }
+    &__parameter-value {
+  
+    }
+  }
+}
+
+@media only screen and (min-width: $xl-width){
+  .transport-item {
+    &__title {
+  
+    }
+    &__info {}
+    &__photo {
+    }
+    &__parameters{
+  
+    }
+  
+    &__parameter-name {
+  
+    }
+    &__parameter-value {
+  
+    }
+  }
+}

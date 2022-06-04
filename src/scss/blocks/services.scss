@@ -1,84 +1,60 @@
 .services{
-  &--head{
-    padding-bottom: 60px;
-  }
-  &__list{
+  &__list {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 270px;
+    // grid-auto-rows: 220px;
     grid-row-gap: 30px;
   }
-  &__subtitle{
-    margin-bottom: 20px;
-  }
-  &__item{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: inset 100vw -100vw 100vw 100vw rgba(0,0,0,0.65);   
-  }
-  &__item-inner{
+
+  &__item {
     display: flex;
     flex-direction: column;
-    
+    align-items: center;
   }
-  &__item-title{
-    padding: 12px 0 6px 6px;
-    width: 70%;
-    font-family: Inter;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.5;
+
+  &__item-icon {
+    margin-bottom: 25px;
+    width: fit-content;
+
+    svg {
+      width: 90px;
+      height: 90px;
+      fill: $bright-color;
+    }
+  }
+
+  &__item-info {
+    max-width: 300px;
+  }
+
+  &__item-title {
+    @include subTitle;
+    margin-bottom: 16px;
+    text-align: center
+  }
+
+  &__item-description {
+    @include aboutParagraph;
     text-align: center;
-    color: $white;
-    text-transform: uppercase;
   }
 }
+
 @media only screen and (min-width: $tablet-width){
-  .services{
-    &__list{
-      grid-template-columns: repeat(2, 46%);
-      grid-row-gap: 50px;
-      grid-auto-rows: 300px;
-      justify-content: space-between;
-    }
-    &__item{
-      overflow-y: hidden;
-      transition: transform .4s ease;
-      &:hover{
-        & .services__item-title{
-          transition: all .4 linear;
-          transform: scale(1.2);
-        }
-      }
+  .services {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 40px;
     }
   }
 }
 @media only screen and (min-width: $desctop-width){
-  .services{
-    &--head{
-      padding-bottom: 80px;
-    }
-    &__list{
-      grid-row-gap: 60px;
-      grid-auto-rows: 350px;
-    }
-    &__item-title{
-      padding: 16px 0 21px 10px;
-      font-size: 22px;
-      text-transform: uppercase;
+  .services {
+    &__list {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 30px;
     }
   }
 }
 @media only screen and (min-width: $desctop-width){
-  .services{
-    &--head{
-      padding-bottom: 100px;
-    }
-    &__item-excerpt, &__item-link{
-      font-size: 20px;
-    }
-  }
+  .services{}
 }

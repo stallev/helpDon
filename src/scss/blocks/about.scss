@@ -1,117 +1,76 @@
-
-.safari .about{
-  &__main-img-wrap{
-    background-image: url(../img/content/about-bg.jpg);
-  }
-}
 .about{
   color: #000;
-  &__main-text-wrap{
+  &__title{
+    @include subTitle;
   }
-  &__main-text p{
-    margin-bottom: 30px;
+  &__content{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+  }
+  &__text-info {
+
+  }
+  &__description-text{
     @include aboutParagraph;
-    &:hover{
-      transition: color .2s ease;
-      color: #fff;
-    }
+    margin-bottom: 16px;
   }
-  &__link{
-    display: inline-block;
-    margin-bottom: 20px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.25;
-  }
-  &__main-img-wrap{
-    width: 100%;
-    height: 210px;
-    background-image: url(../img/content/about-bg.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  &__reasons-title{
-    margin-top: 30px;
-    margin-bottom: 20px;
-    font-family: Inter;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.3px;
-    color: #586F78;
-  }
-  &__reasons-description{
-    margin-bottom: 30px;
-    @include aboutParagraph;
-  }
-  &__reasons-list{
+  &__adv-list{
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
   }
-  &__reasons-item{
+  &__adv-item{
     display: flex;
-    align-items: center;
-    margin-bottom: 17px;
+    align-items: flex-start;
+    margin-bottom: 10px;
   }
-  &__reasons-img{
+  &__adv-item-icon{
     display: inline-block;
-    margin-right: 15px;
-    width: 46px;
-    height: 46px;
+    margin-right: 10px;
+    margin-top: 2px;
+    padding: 4px;
+    background-color: $bright-color;
+    color: $white;
+    font-size: 14px
   }
-  &__reasons-item-text{
+  &__adv-item-text{
     @include aboutParagraph;
+  }
+  &__main-img-wrap{
+    display: flex;
+    height: auto;
+  }
+  &__main-img{
+    object-fit: cover;
   }
 }
 @media only screen and (min-width: $tablet-width){
+  .about {
+    &__content{}
+    &__title{}
+    &__description-text{}
+    &__adv-list{}
+    &__adv-item{}
+    &__adv-item-icon{}
+    &__main-img-wrap{}
+    &__main-img{}
+  }
 }
 @media only screen and (min-width:$desctop-width){
-  .safari .about{
-    background-image: url(../img/content/about-bg-d.jpg);
+  .about {
+    &__content{
+      grid-template-columns: 60% 40%;
+      grid-column-gap: 20px;
+    }
+    &__title{}
+    &__description-text{}
+    &__adv-list{}
+    &__adv-item{}
+    &__adv-item-icon{}
+    &__text-info{
+    }
     &__main-img-wrap{
-      display: none;
     }
-  }
-  .about{
-    background-image: url(../img/content/about-bg-d.webp);
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: 55% auto;
-    box-shadow: inset 50vw -50vw 21vw -30vw #d5dcdf;
-    &__main-img-wrap{
-      display: none;
-    }
-    &__main-text-wrap{
-      width: 60%;
-    }
-    &__link{
-      font-size: 20px;
-      margin-bottom: 95px;
-    }
-    &__reasons-title{
-      font-size: 25px;
-      line-height: 30px;
-    }
-    &__reasons-list{
-      width: 95%;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-row-gap: 40px;
-      justify-content: space-between;
-      margin-bottom: 60px;
-    }
-    &__reasons-item{
-      flex-direction: column;
-    }
-    &__reasons-img{
-      width: 157px;
-      height: 157px;
-      margin-bottom: 17px;
-    }
-    &__reasons-item-text{
-      text-align: center;
-    }
+    &__main-img{}
   }
 }

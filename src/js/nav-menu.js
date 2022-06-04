@@ -131,13 +131,6 @@ if(hiddenItemsControls){
 	)
 }
 
-//появление кнопок соцсетей
-let headSocialBlock = document.querySelector('.head__social');
-let headSocialBlockBtn = document.querySelector('.head__social-clk');
-headSocialBlockBtn.addEventListener('click', function(){
-	headSocialBlock.classList.toggle('head__social--display');
-})
-
 
 //меню футер
 const footerMenu = document.querySelector('.footer__mobile-nav-wrap');

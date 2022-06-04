@@ -15,29 +15,22 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Inter";
-  src: url('../fonts/Inter-Black.woff2') format('woff2'),
-  url('../fonts/Inter-Black.woff') format('woff');
-  font-weight: 900;
+  font-family: "Open Sans";
+  src: url('../fonts/opensans.woff2') format('woff2'),
+  url('../fonts/opensans.woff') format('woff');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Inter";
-  src: url('../fonts/Inter-Bold.woff2') format('woff2'),
-  url('../fonts/Inter-Bold.woff') format('woff');
+  font-family: "Open Sans";
+  src: url('../fonts/opensansbold.woff2') format('woff2'),
+  url('../fonts/opensansbold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "Inter";
-  src: url('../fonts/Inter-Medium.woff2') format('woff2'),
-  url('../fonts/Inter-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
+
 @font-face {
   font-family: "Arial";
   src: url('../fonts/ArialRegular.woff2') format('woff2'),
@@ -57,8 +50,16 @@
 @font-face {
   font-family: "Playfair Display";
   src: url('../fonts/PlayfairDisplayBold.woff2') format('woff2'),
-  url('../fonts/ArialItalic.woff') format('woff');
+  url('../fonts/PlayfairDisplayBold.woff') format('woff');
   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url('../fonts/PlayfairDisplaySCRegular.woff2') format('woff2'),
+  url('../fonts/PlayfairDisplaySCRegular.woff') format('woff');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }

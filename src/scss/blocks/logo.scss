@@ -1,7 +1,21 @@
-.logo{
+.logo {
   display: flex;
-  align-items: flex-end;
-  max-width: 150px;
+  a {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 0.7;
+    color: $dark-gray-color;
+    span {
+      color: $bright-color;
+    }
+    @media only screen and (min-width: 340px) {
+      font-size: 28px;
+    }  
+    @media only screen and (min-width: 420px) {
+      font-size: 32px;
+    }  
+  }
   &__description{
     display: inline-block;
     margin-left: 5px;
@@ -20,7 +34,6 @@
 }
 @media only screen and (min-width: 767px){
   .logo{
-    min-width: 200px;
     align-items: center;
     & a{
       display: inline-block;
@@ -37,6 +50,5 @@
 }
 @media only screen and (min-width: $desctop-width){
   .logo{
-    min-width: 250px;
   }
 }
