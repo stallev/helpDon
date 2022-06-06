@@ -6,14 +6,3 @@ if(bg__elements){
     element.style.backgroundImage = 'url(' + bg_img_src + ')';
   });
 }
-
-if($('.car__photo-wrap12')){
-  $('.car__photo-wrap12').each(function() {
-    $(this).slick({
-        slidesToShow: 1,
-        dots: true,
-        arrows: true,
-    });
-  });
-}
-

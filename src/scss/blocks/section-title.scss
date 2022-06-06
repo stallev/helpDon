@@ -9,8 +9,8 @@
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
-    font-size: 40px;
-    margin-bottom: 25px;
+    font-size: 32px;
+    margin-bottom: 16px;
     text-transform: uppercase;
     font-weight: 700;
     line-height: 1.5;
@@ -19,6 +19,7 @@
     text-transform: uppercase;
   }
   &__text span {
+    display: inline;
     color: $bright-color;
   }
   &__description {
@@ -29,6 +30,10 @@
 }
 @media only screen and (min-width: $tablet-width){
   .section-title{
+    &__text {
+      font-size: 40px;
+      margin-bottom: 25px;
+    }
   }
 }
 @media only screen and (min-width: $desctop-width){

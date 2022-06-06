@@ -15,10 +15,8 @@
     line-height: 19px;
   }
   &__form-paragraph {
-    margin-bottom: 20px;
-    font-family: Roboto;
-    font-size: 14px;
-    line-height: 1.25;
+    @include aboutParagraph;
+    margin-bottom: 16px;
   }
   &__form {
     display: inline-block;
@@ -86,6 +84,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 25px;
+    margin-bottom: 40px;
   }
   &__contact-item {
     display: flex;

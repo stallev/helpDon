@@ -1,6 +1,6 @@
 //валидация формы запроса обратного звонка
 let consultForm = document.querySelector('.order-form__content--call-form');
-let consultFormSubmitBtn = consultForm.querySelector('.action-submit-form');
+let consultFormSubmitBtn = consultForm.querySelector('.action--submit-form');
 if(consultForm){
   let personNameValidity = false;
   let personPhoneValidity = false;
