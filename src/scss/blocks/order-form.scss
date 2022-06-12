@@ -68,13 +68,17 @@
 }
 .order-form-view .order-form__wrap,
 .order-form-view-call .order-form__wrap,
-.order-form-view .order-form__content--order-online{
+.order-form-view .order-form__content--order-online,
+.order-form-view .order-form__content--success-send,
+.order-form-view .order-form__content--error-send{
   visibility: visible;
 }
 
 .call-form .order-form__content--call-form,
-.order-bus .order-form__content--order-bus,
-.order-online .order-form__content--order-online{
+.order-transport .order-form__content--order-transport,
+.order-online .order-form__content--order-online,
+.success-send .order-form__content--success-send,
+.error-send .order-form__content--error-send{
   top: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);

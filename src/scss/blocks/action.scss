@@ -44,15 +44,6 @@
   }
   
 }
-@media only screen and (min-width:$tablet-width){
-  .action{
-    margin-right: 30px;
-
-    &:last-of-type{
-      margin-right: 0;
-    }
-  }
-}
 
 @media only screen and (min-width: $desctop-width){
   .action__group--head{

@@ -124,7 +124,7 @@
                 </ul>
               </div>
               <div class="action__group">
-                <a href="" class="action order-online">Заказать онлайн</a>
+                <a href="" class="action call-form">Заказать онлайн</a>
               </div>
             </div>
             
@@ -202,7 +202,7 @@
                       </div>
                     </div>                    
                   </div>
-                  <span class="action car__order-btn order-bus">
+                  <span class="action car__order-btn order-transport">
                     Заказать
                   </span>
                 </div>
@@ -273,7 +273,7 @@
                       </div>
                     </div>                    
                   </div>
-                  <span class="action car__order-btn order-bus">
+                  <span class="action car__order-btn order-transport">
                     Заказать
                   </span>
                 </div>
@@ -344,7 +344,7 @@
                       </div>
                     </div>                    
                   </div>
-                  <span class="action car__order-btn order-bus">
+                  <span class="action car__order-btn order-transport">
                     Заказать
                   </span>
                 </div>
@@ -419,7 +419,7 @@
             </div>
             <div class="connect__list">
               <div class="connect__item">
-                <div class="connect__item-icon connect__item-icon--form order-online">
+                <div class="connect__item-icon connect__item-icon--form call-form">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
                     <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                     <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
@@ -542,11 +542,11 @@
               <p class="answers__form-paragraph">
                 Чтобы рассчитать стоимость аренды автобуса, заполните форму ниже:
               </p>
-              <form action="index.html" class="answers__form">
+              <form class="answers__form answers__form--bottom">
                 <div class="answers__form-inner">
-                  <input type="text" class="answers__form-text-field" placeholder="Ваше имя" name="answers-name" required>
-                  <input type="tel" class="answers__form-text-field phone-field" placeholder="Ваш номер телефона" name="answers-phone" required>
-                  <textarea name="" id="" cols="30" rows="6" class="answers__form-textarea-field" name="answers-message" placeholder="Текст сообщения" ></textarea>
+                  <input type="text" class="input-field" placeholder="Ваше имя" name="person-name" required>
+                  <input type="tel" class="input-field input-field--phone" placeholder="Ваш номер телефона" name="person-phone" required>
+                  <textarea name="" id="" cols="30" rows="6" class="answers__form-textarea-field" name="person-message" placeholder="Текст сообщения" ></textarea>
                   <div class="action__group action__group--answers">
                     <button type="submit" class="action">
                       рассчитать
@@ -618,37 +618,17 @@
           <p class="answers__description">
             Оставьте свои данные, и мы перезвоним Вам в течение 15 минут
           </p>
-          <form action="thanks.html" class="answers__form">
+          <form class="answers__form">
             <div class="answers__form-inner">
-              <input type="text" class="answers__form-text-field" placeholder="Ваше имя" name="answers-name" required="">
-              <input type="tel" class="answers__form-text-field phone-field" placeholder="Ваш номер телефона" name="answers-phone" required="">
+              <input type="text" class="input-field" placeholder="Ваше имя" name="person-name" required="">
+              <input type="tel" class="input-field input-field--phone" placeholder="Ваш номер телефона" name="person-phone" required="">
               <button type="submit" class="action action--submit-form">
                 отправить
               </button>
             </div>
           </form>
         </div>
-        <div class="order-form__content order-form__content--order-online answers answers--call-form">
-          <div class="order-form__icon-close-wrap closeFormBtn">
-            <span class="order-form__icon-close"></span>
-          </div>
-          <h2 class="answers__form-title">
-            Заказать онлайн
-          </h2>
-          <p class="answers__description">
-            Оставьте свои данные, и мы перезвоним Вам в течение 15 минут
-          </p>
-          <form action="thanks.html" class="answers__form">
-            <div class="answers__form-inner">
-              <input type="text" class="answers__form-text-field" placeholder="Ваше имя" name="answers-name" required="">
-              <input type="tel" class="answers__form-text-field phone-field" placeholder="Ваш номер телефона" name="answers-phone" required="">
-              <button type="submit" class="action action--submit-form">
-                заказать
-              </button>
-            </div>
-          </form>
-        </div>
-        <div class="order-form__content order-form__content--order-bus answers answers--call-form">
+        <div class="order-form__content order-form__content--order-transport answers answers--call-form">
           <div class="order-form__icon-close-wrap closeFormBtn">
             <span class="order-form__icon-close"></span>
           </div>
@@ -658,16 +638,41 @@
           <p class="answers__description">
             Оставьте свои данные, и мы перезвоним Вам в течение 15 минут
           </p>
-          <form action="thanks.html" class="answers__form">
+          <form class="answers__form">
             <div class="answers__form-inner">
-              <input type="text" class="answers__form-text-field" placeholder="Ваше имя" name="answers-name" required="">
-              <input type="tel" class="answers__form-text-field phone-field" placeholder="Ваш номер телефона" name="answers-phone" required="">
-              <input type="date" class="answers__form-text-field date-field" placeholder="Дата поездки" name="answers-date">
+              <input type="text" class="input-field input-field--disabled transport-name" placeholder="Средство" name="transport-name">
+              <input type="text" class="input-field" placeholder="Ваше имя" name="transport-person" required="">
+              <input type="tel" class="input-field input-field--phone" placeholder="Ваш номер телефона" name="person-phone" required="">
+              <input type="date" class="input-field date-field" placeholder="Дата поездки" name="transport-date" required="">
               <button type="submit" class="action action--submit-form">
                 заказать
               </button>
             </div>
           </form>
+        </div>
+        <div class="order-form__content order-form__content--success-send modal-notification modal-notification--ok">
+          <div class="order-form__icon-close-wrap closeFormBtn">
+            <span class="order-form__icon-close"></span>
+          </div>
+          <span class="modal-notification__symbol">&#10004;</span>
+          <h2 class="modal-notification__title">
+            Сообщение успешно отправлено
+          </h2>
+          <p class="modal-notification__text">
+            Мы вскоре Вам позвоним
+          </p>
+        </div>
+        <div class="order-form__content order-form__content--error-send modal-notification modal-notification--error">
+          <div class="order-form__icon-close-wrap closeFormBtn">
+            <span class="order-form__icon-close"></span>
+          </div>
+          <span class="modal-notification__symbol">&#9888;</span>
+          <h2 class="modal-notification__title">
+            Что-то пошло не так
+          </h2>
+          <p class="modal-notification__text">
+            Пожалуйста, наберите по номеру +375-33-6-585-585
+          </p>
         </div>
       </div>
     </div>

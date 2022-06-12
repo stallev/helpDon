@@ -1,0 +1,25 @@
+.input-field {
+  margin-bottom: 15px;
+  @include inputField;
+  background-color: transparent;
+  &--disabled {
+    pointer-events: none;
+    opacity: .5;
+    border-color: $dark-gray;
+    color: $dark-gray;
+  }
+  &--finish {
+    width: 238px;
+    min-height: 72px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: $tablet-width){}
+@media only screen and (min-width: $desctop-width) {
+  .input-field {
+    &--finish {
+      padding: 19px 19px;
+    }
+  }
+}
