@@ -643,7 +643,16 @@
               <input type="text" class="input-field input-field--disabled transport-name" placeholder="Средство" name="transport-name">
               <input type="text" class="input-field" placeholder="Ваше имя" name="transport-person" required="">
               <input type="tel" class="input-field input-field--phone" placeholder="Ваш номер телефона" name="person-phone" required="">
-              <input type="date" class="input-field date-field" placeholder="Дата поездки" name="transport-date" required="">
+              <input
+                type="text"
+                class="input-field date-field"
+                placeholder="Дата поездки"
+                name="transport-date"
+                required=""
+                type="text"
+                onfocus="(this.type='date')"
+                onblur="(this.type='text')"
+              >
               <button type="submit" class="action action--submit-form">
                 заказать
               </button>
