@@ -86,20 +86,20 @@ if (isMobile.any()) {
 
 
 /* липкий header*/
-let header = document.querySelector(".header");
-if(header){
-	(function(){
-		window.onscroll = function() {stickyHeader()};
-		let sticky = 0;
-		function stickyHeader() {
-			if (window.pageYOffset > sticky) {
-				header.classList.add("sticky-header");
-			} else {
-				header.classList.remove("sticky-header");
-			}
-		}
-	})();
-}
+// let header = document.querySelector(".header");
+// if(header){
+// 	(function(){
+// 		window.onscroll = function() {stickyHeader()};
+// 		let sticky = 0;
+// 		function stickyHeader() {
+// 			if (window.pageYOffset > sticky) {
+// 				header.classList.add("sticky-header");
+// 			} else {
+// 				header.classList.remove("sticky-header");
+// 			}
+// 		}
+// 	})();
+// }
 
 
 

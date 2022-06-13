@@ -31,7 +31,7 @@ if(closeFormBtns){
 }
 
 //клик по месту вне формы
-let orderFormOverlay = document.querySelector('.order-form__overlay');
+let orderFormOverlay = document.querySelector('.modal__overlay');
 
 if(orderFormOverlay){
   orderFormOverlay.addEventListener('click', function(){
@@ -50,7 +50,7 @@ function openCalcForm(btnClass){
       btn => {
         btn.addEventListener('click', function(e){
           e.preventDefault();
-          document.body.classList.add('order-form-view');
+          document.body.classList.add('modal-view');
           document.body.classList.add(btnClass);
         });
       }
@@ -69,7 +69,7 @@ function openOrderForm(btnClass){
           e.preventDefault();
           let transportName = btn.closest('.car').querySelector('.car__title').innerHTML;
           document.querySelector('.transport-name').value = transportName;
-          document.body.classList.add('order-form-view');
+          document.body.classList.add('modal-view');
           document.body.classList.add(btnClass);
         });
       }
@@ -81,7 +81,7 @@ openOrderForm('order-transport');
 const TOKEN = '5477703463:AAGlt6r7osdT9QmZpG2ksKcpBkbAWrKGyT0';
 const CHAT_ID = '-792442518';
 
-let orderCallForm = document.querySelector('.order-form__content--call-form form'); 
+let orderCallForm = document.querySelector('.modal__content--call-form form'); 
 orderCallForm.addEventListener("submit", function (e) {
     e.preventDefault();
     let data = new FormData(this);
@@ -90,7 +90,7 @@ orderCallForm.addEventListener("submit", function (e) {
     sendMsg(messageText);
 });
 
-let orderTransportForm = document.querySelector('.order-form__content--order-transport form'); 
+let orderTransportForm = document.querySelector('.modal__content--order-transport form'); 
 orderTransportForm.addEventListener("submit", function (e) {
     e.preventDefault();
     let data = new FormData(this);
@@ -114,17 +114,17 @@ function sendMsg(data) {
         parse_mode: 'Markdown',
         text: data
     });
-    var xhr = new XMLHttpRequest(); // инициализируем AJAX запрос
-    xhr.open('POST', url, true); // отправляем наше сообщение методом POST на сервак телеги
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', url, true);
 
     // уведомление-модалка
     xhr.onload = function(oEvent) {
       if (xhr.status === 200) {
-        document.body.classList.add('order-form-view');
+        document.body.classList.add('modal-view');
         document.body.classList.add('success-send');
       }
       if (xhr.status !== 200) {
-        document.body.classList.add('order-form-view');
+        document.body.classList.add('modal-view');
         document.body.classList.add('error-send');
       }
     }

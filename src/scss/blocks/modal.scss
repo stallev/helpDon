@@ -1,4 +1,4 @@
-.order-form__wrap{
+.modal__wrap{
   position: fixed;
   top: 0;
   bottom: 0;
@@ -8,7 +8,7 @@
   height: 100%;
   visibility: hidden;
 }
-.order-form__overlay{
+.modal__overlay{
   position: fixed;
   top: 0;
   bottom: 0;
@@ -18,7 +18,7 @@
   background-color: #222;
   opacity: .7;
 }
-.order-form__icon-close-wrap{
+.modal__icon-close-wrap{
   position: absolute;
   top: 18px;
   right: 15px;
@@ -27,7 +27,7 @@
   background-color: transparent;
   cursor: pointer;
 }
-.order-form__icon-close{
+.modal__icon-close{
   position: absolute;
   display: block;
   top: 15px;
@@ -52,7 +52,7 @@
     transform: rotate(-45deg);
   }
 }
-.order-form__content{
+.modal__content{
   position: absolute;
   background-color: #fff;
   max-height: 80vh;
@@ -66,19 +66,19 @@
   transition: transform .4s ease-in-out;
   border-radius: 20px;
 }
-.order-form-view .order-form__wrap,
-.order-form-view-call .order-form__wrap,
-.order-form-view .order-form__content--order-online,
-.order-form-view .order-form__content--success-send,
-.order-form-view .order-form__content--error-send{
+.modal-view .modal__wrap,
+.modal-view-call .modal__wrap,
+.modal-view .modal__content--order-online,
+.modal-view .modal__content--success-send,
+.modal-view .modal__content--error-send{
   visibility: visible;
 }
 
-.call-form .order-form__content--call-form,
-.order-transport .order-form__content--order-transport,
-.order-online .order-form__content--order-online,
-.success-send .order-form__content--success-send,
-.error-send .order-form__content--error-send{
+.call-form .modal__content--call-form,
+.order-transport .modal__content--order-transport,
+.order-online .modal__content--order-online,
+.success-send .modal__content--success-send,
+.error-send .modal__content--error-send{
   top: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
@@ -87,11 +87,11 @@
 input{
   font-family: $content-ff;
 }
-.order-form__form{
+.modal__form{
   display: flex;
   flex-direction: column;
 }
-.order-form{
+.modal{
   &__form--quiz{
     padding: 0;
   }
@@ -117,13 +117,13 @@ input{
 }
 
 //стилизация radio в различных состояниях
-.order-form__field--radio+label>.fa-dot-circle{
+.modal__field--radio+label>.fa-dot-circle{
   display: none;
 }
-.order-form__field--radio:checked+label>.fa-circle{
+.modal__field--radio:checked+label>.fa-circle{
   display: none;
 }
-.order-form__field--radio:checked+label>.fa-dot-circle{
+.modal__field--radio:checked+label>.fa-dot-circle{
   display: inline-block;
 }
 
@@ -134,7 +134,7 @@ input{
 }
 @media only screen and (min-width: $desctop-width){
   
-  .order-form{
+  .modal{
     &__field--text{
       max-width: 100%;
     }
@@ -147,7 +147,7 @@ input{
   }
 }
 @media only screen and (min-width: 1200px){
-  .order-form{
+  .modal{
     &__content{
       width: 1100px;
     }

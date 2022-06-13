@@ -3,9 +3,8 @@
 }
 .head{
   position: relative;
-  padding: 50px 0 60px;
+  padding: 150px 0 60px;
   background-repeat: no-repeat;padding: 54px 0;
-  background-image: url(../img/content/img-main2.jpg);
   background-position: center;
   box-shadow: inset 100vw -100vw 100vw 100vw rgba(0,0,0,0.65);
   background-size: cover;
@@ -33,10 +32,10 @@
     }
   }
   @media only screen and (min-width: 360px){
-    padding: 60px 0 120px;
+    padding: 150px 0 120px;
   }
   @media only screen and (min-width: 450px){
-    padding: 70px 0 150px;
+    padding: 160px 0 150px;
   }
   &__description-item {
     display: flex;
@@ -55,7 +54,7 @@
     
   }
   .head{
-    padding: 80px 0 180px 80px;
+    padding: 150px 0 180px 30px;
     background-position: right top;
     &__description{
       text-align: left;
@@ -75,7 +74,7 @@
 }
 @media only screen and (min-width: $desctop-width){
   .head{
-    padding: 90px 0 180px;
+    padding: 190px 0 180px;
     
     &__description{
       font-size: 24px;
@@ -92,7 +91,7 @@
 }
 @media only screen and (min-width:$xl-width){
   .head{
-    padding: 90px 0 170px;    
+    padding: 180px 0 170px;    
     &__description{
       font-size: 28px;
       line-height: 1.7;

@@ -5,7 +5,6 @@
     <meta name="robots" content="noindex,nofollow"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Пассажирские перевозки">
-    <link id="bgpreload" rel="preload" as="image" href="../img/content/img-main.webp" />
     <link rel="stylesheet" href="libs/normalize/normalize.min.css">
     <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.min.css">
@@ -84,7 +83,7 @@
         </div>
       </header>
       <main class="main">
-        <section class="head head--main">
+        <section class="head head--main" style="background-image: url(img/content/img-main2.jpg)">
            <div class="container">
             <div class="main__inner">
               <div class="page-title">
@@ -210,12 +209,12 @@
               <article class="car">
                 <div class="swiper-container car__photo-wrap">
                   <div class="swiper-wrapper">
-                    <img src="../img/content/cars/1.jpg" alt="Image" class="car__image swiper-slide">
-                    <img src="../img/content/cars/2.jpg" alt="Image" class="car__image swiper-slide">
-                    <img src="../img/content/cars/3.jpg" alt="Image" class="car__image swiper-slide">
-                    <img src="../img/content/cars/4.jpg" alt="Image" class="car__image swiper-slide">
-                    <img src="../img/content/cars/5.jpg" alt="Image" class="car__image swiper-slide">
-                    <img src="../img/content/cars/6.jpg" alt="Image" class="car__image swiper-slide">
+                    <img src="../img/content/cars/1.jpg" alt="Image" loading="lazy" class="car__image swiper-slide">
+                    <img src="../img/content/cars/2.jpg" alt="Image" loading="lazy" class="car__image swiper-slide">
+                    <img src="../img/content/cars/3.jpg" alt="Image" loading="lazy" class="car__image swiper-slide">
+                    <img src="../img/content/cars/4.jpg" alt="Image" loading="lazy" class="car__image swiper-slide">
+                    <img src="../img/content/cars/5.jpg" alt="Image" loading="lazy" class="car__image swiper-slide">
+                    <img src="../img/content/cars/6.jpg" alt="Image" loading="lazy" class="car__image swiper-slide">
                   </div>
                   <div class="swiper-pagination"></div>
                   <div class="swiper-button-prev"></div>
@@ -605,12 +604,12 @@
           </div>     
         </div>
       </footer>
-    <div class="order-form__wrap">
-      <div class="order-form__overlay"></div>
-      <div class="container container--order-form">
-        <div class="order-form__content order-form__content--call-form answers answers--call-form">
-          <div class="order-form__icon-close-wrap closeFormBtn">
-            <span class="order-form__icon-close"></span>
+    <div class="modal__wrap">
+      <div class="modal__overlay"></div>
+      <div class="container container--modal">
+        <div class="modal__content modal__content--call-form answers answers--call-form">
+          <div class="modal__icon-close-wrap closeFormBtn">
+            <span class="modal__icon-close"></span>
           </div>
           <h2 class="answers__form-title">
             Заказать звонок
@@ -628,9 +627,9 @@
             </div>
           </form>
         </div>
-        <div class="order-form__content order-form__content--order-transport answers answers--call-form">
-          <div class="order-form__icon-close-wrap closeFormBtn">
-            <span class="order-form__icon-close"></span>
+        <div class="modal__content modal__content--order-transport answers answers--call-form">
+          <div class="modal__icon-close-wrap closeFormBtn">
+            <span class="modal__icon-close"></span>
           </div>
           <h2 class="answers__form-title">
             Заказать транспорт
@@ -659,9 +658,9 @@
             </div>
           </form>
         </div>
-        <div class="order-form__content order-form__content--success-send modal-notification modal-notification--ok">
-          <div class="order-form__icon-close-wrap closeFormBtn">
-            <span class="order-form__icon-close"></span>
+        <div class="modal__content modal__content--success-send modal-notification modal-notification--ok">
+          <div class="modal__icon-close-wrap closeFormBtn">
+            <span class="modal__icon-close"></span>
           </div>
           <span class="modal-notification__symbol">&#10004;</span>
           <h2 class="modal-notification__title">
@@ -671,9 +670,9 @@
             Мы вскоре Вам позвоним
           </p>
         </div>
-        <div class="order-form__content order-form__content--error-send modal-notification modal-notification--error">
-          <div class="order-form__icon-close-wrap closeFormBtn">
-            <span class="order-form__icon-close"></span>
+        <div class="modal__content modal__content--error-send modal-notification modal-notification--error">
+          <div class="modal__icon-close-wrap closeFormBtn">
+            <span class="modal__icon-close"></span>
           </div>
           <span class="modal-notification__symbol">&#9888;</span>
           <h2 class="modal-notification__title">

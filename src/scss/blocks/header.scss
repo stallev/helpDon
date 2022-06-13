@@ -1,6 +1,10 @@
 .header{
+	position: fixed;
+	top: 0;
+	width: 100vw;
 	background: $white;
 	box-shadow: 0px 6px 8px 0px rgba(34, 60, 80, 0.2);
+	z-index: 100;
 	&__wrapper{
 		position: relative;
 		display: flex;
@@ -312,7 +316,7 @@
 			margin-bottom: 0;
 		}
 		&__messengers-item{
-			border-radius: 5px 5px 0 0;
+			border-radius: 5px;
 		}
 	}
 }
