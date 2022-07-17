@@ -1,11 +1,14 @@
 .input-field {
+  display: inline-block;
+  border-radius: 0;
   margin-bottom: 15px;
   @include inputField;
   background-color: transparent;
+  min-height: 39.5px;
   &--disabled {
     pointer-events: none;
     opacity: .5;
-    border-color: $dark-gray;
+    border-color: $textColor;
     color: $dark-gray;
   }
   &--finish {

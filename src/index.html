@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex,nofollow"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Пассажирские перевозки">
+    <meta name="description" content="Пассажирские перевозки NikitaBus">
+    <meta name="keywords" content="пассажирские перевозки в Могилеве, аренда микроавтобусов в Республике Беларусь, транспортные услуги">
+    <meta name="Author" content="NikitaBus">
+    <meta name="Copyright" content="NikitaBus">
+
+    <meta property="og:locale" content="ru_RU">
+    <!-- тип контента, по умолчанию используется article -->
+    <meta property="og:type" content="article">
+    <!-- заголовок страницы, который будет выводится в записи социальной сети -->
+    <meta property="og:title" content="NikitaBus Пассажирские перевозки">
+    <!-- описание страницы -->
+    <meta property="og:description" content="Пассажирские перевозки по Беларуси NikitaBus">
+    <!-- ссылка на изображение, которое будет публиковаться в записи -->
+    <meta property="og:image" content="http://nikitabus.by/wp-content/uploads/2022/07/logo1.png">
+    <!-- ссылка на текущую страницу -->
+    <meta property="og:url" content="https://nikitabus.by/ ">
+    <!-- название сайта -->
+    <meta property="og:site_name" content="Пассажирские перевозки по Беларуси">
+    
     <link rel="stylesheet" href="libs/normalize/normalize.min.css">
     <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="shortcut icon" href="../img/decor/favicon.png" type="image/png" />
     <title>NikitaBus</title>
   </head>
   <body class="">
@@ -642,15 +661,15 @@
               <input type="text" class="input-field input-field--disabled transport-name" placeholder="Средство" name="transport-name">
               <input type="text" class="input-field" placeholder="Ваше имя" name="transport-person" required="">
               <input type="tel" class="input-field input-field--phone" placeholder="Ваш номер телефона" name="person-phone" required="">
+              <p class="answers__form-paragraph answers__form-paragraph--descr">
+                Выберите дату поездки:
+              </p>
               <input
-                type="text"
-                class="input-field date-field"
+                type="date"
+                class="input-field input-field--date date-field"
                 placeholder="Дата поездки"
                 name="transport-date"
                 required=""
-                type="text"
-                onfocus="(this.type='date')"
-                onblur="(this.type='text')"
               >
               <button type="submit" class="action action--submit-form">
                 заказать
