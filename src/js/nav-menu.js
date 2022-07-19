@@ -109,10 +109,12 @@ let tooggleMenu = document.querySelector('.header__tooggle-menu');
 let headerContent = document.querySelector('.header__content');
 let menuHamburger = document.querySelector('.header__hamburger-img');
 let menuCross = document.querySelector('.header__cross-img');
-tooggleMenu.addEventListener('click', function(){
-	tooggleMenu.classList.toggle('header__tooggle-menu--cross');
-	headerContent.classList.toggle('header__content--visible');
-})
+if(tooggleMenu) {
+	tooggleMenu.addEventListener('click', function(){
+		tooggleMenu.classList.toggle('header__tooggle-menu--cross');
+		headerContent.classList.toggle('header__content--visible');
+	})
+}
 
 //показываем и скрываем списки и подменю
 let hiddenItemsControls = document.querySelectorAll('.hidden-items-control');
