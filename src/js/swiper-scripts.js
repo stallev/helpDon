@@ -1,7 +1,7 @@
 //слайдер Наша команда
 
 
-var gallerySlider = new Swiper(".gallery__list", {
+var gallerySlider = new Swiper(".gallery__list1", {
   loop: true,
   lazy: true,
   slidesPerView: 1,
