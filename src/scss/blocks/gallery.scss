@@ -1,0 +1,52 @@
+.gallery {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px 0;
+      // max-width: 500px;
+      &:not(:last-of-type){
+        margin-bottom: 45px;
+      }
+    }
+		&__item-image-wrap {
+			display: flex;
+			width: 100%;
+			height: fit-content;
+		}
+		&__item-image{
+			object-fit: cover;
+		}
+    &__item-title {
+      @include subTitle;
+      text-align: center;
+      margin-bottom: 10px;
+      color: $bright-color;
+    }
+    &__item-description {
+      @include aboutParagraph;
+      text-align: center;
+      color: $white;
+    }
+  }
+  
+  @media only screen and (min-width: $tablet-width){
+    .connect {
+      &__item {}
+      &__item-title {}
+    }
+  }
+  @media only screen and (min-width: $desctop-width){
+    .connect {
+			&__item {}
+			&__item-title {}
+      }
+  }
+  @media only screen and (min-width: 1199px){
+    .connect {
+			&__item {}
+			&__item-title {}
+      }
+  }

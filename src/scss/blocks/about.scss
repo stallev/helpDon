@@ -58,10 +58,7 @@
 }
 @media only screen and (min-width:$desctop-width){
   .about {
-    &__content{
-      grid-template-columns: 60% 40%;
-      grid-column-gap: 20px;
-    }
+    &__content{}
     &__title{}
     &__description-text{}
     &__adv-list{}

@@ -1,7 +1,7 @@
 //слайдер Наша команда
 
 
-var gallerySlider = new Swiper(".car__photo-wrap", {
+var gallerySlider = new Swiper(".gallery__list", {
   loop: true,
   lazy: true,
   slidesPerView: 1,

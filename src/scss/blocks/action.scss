@@ -1,6 +1,7 @@
 .action{
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -19,10 +20,24 @@
   background: $bright-color;
   text-transform: uppercase;
   transition: all .5s linear;
-  //transition: color 1s ease, background 1s ease;
+  //transition: color 1s ease, background 1s ease;  
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-ml;
+
+    @media only screen and (min-width: $tablet-width) {
+      margin-bottom: 0;
+      margin-right: $gutter-ml;
+    }
+  }
   &__group {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    
+    @media only screen and (min-width: $tablet-width) {
+      flex-direction: row;
+    }
   }
   &.action--nobg{
     background: rgba($color: #fff, $alpha: .7);
@@ -33,6 +48,11 @@
       color: $textColor;
       border-width: 0;
     }
+  }
+  &__location-place {
+    text-transform: none;
+    font-size: 12px;
+    color: $content-color;
   }
   &--submit-form {
     display: inline-block;
