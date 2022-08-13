@@ -43,6 +43,9 @@
   &__main-img{
     object-fit: cover;
   }
+  &__video iframe{
+    max-width: 100% !important;
+  }
 }
 @media only screen and (min-width: $tablet-width){
   .about {

@@ -40,7 +40,8 @@
     @include inputField;
     background-color: transparent;
   }
-  &__info {
+  &__text-block {
+    @include aboutParagraph;
   }
   &__slogan {
     display: none;

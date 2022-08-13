@@ -78,8 +78,8 @@ function openOrderForm(btnClass){
 }
 openOrderForm('order-transport');
 
-const TOKEN = '5477703463:AAGlt6r7osdT9QmZpG2ksKcpBkbAWrKGyT0';
-const CHAT_ID = '-792442518';
+const TOKEN = '5477703463:AAGlt6r7osdT9QmZpG2ksKcp233yT0';
+const CHAT_ID = '-7924333518';
 
 let orderCallForm = document.querySelector('.modal__content--call-form form'); 
 orderCallForm.addEventListener("submit", function (e) {
