@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex,nofollow"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Студия WEB-разработки сайтов
-    пн-пт с 8:30 до 17:00">
+    <meta name="description" content="Евангелие на фронте">
+    <meta name="keywords" content="Евангелие на фронте">
+    <meta name="Author" content="Евангелие на фронте">
+    <meta name="Copyright" content="Евангелие на фронте">
+
+    <meta property="og:locale" content="ru_RU">
+    <!-- тип контента, по умолчанию используется article -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Евангелие на фронте">
+    <!-- описание страницы -->
+    <meta property="og:description" content="Евангелие на фронте: Донецкая и Луганская области">
+    <meta property="og:site_name" content="Евангелие на фронте">
+    
     <link rel="stylesheet" href="libs/normalize/normalize.min.css">
-    <link rel="stylesheet" href="libs/fancybox/fancybox.css">
-    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="libs/lightbox/lightbox.min.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="shortcut icon" href="../img/decor/favicon.png" type="image/png" />
-    <title>BelWebStudio - Благодарим за заявку!</title>
+    <title>Евангелие на фронте</title>
   </head>
   <body class="">
     <div class="wrapper">
@@ -20,7 +30,7 @@
           <div class="header__top">
             <div class="logo header__logo">
               <a href="index.html">
-                <span>Nikita</span>Bus
+                <span>Help</span>Donbass
               </a>
             </div>  
             <div class="header__messengers">
@@ -53,14 +63,6 @@
                   </svg>
                 </a></li>
               </ul>
-            </div>          
-            <div class="header__phones">
-              <div class="header__phones-call">
-                <div class="header__phones-call-right">
-                  <a href="tel:+375336585585" class="header__phone-link">+375 (33) 6-585-585</a>
-                  <span class="header__phone-order call-form">заказать звонок</span>
-                </div>
-              </div>              
             </div>
             <div class="header__tooggle-menu">
               <svg class="header__hamburger-img" width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -91,7 +93,7 @@
             <div class="additional__content">
               <div class="additional__inner">
                 <h1 class="additional__title">
-                  Спасибо, что оставили заявку на нашем сайте!
+                  Спасибо, за ваш вопрос!
                 </h1>
                 <p class="additional__description">
                   Мы свяжемся с Вами в ближайшее рабочее время!
@@ -138,55 +140,90 @@
           </div>     
         </div>
       </footer>
-      <div class="order-form__wrap">
-        <div class="order-form__overlay"></div>
-        <div class="container container--order-form">
-          <div class="order-form__content order-form__content--call-form answers answers--call-form">
-            <div class="order-form__icon-close-wrap closeFormBtn">
-              <span class="order-form__icon-close"></span>
-            </div>
-            <h2 class="answers__form-title">
-              Заказать звонок
-            </h2>
-            <p class="answers__description">
-              Оставьте свои данные, и мы перезвоним Вам в течение 15 минут
-            </p>
-            <form action="thanks.html" class="answers__form">
-              <div class="answers__form-inner">
-                <input type="text" class="answers__form-text-field" placeholder="Ваше имя" name="answers-name" required="">
-                <input type="tel" class="answers__form-text-field phone-field" placeholder="Ваш номер телефона" name="answers-phone" required="">
-                <button type="submit" class="action action--submit-form">
-                  отправить
-                </button>
-              </div>
-            </form>
+    <div class="modal__wrap">
+      <div class="modal__overlay"></div>
+      <div class="container container--modal">
+        <div class="modal__content modal__content--call-form answers answers--call-form">
+          <div class="modal__icon-close-wrap closeFormBtn">
+            <span class="modal__icon-close"></span>
           </div>
-          <div class="order-form__content order-form__content--order-online answers answers--call-form">
-            <div class="order-form__icon-close-wrap closeFormBtn">
-              <span class="order-form__icon-close"></span>
+          <h2 class="answers__form-title">
+            Заказать звонок
+          </h2>
+          <p class="answers__description">
+            Оставьте свои данные, и мы перезвоним Вам в течение 15 минут
+          </p>
+          <form class="answers__form">
+            <div class="answers__form-inner">
+              <input type="text" class="input-field" placeholder="Ваше имя" name="person-name" required="">
+              <input type="tel" class="input-field input-field--phone" placeholder="Ваш номер телефона" name="person-phone" required="">
+              <button type="submit" class="action action--submit-form">
+                отправить
+              </button>
             </div>
-            <h2 class="answers__form-title">
-              Заказать онлайн
-            </h2>
-            <p class="answers__description">
-              Оставьте свои данные, и мы перезвоним Вам в течение 15 минут
-            </p>
-            <form action="thanks.html" class="answers__form">
-              <div class="answers__form-inner">
-                <input type="text" class="answers__form-text-field" placeholder="Ваше имя" name="answers-name" required="">
-                <input type="tel" class="answers__form-text-field phone-field" placeholder="Ваш номер телефона" name="answers-phone" required="">
-                <button type="submit" class="action action--submit-form">
-                  заказать
-                </button>
-              </div>
-            </form>
+          </form>
+        </div>
+        <div class="modal__content modal__content--order-transport answers answers--call-form">
+          <div class="modal__icon-close-wrap closeFormBtn">
+            <span class="modal__icon-close"></span>
           </div>
+          <h2 class="answers__form-title">
+            Заказать транспорт
+          </h2>
+          <p class="answers__description">
+            Оставьте свои данные, и мы перезвоним Вам в течение 15 минут
+          </p>
+          <form class="answers__form">
+            <div class="answers__form-inner">
+              <input type="text" class="input-field input-field--disabled transport-name" placeholder="Средство" name="transport-name">
+              <input type="text" class="input-field" placeholder="Ваше имя" name="transport-person" required="">
+              <input type="tel" class="input-field input-field--phone" placeholder="Ваш номер телефона" name="person-phone" required="">
+              <p class="answers__form-paragraph answers__form-paragraph--descr">
+                Выберите дату поездки:
+              </p>
+              <input
+                type="date"
+                class="input-field input-field--date date-field"
+                placeholder="Дата поездки"
+                name="transport-date"
+                required=""
+              >
+              <button type="submit" class="action action--submit-form">
+                заказать
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="modal__content modal__content--success-send modal-notification modal-notification--ok">
+          <div class="modal__icon-close-wrap closeFormBtn">
+            <span class="modal__icon-close"></span>
+          </div>
+          <span class="modal-notification__symbol">&#10004;</span>
+          <h2 class="modal-notification__title">
+            Сообщение успешно отправлено
+          </h2>
+          <p class="modal-notification__text">
+            Мы вскоре Вам позвоним
+          </p>
+        </div>
+        <div class="modal__content modal__content--error-send modal-notification modal-notification--error">
+          <div class="modal__icon-close-wrap closeFormBtn">
+            <span class="modal__icon-close"></span>
+          </div>
+          <span class="modal-notification__symbol">&#9888;</span>
+          <h2 class="modal-notification__title">
+            Что-то пошло не так
+          </h2>
+          <p class="modal-notification__text">
+            Пожалуйста, наберите по номеру +375-33-6-585-585
+          </p>
         </div>
       </div>
     </div>
+    </div>
     <script src="libs/jquery/jquery.min.js"></script>
     <script src="libs/imask/jquery.maskedinput.min.js"></script>
-    <script src="libs/notify/notify.js"></script>
+    <script type="text/javascript" src="libs/lightbox/lightbox.min.js"></script>
     <script src="js/script.min.js"></script>
   </body>
 </html>
