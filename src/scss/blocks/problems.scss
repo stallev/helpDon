@@ -29,10 +29,12 @@
   &__item-title{
     @include subTitle;
     text-align: center;
+    color: $body-color;
   }
   &__item-description{
     @include aboutParagraph;
     text-align: center;
+    color: $light-grey;
   }
 }
 
