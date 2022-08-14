@@ -1,4 +1,4 @@
-.advantages{
+.problems{
   &__list{
     display: grid;
     grid-template-columns: 1fr;
@@ -37,7 +37,7 @@
 }
 
 @media only screen and (min-width:$tablet-width){
-  .advantages{
+  .problems{
     &__list{
       display: grid;
       grid-template-columns: 50% 50%;
@@ -50,7 +50,7 @@
   }
 }
 @media only screen and (min-width: $desctop-width){
-  .advantages{
+  .problems{
     &__list{
       grid-template-columns: repeat(3, 1fr);
       row-gap: 40px;
@@ -61,7 +61,7 @@
   }
 }
 @media only screen and (min-width: $xl-width){
-  .advantages{
+  .problems{
     &__list{
       row-gap: 60px;
     }

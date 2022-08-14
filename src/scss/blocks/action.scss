@@ -38,6 +38,11 @@
     @media only screen and (min-width: $tablet-width) {
       flex-direction: row;
     }
+
+    &--center {
+      width: fit-content;
+      margin: 0 auto;
+    }
   }
   &.action--nobg{
     background: rgba($color: #fff, $alpha: .7);

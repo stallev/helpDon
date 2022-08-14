@@ -43,8 +43,17 @@
   &__main-img{
     object-fit: cover;
   }
-  &__video iframe{
-    max-width: 100% !important;
+  &__video-iframe {
+    width: calc(100vw - 40px);
+    height: 60vw;
+    @media only screen and (min-width: $tablet-width) {
+      width: 700px;
+      height: 400px;
+    }
+    @media only screen and (min-width: $desctop-width) {
+      width: 900px;
+      height: 506px;
+    }
   }
 }
 @media only screen and (min-width: $tablet-width){

@@ -1,0 +1,19 @@
+.my-help{
+	&__items-list{}
+	&__item{
+		&:not(:last-child) {
+			margin-bottom: $gutter-base;
+		}
+	}
+	&__item-description{
+		@include aboutParagraph;
+	}
+}
+
+@media only screen and (min-width:$tablet-width){
+	.my-help{
+		&__items-list{}
+		&__item{}
+		&__item-description{}
+	}
+}
