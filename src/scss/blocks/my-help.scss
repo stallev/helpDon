@@ -1,5 +1,7 @@
 .my-help{
-	&__items-list{}
+	&__items-list{
+		margin-bottom: $gutter-base;
+	}
 	&__item{
 		&:not(:last-child) {
 			margin-bottom: $gutter-base;
@@ -7,6 +9,11 @@
 	}
 	&__item-description{
 		@include aboutParagraph;
+	}
+	&__notion {
+		@include aboutParagraph;
+		margin-top: $gutter-ml;
+		font-size: 13px;
 	}
 }
 

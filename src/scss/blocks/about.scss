@@ -14,27 +14,9 @@
   &__description-text{
     @include aboutParagraph;
     margin-bottom: 16px;
-  }
-  &__adv-list{
-    display: flex;
-    flex-direction: column;
-  }
-  &__adv-item{
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 10px;
-  }
-  &__adv-item-icon{
-    display: inline-block;
-    margin-right: 10px;
-    margin-top: 2px;
-    padding: 4px;
-    background-color: $bright-color;
-    color: $white;
-    font-size: 14px
-  }
-  &__adv-item-text{
-    @include aboutParagraph;
+    &--light-color {
+      color: $light-grey;
+    }
   }
   &__main-img-wrap{
     display: flex;

@@ -20,22 +20,20 @@
     color: $bright-color;
     @media only screen and (min-width: 360px){
       font-size: 20px;
-      margin-bottom: 55px;
+      margin-bottom: 40px;
     }
     @media only screen and (min-width: 450px){
       font-size: 24px;
-      margin-bottom: 65px;
     }
     @media only screen and (min-width: 550px){
-      margin-bottom: 75px;
       font-size: 26px;
     }
   }
   @media only screen and (min-width: 360px){
-    padding: 150px 0 120px;
+    padding: 90px 0 90px;
   }
   @media only screen and (min-width: 450px){
-    padding: 160px 0 150px;
+    padding: 100px 0;
   }
   &__description-item {
     display: flex;
@@ -48,13 +46,17 @@
   &__description-text {
     color: $white;
   }
+  &__motivation-recall {
+    margin-bottom: $gutter-base;
+    @include subTitle;
+    color: $bright-color;
+  }
 }
 @media only screen and (min-width:$tablet-width){
   .safari .head{
     
   }
   .head{
-    padding: 150px 0 180px 30px;
     background-position: right top;
     &__description{
       text-align: left;
@@ -74,7 +76,6 @@
 }
 @media only screen and (min-width: $desctop-width){
   .head{
-    padding: 160px 0 180px;
     
     &__description{
       font-size: 24px;
@@ -90,8 +91,7 @@
   }
 }
 @media only screen and (min-width:$xl-width){
-  .head{
-    padding: 160px 0 170px;    
+  .head{ 
     &__description{
       font-size: 28px;
       line-height: 1.7;
