@@ -2,14 +2,16 @@
   width: fit-content;
   margin-bottom: 18px;
   &__text{
+    display: flex;
+    flex-direction: column;
     font-family: Roboto;
     font-style: normal;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 22px;
     line-height: 1.2;
     color: $white;
     @media only screen and (min-width: 360px){
-      font-size: 22px;
+      font-size: 24px;
     }
     @media only screen and (min-width: 450px){
       font-size: 26px;

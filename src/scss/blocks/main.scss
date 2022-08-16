@@ -1,5 +1,6 @@
 .main{
   min-height: 1000px;
+  padding-top: 90px;
   &__content-wrap{
     overflow: hidden;
   }
@@ -10,12 +11,13 @@
     padding-left: 10vw;
   }
 }
-@media only screen and (min-width: 360px){
+@media only screen and (min-width: 500px){
   .main{
+    padding-top: 70px;
   }
 }
 @media only screen and (min-width: 767px){
-  .main{
+  .main{    
     &__inner {
       align-items: flex-start;
       padding-left: 0;
@@ -24,6 +26,7 @@
 }
 @media only screen and (min-width: 991px){
   .main{
+    padding-top: 65px;
     &__content{
       overflow-x: hidden;
     }
