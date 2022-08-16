@@ -1,5 +1,6 @@
 .section-title{
   padding-bottom: 20px;
+  color: $bright-color;
   &--black-bg {
     color: $white;
   }
@@ -19,8 +20,7 @@
     text-transform: uppercase;
   }
   &__text span {
-    display: inline;
-    color: $bright-color;
+    display: inline;    
   }
   &__description {
     @include aboutParagraph;

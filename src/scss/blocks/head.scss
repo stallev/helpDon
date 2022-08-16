@@ -3,8 +3,8 @@
 }
 .head{
   position: relative;
-  padding: 150px 0 60px;
-  background-repeat: no-repeat;padding: 54px 0;
+  padding: 40px 0 60px;
+  background-repeat: no-repeat;
   background-position: center;
   box-shadow: inset 100vw -100vw 100vw 100vw rgba(0,0,0,0.65);
   background-size: cover;
@@ -30,7 +30,7 @@
     }
   }
   @media only screen and (min-width: 360px){
-    padding: 90px 0 90px;
+    padding: 60px 0 90px;
   }
   @media only screen and (min-width: 450px){
     padding: 100px 0;
