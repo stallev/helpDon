@@ -353,7 +353,6 @@
                 В связи с санкциями, применными к банковской системе России, мы используем различные сервисы для осуществления пожертвования.
               </p>
             </div>
-            <iframe src="https://donorbox.org/embed/help-people-13" name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0" scrolling="no" height="900px" width="100%" style="max-width: 500px; min-width: 250px; max-height:none!important"></iframe>
           </div>
         </section>
         <section class="section gallery">
@@ -418,6 +417,24 @@
                 <div class="answers__form-inner">
                   <input type="text" class="input-field" placeholder="Ваше имя" name="person-name" required>
                   <input type="tel" class="input-field input-field--phone" placeholder="Ваш номер телефона" name="person-phone" required>
+                  <p class="answers__form-paragraph answers__form-paragraph--no-pb">
+                    Укажите мессенджер для связи:
+                  </p>
+                  <div class="answers__form-radio-list">
+                    <div class="answers__form-radio-item">
+                      <input type="radio" id="messengerChoice1" name="person-messenger" value="Telegram">
+                      <label for="messengerChoice1">Telegram</label>
+                    </div>
+                    <div class="answers__form-radio-item">
+                      <input type="radio" id="messengerChoice2" name="person-messenger" value="Viber">
+                      <label for="messengerChoice2">Viber</label>
+                    </div>
+                    <div class="answers__form-radio-item">
+                      <input type="radio" id="messengerChoice3" name="person-messenger" value="WhatsApp">
+                      <label for="messengerChoice3">WhatsApp</label>
+                    </div>
+                  </div>
+                  <input type="email" class="input-field" placeholder="Ваш email" name="person-email">
                   <textarea name="" id="" cols="30" rows="6" class="answers__form-textarea-field" name="person-message" placeholder="Текст сообщения" ></textarea>
                   <div class="action__group action__group--answers">
                     <button type="submit" class="action">

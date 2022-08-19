@@ -16,6 +16,9 @@
   &__form-paragraph {
     @include aboutParagraph;
     margin-bottom: 16px;
+    &--no-pb {
+      margin-bottom: 4px;
+    }
   }
   &__form {
     display: inline-block;
@@ -100,6 +103,59 @@
     cursor: pointer;
     color: $bright-color;
   }
+  &__form-radio-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    @media only screen and (min-width: $tablet-width) {
+      flex-direction: row;
+    }
+  }
+  &__form-radio-item {
+    display: flex;
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-bottom: $gutter-ml;
+      @media only screen and (min-width: $tablet-width) {
+        margin-bottom: 0;
+        margin-right: $gutter-ml;
+      }
+    }
+    input {
+      display: none;
+    }
+    label {
+      position: relative;
+      @include aboutParagraph;
+      padding-left: $gutter-ml;
+      &::before{
+        position: absolute;
+        display: block;
+        content: "";
+        left: 1px;
+        top: 4px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 1px solid #777;
+      }
+      &::after{
+        position: absolute;
+        display: none;
+        content: "";
+        left: 5px;
+        top: 8px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid #777;
+        background-color: #777;
+      }
+    }
+  }
+}
+.answers__form-radio-item input:checked + label::after {
+  display: block;
 }
 .answers--call-form.answers {
   display: flex;
