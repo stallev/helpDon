@@ -78,14 +78,15 @@ function openOrderForm(btnClass){
 }
 openOrderForm('order-transport');
 
-const TOKEN = '5477703463:AAGlt6r7osdT9QmZpG2ksKcp233yT01';
-const CHAT_ID = '-7924333518';
+const TOKEN = '5459735794:AAF0SQyrHcp8vwGOQH2_BDoQ749QiO70LUI';
+const CHAT_ID = '-791862587';
 
 let orderBottomForm = document.querySelector('.answers__form--bottom'); 
 orderBottomForm.addEventListener("submit", function (e) {
     e.preventDefault();
     let data = new FormData(this);
-    let messageText = 'Посетитель сайта задал вопрос\n\n' + 'Имя посетителя ' + data.get("person-name") + '\nТелефон: ' + data.get("person-phone") + '\nПредпочитаемый мессендже: ' + (!!data.get("person-messenger") ? data.get("person-messenger") : 'мессенджер не указан') + '\nEmail: ' + data.get("person-email") + '\nСообщение клиента: ' + data.get("person-message");
+    console.log(data.get("person-message"));
+    let messageText = 'Посетитель сайта задал вопрос\n\n' + 'Имя посетителя: ' + data.get("person-name") + '\nТелефон: ' + data.get("person-phone") + '\nПредпочитаемый мессенджер: ' + (!!data.get("person-messenger") ? data.get("person-messenger") : 'мессенджер не указан') + '\nEmail: ' + (!!data.get("person-email") ? data.get("person-email") : 'email не указан') + '\nСообщение клиента: ' + data.get("person-message");
     console.log(messageText);
     sendMsg(messageText);
 });
