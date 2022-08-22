@@ -78,32 +78,16 @@ function openOrderForm(btnClass){
 }
 openOrderForm('order-transport');
 
-const TOKEN = '5477703463:AAGlt6r7osdT9QmZpG2ksKcp233yT0';
-const CHAT_ID = '-7924333518';
-
-let orderCallForm = document.querySelector('.modal__content--call-form form'); 
-orderCallForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    let data = new FormData(this);
-    
-    let messageText = 'Клиент просит перезвонить\n\n' + 'Имя клиента ' + data.get("person-name") + '\nТелефон: ' + data.get("person-phone");
-    sendMsg(messageText);
-});
-
-let orderTransportForm = document.querySelector('.modal__content--order-transport form'); 
-orderTransportForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    let data = new FormData(this);
-    let messageText = 'Клиент заказывает авто\n\n' + 'Авто\n' + data.get("transport-name") + '\nИмя клиента ' + data.get("transport-person") + '\nТелефон: ' + data.get("person-phone") + '\nДата поездки: ' + data.get("transport-date");
-    console.log(messageText);
-    sendMsg(messageText);
-});
+const TOKEN = '5459735794:AAF0SQyrHcp8vwGOQH2_BDoQ749QiO70LUI';
+const CHAT_ID = '-791862587';
 
 let orderBottomForm = document.querySelector('.answers__form--bottom'); 
 orderBottomForm.addEventListener("submit", function (e) {
     e.preventDefault();
     let data = new FormData(this);
-    let messageText = 'Клиент интересуется стоимостью сделки\n\n' + 'Имя клиента ' + data.get("person-name") + '\nТелефон: ' + data.get("person-phone") + '\nСообщение клиента: ' + data.get("person-message");
+    console.log(data.get("person-message"));
+    let messageText = 'Посетитель сайта задал вопрос\n\n' + 'Имя посетителя: ' + data.get("person-name") + '\nТелефон: ' + data.get("person-phone") + '\nПредпочитаемый мессенджер: ' + (!!data.get("person-messenger") ? data.get("person-messenger") : 'мессенджер не указан') + '\nEmail: ' + (!!data.get("person-email") ? data.get("person-email") : 'email не указан') + '\nСообщение клиента: ' + data.get("person-message");
+    console.log(messageText);
     sendMsg(messageText);
 });
 

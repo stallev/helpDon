@@ -9,10 +9,12 @@
 	}
 	&__item-description{
 		@include aboutParagraph;
+		color: $light-grey;
 	}
 	&__notion {
 		@include aboutParagraph;
 		margin-top: $gutter-ml;
+		color: $light-grey;
 		font-size: 13px;
 	}
 }
